@@ -693,3 +693,7 @@ p {
 		margin: 1.5%;
 	}
 }
+.vl {
+	border-left: 6px solid brown;
+	height: 500px;
+  }
