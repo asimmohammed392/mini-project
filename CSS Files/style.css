@@ -294,7 +294,7 @@ p {
 }
 /* Middle column */
 .column.middle {
-    width: 66.6%;
+    width: 10%;
 }
 
 /* Clear floats after the columns */
@@ -697,3 +697,6 @@ p {
 	border-left: 6px solid brown;
 	height: 500px;
   }
+.v2{
+	color: black;
+}
