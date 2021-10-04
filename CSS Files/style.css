@@ -267,11 +267,19 @@ p {
 /* Create three unequal columns that floats next to each other */
 .column {
   float: left;
-  padding: 100px;
+  padding: 50px;
+  background-color:aquamarine;
 }
+.vl {
+	border-left: 6px solid brown;
+	height: 700px;
 
+  }
+.v2{
+	color: black;
+}
 /* Left and right column */
-.column.side.ul.a {
+.column.left.ul.a {
 	color:black;
 	display: inline-block;
     width: 20%;
@@ -297,6 +305,7 @@ p {
     width: 10%;
 }
 
+
 /* Clear floats after the columns */
 .row:after {
   content: "";
@@ -304,6 +313,8 @@ p {
   clear: both;
 }
 /*End Columns */
+
+
 /* Services Section */
 #services .services {
 	flex-direction: column;
