@@ -5,10 +5,33 @@
     <link rel="stylesheet" href="../CSS Files/quiz_style.css">
   </head>
   <body>
+    <section id="header">
+      <div class="header container">
+        <div class="nav-bar">
+          <div class="brand">
+            <a href="#hero">
+              <h1><span>P</span>ort <span>F</span>olio</h1>
+            </a>
+          </div>
+          <div class="nav-list">
+            <div class="hamburger">
+              <div class="bar"></div>
+            </div>
+            <ul>
+              <li><a href="#hero" data-after="Home">Home</a></li>
+              <li><a href="#services" data-after="Services">Courses</a></li>
+              <li><a href="#projects" data-after="Projects">Quiz</a></li>
+              <li><a href="#contact" data-after="Contact">Contact</a></li>
+              <li><a href="#login" data-after="Login">Login</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
     <form name="quiz"  id="quiz"> 
       <h1> Sample Quiz </h1>
       <div id="border">
-      <div>
+      <div id="questions">
         <h4>1. Which is the best programming language in 2021</h4>
         <p><input type="radio" name="q1" value="pyhton">Python</p>
         <p><input type="radio" name="q1" value="Java">Java</p>
@@ -16,7 +39,7 @@
         <p><input type="radio" name="q1" value="Js">JS</p>
       </div>
       <hr>
-      <div>
+      <div id="questions">
         <h4>2. Biggest country in the world</h4>
         <p><input type="radio" name="q2" value="Russia">Russia</p>
         <p><input type="radio" name="q2" value="America">America</p>
@@ -24,14 +47,15 @@
         <p><input type="radio" name="q2" value="China">China</p>
       </div>
       <hr>
-      <div>
+      <div id="questions">
         <h4>3. Who is the father of computer</h4>
         <p><input type="radio" name="q3" value="Charles Babbage">Charles Babbage</p>
         <p><input type="radio" name="q3" value="Sohail">Sohail</p>
         <p><input type="radio" name="q3" value="Asim">Asim</p>
         <p><input type="radio" name="q3" value="Karan">Karan</p>
       </div>
-      <div>
+      <hr>
+      <div id="questions">
         <h4>4. Best movie in the world</h4>
         <p><input type="radio" name="q4" value="Phir Hera pheri">Phir Hera pheri</p>
         <p><input type="radio" name="q4" value="Dhamaal">Dhamaal</p>
@@ -39,7 +63,7 @@
         <p><input type="radio" name="q4" value="Coolie no.1">Coolie no.1</p>
       </div>
       <hr>
-      <div>
+      <div id="questions">
         <h4>5. Best memer</h4>
         <p><input type="radio" name="q5" value="Akshay">Akshay</p>
         <p><input type="radio" name="q5" value="Salman">Salman</p>
