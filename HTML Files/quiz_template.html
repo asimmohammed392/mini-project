@@ -2,71 +2,54 @@
 <html>
   <head>
     <title> Quiz template</title>
-    <script>
-      function check(){
-    var count=0;
-    var q1=document.quiz.q1.value;
-    var q2=document.quiz.q2.value;
-    var q3=document.quiz.q3.value;
-    var q4=document.quiz.q4.value;
-    var q5=document.quiz.q5.value;
-    if(q1=="Java"){count++}
-    if(q2=="Russia"){count++}
-    if(q3=="Sohail"){count++}
-    if(q4=="Phir Hera pheri"){count++}
-    if(q5=="Akshay"){count++}
-
-    document.write("Your Score is "+((count/5)*100)+"%");
-}
-    </script>
-    <Style>
-      body{
-        background-color: aquamarine;
-        color: black;
-        font-size: 20px;
-        font-weight: bolder;
-      }
-    </Style>
+    <link rel="stylesheet" href="../CSS Files/quiz_style.css">
   </head>
   <body>
     <form name="quiz"  id="quiz"> 
+      <h1> Sample Quiz </h1>
+      <div id="border">
       <div>
-        <h4>1) Which is the best programming language in 2021</h4>
-        <p><input type="radio" name="q1" value="pyhton">A.pyhton</p>
-        <p><input type="radio" name="q1" value="Java">B.Java</p>
-        <p><input type="radio" name="q1" value="Php">C.Php</p>
-        <p><input type="radio" name="q1" value="Js">D.Js</p>
+        <h4>1. Which is the best programming language in 2021</h4>
+        <p><input type="radio" name="q1" value="pyhton">Python</p>
+        <p><input type="radio" name="q1" value="Java">Java</p>
+        <p><input type="radio" name="q1" value="Php">Php</p>
+        <p><input type="radio" name="q1" value="Js">JS</p>
+      </div>
+      <hr>
+      <div>
+        <h4>2. Biggest country in the world</h4>
+        <p><input type="radio" name="q2" value="Russia">Russia</p>
+        <p><input type="radio" name="q2" value="America">America</p>
+        <p><input type="radio" name="q2" value="India">India</p>
+        <p><input type="radio" name="q2" value="China">China</p>
+      </div>
+      <hr>
+      <div>
+        <h4>3. Who is the father of computer</h4>
+        <p><input type="radio" name="q3" value="Charles Babbage">Charles Babbage</p>
+        <p><input type="radio" name="q3" value="Sohail">Sohail</p>
+        <p><input type="radio" name="q3" value="Asim">Asim</p>
+        <p><input type="radio" name="q3" value="Karan">Karan</p>
       </div>
       <div>
-        <h4>2) Biggest country in the world</h4>
-        <p><input type="radio" name="q2" value="Russia">A.Russia</p>
-        <p><input type="radio" name="q2" value="America">B.America</p>
-        <p><input type="radio" name="q2" value="India">C.India</p>
-        <p><input type="radio" name="q2" value="China">D.China</p>
+        <h4>4. Best movie in the world</h4>
+        <p><input type="radio" name="q4" value="Phir Hera pheri">Phir Hera pheri</p>
+        <p><input type="radio" name="q4" value="Dhamaal">Dhamaal</p>
+        <p><input type="radio" name="q4" value="Avengers-End game">Avengers-End game</p>
+        <p><input type="radio" name="q4" value="Coolie no.1">Coolie no.1</p>
       </div>
+      <hr>
       <div>
-        <h4>3) Who is the father of computer</h4>
-        <p><input type="radio" name="q3" value="Charles babbage">A.Charles babbage</p>
-        <p><input type="radio" name="q3" value="Sohail">B.Sohail</p>
-        <p><input type="radio" name="q3" value="Asim">C.Asim</p>
-        <p><input type="radio" name="q3" value="Karan">D.Karan</p>
+        <h4>5. Best memer</h4>
+        <p><input type="radio" name="q5" value="Akshay">Akshay</p>
+        <p><input type="radio" name="q5" value="Salman">Salman</p>
+        <p><input type="radio" name="q5" value="Varun">Varun</p>
+        <p><input type="radio" name="q5" value="Abishek">Abishek</p>
       </div>
-      <div>
-        <h4>4) Best movie in the world</h4>
-        <p><input type="radio" name="q4" value="Phir Hera pheri">A.Phir Hera pheri</p>
-        <p><input type="radio" name="q4" value="Dhamaal">B.Dhamaal</p>
-        <p><input type="radio" name="q4" value="Avengers-End game">C.Avengers-End game</p>
-        <p><input type="radio" name="q4" value="Coolie no.1">D.Coolie no.1</p>
-      </div>
-      <div>
-        <h4>5) Best memer</h4>
-        <p><input type="radio" name="q5" value="Akshay">A.Akshay</p>
-        <p><input type="radio" name="q5" value="salman">B.Salman</p>
-        <p><input type="radio" name="q5" value="varun">C.Varun</p>
-        <p><input type="radio" name="q5" value="abishek">D.Abishek</p>
-      </div>
-      <input type="button" name="" value="submit" onclick="check()">
+      <input type="button" name="" value="Finish" onclick="check()">
+    </div>
 
     </form>
+    <script src="../JS Files/quiz_js.js"></script>
   </body>
 </html>
