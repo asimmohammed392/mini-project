@@ -31,7 +31,7 @@ input[type=button] {
 #border{
     padding-left: 2rem;
     padding-right: 2rem;
-    border-left: 6px solid black;
-    border-right: 6px solid black;
+    border-left: 6px solid crimson;
+    border-right: 6px solid crimson;
 	height:fit-content;
 }

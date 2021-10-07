@@ -271,7 +271,7 @@ p {
   background-color:aquamarine;
 }
 .vl {
-	border-left: 6px solid brown;
+	border-left: 3px solid crimson;
 	height: 700px;
 
   }
@@ -704,17 +704,4 @@ p {
 		margin: 1.5%;
 	}
 }
-.vl {
-	border-left: 6px solid brown;
-	height: 700px;
 
-  }
-.v2{
-	color: black;
-}
-.boss{
-    background-color: aquamarine;
-    font-size: 20px;
-    font-weight: bolder;
-    color: black;
-}
