@@ -24,18 +24,30 @@ menu_item.forEach((item) => {
 	});
 });
 
-function check(){
-    var count=0;
-    var q1=document.quiz.q1.value;
-    var q2=document.quiz.q2.value;
-    var q3=document.quiz.q3.value;
-    var q4=document.quiz.q4.value;
-    var q5=document.quiz.q5.value;
-    if(q1=="Java"){count++}
-    if(q2=="Russia"){count++}
-    if(q3=="Sohail"){count++}
-    if(q4=="Phir Hera pheri"){count++}
-    if(q5=="Akshay"){count++}
-    
-    document.write('<h1 class="result">'+"Your Score is "+((count/5)*100)+"%"+'</h1>');
+const quiz=[
+{
+    q:'Which month comes before June?',
+    options:['May','September','July','August'],
+    answer:0
+},
+{
+    q:'What colour is a banana?',
+    options:['Red','Yellow','White','Blue'],
+    answer:1
+},
+{
+    q:'3+4=7?',
+    options:['True','False'],
+    answer:0
+},
+{
+    q:'What time of day we have breakfast?',
+    options:['Afternoon','Evening','Morning'],
+    answer:2
+},
+{
+    q:'What is 22+6?',
+    options:['99','26','16','78'],
+    answer:3
 }
+]
