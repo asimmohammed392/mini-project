@@ -49,5 +49,20 @@ const quiz=[
     q:'What is 22+6?',
     options:['99','26','16','78'],
     answer:3
+},
+{
+    q:'Python is better than C++?',
+    options:['True','False'],
+    answer:0
+},
+{
+    q:'Which of these is OOPS concept?',
+    options:['Encapsulation','Abstraction','Format Specifiers','Inheritance'],
+    answer:2
+},
+{
+    q:'Best Sport?',
+    options:['Cricket','Football','Baseball'],
+    answer:0
 }
 ]
