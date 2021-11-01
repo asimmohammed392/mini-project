@@ -11,7 +11,18 @@ html {
 }
 a {
 	text-decoration: none;
+	color:white;
 }
+a:visited{
+	text-decoration: none;
+	color:white;
+	background-color:transparent;
+}
+a:active {
+	color: white;
+	background-color: transparent;
+	text-decoration: underline;
+  }
 .container {
 	min-height: 100vh;
 	width: 100%;
