@@ -6,7 +6,7 @@ const homeBox=document.querySelector(".home-box");
 const quizBox=document.querySelector(".quiz-box");
 const resultBox=document.querySelector(".result-box");
 
-const questionLimit=5;
+const questionLimit=10;
 
 let questionCounter=0;
 let currentQuestions;
@@ -16,13 +16,14 @@ let correctAnswers=0;
 let attempts=0;
 
 function setAvailableQuestions(){
-    const totalQuestion=questionLimit;
+    const totalQuestion=quiz.length;
     for(let i=0; i<totalQuestion;i++){
         availableQuestions.push(quiz[i]);
     }
 }
 function getNewQuestion(){
-    questionNumber.innerHTML="Question "+(questionCounter+1)+" of "+questionLimit;
+    console.log(availableQuestions)
+    questionNumber.innerHTML="Question "+(questionCounter+1)+" of "+ questionLimit;
     const questionIndex= availableQuestions[Math.floor(Math.random()*availableQuestions.length)];
     currentQuestions=questionIndex;
     questionText.innerHTML= currentQuestions.q;
@@ -69,7 +70,7 @@ function unclickableOptions(){
 
 function answersIndicator(){
     answerIndicatorContainer.innerHTML='';
-    const totalQuestion=questionLimit;
+    const totalQuestion = questionLimit;
     for(let i=0;i<totalQuestion;i++){
         const indicator = document.createElement("div");
         answerIndicatorContainer.appendChild(indicator);
