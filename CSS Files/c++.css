@@ -220,22 +220,21 @@ a {
 p {
 	color: white;
 	font-size: 2rem;
-	margin-top: 5px;
+	margin-top: 3px;
 	line-height: 2.5rem;
-	font-weight: 300;
-	letter-spacing: 0.05rem;
+	font-weight: 600;
 }
 .headings{
     color: white;
 }
 .column {
     float: left;
-    padding: 50px;
+    padding: 50px 10px;
     background-color:black;
 }
 .vl {
     border-left: 3px solid crimson;
-    height: 700px;
+    height: 100vh;
   
 }
 .v2{
@@ -244,8 +243,13 @@ p {
 /* Left and right column */
 /* Middle column */
 .column.middle {
-	width: 3%;
+	width: 1%;
 }
-  
+.right{
+    padding-top: 20px;
+}
+.right p{
+    font-weight: 300;
+}
 /* Clear floats after the columns */
 /*End Columns */
