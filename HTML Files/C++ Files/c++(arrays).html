@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../CSS Files/C++/c++(arrays).css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Header -->
+  <section id="header" style="background-color:black">
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="#hero">
+            <h1><span>KSA</span> Learning</h1>
+          </a>
+        </div>
+        <div class="nav-list">
+          <div class="hamburger">
+            <div class="bar"></div>
+          </div>
+          <ul>
+            <li><a href="#hero" data-after="Home">Home</a></li>
+            <li><a href="#services" data-after="Courses">Courses</a></li>
+            <li><a href="#projects" data-after="Projects">Quiz</a></li>
+            <li><a href="#contact" data-after="Contact">Contact</a></li>
+            <li><a href="#contact" data-after="Login">Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Header -->
+
+  <!-- Columns -->
+  <div class="column">
+    <div class="column left">
+      <h1 class="headings">All Topics</h1>
+      <ul> 
+        <li><a href="#" class="v2"><p>Syntax</p></a></li>
+        <li><a href="#" class="v2"><p>Data Types</p></a></li>
+        <li><a href="#" class="v2"><p>Operators</p></a></li>
+        <li><a href="#" class="v2"><p>Conditionals</p></a></li>
+        <li><a href="#" class="v2"><p>Looping</p></a></li>
+        <li><a href="#" class="v2"><p>Arrays</p></a></li>
+        <li><a href="#" class="v2"><p>Pointers</p></a></li>
+        <li><a href="#" class="v2"><p>Functions</p></a></li>
+        <li><a href="#" class="v2"><p>Classes & Objects</p></a></li>
+        <li><a href="#" class="v2"><p>Constructor</p></a></li>
+        <li><a href="#" class="v2"><p>Inheritance</p></a></li>
+        <li><a href="#" class="v2"><p>Polymorphism</p></a></li>
+        <li><a href="#" class="v2"><p>Encapsulation</p></a></li>
+        <li><a href="#" class="v2"><p>Files & Exceptions</p></a></li>
+      </ul>
+    </div>
+    <div class="column middle">
+      <div class="vl"></div>
+    </div>
+      <div class="column right">
+      <h1 class="heading">Arrays</h1>
+      <br><br>
+      <p>Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each value. <br>
+        To declare an array, define the variable type, specify the name of the array followed by square brackets and specify the number of elements it should store. <br><br>
+        <br>
+        Declaring:- <br>
+        string cars[4] = {"Volvo", "BMW", "Ford", "Mazda"}; <br>
+        int myNum[3] = {10, 20, 30}; <br> <br>
+        Access elements of the array:- <br>
+        You access an array element by referring to the index number. <br>
+        This statement accesses the value of the first element in cars <br>
+        Array indexes start with 0: [0] is the first element. [1] is the second element, etc. <br><br>
+        Change elements of the array:- <br>
+        To change the value of a specific element, refer to the index number <br><br>
+    
+        <textarea name="ifc" id="ifc" cols="80" rows="6">
+            string cars[4] = {"Volvo", "BMW", "Ford", "Mazda"};
+            cars[0] = "Opel";
+            cout << cars[0];
+            // Now outputs Opel instead of Volvo
+        </textarea>
+        <br> <br>
+        Looping through an array:- <br>
+        You can loop through the array elements with the for loop. <br>
+        <textarea name="ifc" id="ifc" cols="80" rows="6">
+            string cars[4] = {"Volvo", "BMW", "Ford", "Mazda"};
+            for(int i = 0; i < 4; i++) {
+                cout << cars[i] << "\n";
+            }
+        </textarea> <br><br>
+        Omiting Array size:- <br>
+        You don't have to specify the size of the array. 
+        But if you don't, it will only be as big as the elements that are inserted into it. <br><br>
+        string cars[] = {"Volvo", "BMW", "Ford"}; <br> // size of array is always 3 <br>
+        <br>
+        This is completely fine. However, the problem arise if you want extra space for future elements. Then you have to overwrite the existing values <br>
+        If you specify the size however, the array will reserve the extra space <br><br>
+        string cars[5] = {"Volvo", "BMW", "Ford"}; <br>
+        // size of array is 5, even though it's only three elements inside it <br><br>
+        Now you can add a fourth and fifth element without overwriting the others <br> <br>
+        It is also possible to declare an array without specifying the elements on declaration, 
+        and add them later <br><br>
+        <textarea name="ifc" id="ifc" cols="80" rows="5">
+            string cars[5];
+            cars[0] = "Volvo";
+            cars[1] = "BMW";
+            ...
+        </textarea> <br><br>
+      </p>
+      <br><br>
+        <button class="nextbutton"><a href="#">Next Topic</a></button>
+  </div>
+</div>
+    <!-- End Columns -->
+  <script src="../../Files/js.js"></script>
+</body>
+</html>
