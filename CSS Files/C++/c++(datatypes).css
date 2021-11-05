@@ -245,13 +245,19 @@ p {
     font-weight:normal;
 }
 .column {
-    float: left;
-    padding: 50px 10px;
+    padding-top:40px;
+	width:100%;
     background-color:black;
+	float:left;
+}
+.column.left{
+	padding:40px;
+	float:left;
+	width:20%;
 }
 .vl {
     border-left: 3px solid crimson;
-    height: 170vh;
+    height: 180vh;
   
 }
 .v2{
@@ -260,11 +266,16 @@ p {
 /* Left and right column */
 /* Middle column */
 .column.middle {
-	width: 10%;
+	width: 5%;
+	float:left;
 }
 .right{
     padding-top: 20px;
-    width:100%;
+	padding-left:30px;
+}
+.column.right{
+	width:60%;
+	float:right;
 }
 .right p{
     font-weight: 300;
