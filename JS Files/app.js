@@ -53,9 +53,13 @@ function getResult(element){
     const id=parseInt(element.id);
     if(id===currentQuestions.answer){
         element.classList.add("correct");
+        updateAnswerIndicator("correct");
         correctAnswers++;
+        console.log("correct:"+correctAnswers);
+
     }else{
         element.classList.add("wrong");
+        updateAnswerIndicator("wrong");
     }
     attempts++;
     unclickableOptions();
@@ -77,6 +81,9 @@ function answersIndicator(){
     }
 }
 
+function updateAnswerIndicator(markType){
+    answerIndicatorContainer.children[questionCounter-1].classList.add(markType);
+}
 
 function next(){
     if(questionCounter === questionLimit){
@@ -124,7 +131,8 @@ function startQuiz(){
     getNewQuestion();
     answersIndicator();
 }
-
 window.onload=function(){
-    homeBox.querySelector(".total-question").innerHTML=questionLimit;
+    setAvailableQuestions();
+    answersIndicator();
+   // homeBox.querySelector(".total-question").innerHTML=questionLimit;
 }
