@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS Files/c++.css">
+    <link rel="stylesheet" href="../../CSS Files/C++/c++(datatypes).css">
     <title>Document</title>
 </head>
 <body>
@@ -61,33 +61,38 @@
       <div class="right">
       <h1 class="heading">Introduction <span>(and some facts about C++)</span></h1>
       <br><br>
-      <p>C++ is a cross-platform language that can be used to create high-performance applications. <br><br>
+      <p>Before looking into datatypes in C++, we will first see what a variable is. <br><br>
 
-        C++ was developed by Bjarne Stroustrup, as an extension to the C language.<br><br>
+        Variables are containers for storing data values.<br>
+        In C++, there are different types of variables (defined with different keywords)<br><br>
         
-        C++ gives programmers a high level of control over system resources and memory.<br>
-<br>        C++ is one of the world's most popular programming languages. <br>
-<br>
-C++ can be found in today's operating systems, Graphical User Interfaces, and embedded systems. <br>
-<br>
-C++ is an object-oriented programming language which gives a clear structure to programs and allows code to be reused, lowering development costs.
-<br><br>
-C++ is portable and can be used to develop applications that can be adapted to multiple platforms.
-<br><br>
-C++ is fun and easy to learn!
-<br><br>
-As C++ is close to C# and Java, it makes it easy for programmers to switch to C++ or vice versa. <br><br><br><br>
-This tutorial will teach you the basics of C++. <br><br>
-
-It is not necessary to have any prior programming experience.
-
-</p>
-<br><br>
+          Line 1: "#include <iostream>" is a header file library that lets us work with input and output objects, such as cout (used in line 5). Header files add functionality to C++ programs.<br><br>       
+          Line 2: "using namespace std" means that we can use names for objects and variables from the standard library. <br><br>
+          Note:- Don't worry if you don't understand how #include <iostream> and using namespace std works. Just think of it as something that (almost) always appears in your program.<br><br>
+          Line 3: A blank line. C++ ignores white space. But we use it to make the code more readable.<br><br>
+          Line 4: Another thing that always appear in a C++ program, is 'int main()'. This is called a function. Any code inside its curly brackets '{}' will be executed.<br><br>
+          Line 5: 'cout' (pronounced "see-out") is an object used together with the insertion operator (<<) to output/print text. In our example it will output "Hello World".<br><br>
+          Note: Every C++ statement ends with a semicolon ';'.<br><br>
+          Note: The body of 'int main()' could also been written as:<br> "int main () { cout << "Hello World! "; return 0; }"<br><br>
+          Remember: The compiler ignores white spaces. However, multiple lines makes the code more readable.<br><br>
+          Line 6: 'return 0' ends the main function. <br><br>
+          Line 7: Do not forget to add the closing curly bracket '}' to actually end the main function.
+          <textarea id="w3review" name="w3review" rows="8" cols="35"><br><br>
+            #include <iostream>
+              using namespace std;
+              
+              int main() {
+                cout << "Hello World!";
+                return 0;
+              }
+            </textarea> 
+      </p>
+      <br><br>
         <button class="nextbutton"><a href="#">Next Topic</a></button>
   </div>
 
 </div>
     <!-- End Columns -->
-  <script src="../JS Files/js.js"></script>
+  <script src="../../Files/js.js"></script>
 </body>
 </html>

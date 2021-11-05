@@ -214,6 +214,14 @@ a {
 		display: none;
 	}
 }
+@media only screen and (max-width: 768px){
+	.headings{
+		display:none;
+	}
+	p{
+		height:fit-content;
+	}
+}
 	/* End header */
 /* Columns */
 /* Create three unequal columns that floats next to each other */
