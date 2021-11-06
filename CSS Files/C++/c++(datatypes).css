@@ -282,7 +282,7 @@ p {
 }
 /* Clear floats after the columns */
 /*End Columns */
-.nextbutton{
+.nextbutton, .nextbutton1{
     padding:20px 40px;
     height: 60px;
     background-color:crimson;
@@ -292,6 +292,9 @@ p {
     justify-content: center;
     align-items: center;
 }
-.nextbutton a{
+.nextbutton1{
+    float:right;
+}
+.nextbutton a, .nextbutton1 a{
     color:white;
 }
