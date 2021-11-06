@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../CSS Files/C++/c++(files).css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Header -->
+  <section id="header" style="background-color:black">
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="#hero">
+            <h1><span>KSA</span> Learning</h1>
+          </a>
+        </div>
+        <div class="nav-list">
+          <div class="hamburger">
+            <div class="bar"></div>
+          </div>
+          <ul>
+            <li><a href="#hero" data-after="Home">Home</a></li>
+            <li><a href="#services" data-after="Courses">Courses</a></li>
+            <li><a href="#projects" data-after="Projects">Quiz</a></li>
+            <li><a href="#contact" data-after="Contact">Contact</a></li>
+            <li><a href="#contact" data-after="Login">Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Header -->
+
+  <!-- Columns -->
+  <div class="column">
+    <div class="column left">
+      <h1 class="headings">All Topics</h1>
+      <ul> 
+        <li><a href="#" class="v2"><p>Syntax</p></a></li>
+        <li><a href="#" class="v2"><p>Data Types</p></a></li>
+        <li><a href="#" class="v2"><p>Operators</p></a></li>
+        <li><a href="#" class="v2"><p>Conditionals</p></a></li>
+        <li><a href="#" class="v2"><p>Looping</p></a></li>
+        <li><a href="#" class="v2"><p>Arrays</p></a></li>
+        <li><a href="#" class="v2"><p>Pointers</p></a></li>
+        <li><a href="#" class="v2"><p>Functions</p></a></li>
+        <li><a href="#" class="v2"><p>Classes & Objects</p></a></li>
+        <li><a href="#" class="v2"><p>Constructor</p></a></li>
+        <li><a href="#" class="v2"><p>Inheritance</p></a></li>
+        <li><a href="#" class="v2"><p>Polymorphism</p></a></li>
+        <li><a href="#" class="v2"><p>Encapsulation</p></a></li>
+        <li><a href="#" class="v2"><p>Files & Exceptions</p></a></li>
+      </ul>
+    </div>
+    <div class="column middle">
+      <div class="vl"></div>
+    </div>
+      <div class="column right">
+      <h1 class="heading">Files and Exceptions</h1>
+      <br><br>
+      <p>The fstream library allows us to work with files. <br>
+        To use the fstream library, include both the standard <iostream> AND the <fstream> header file <br><br>
+        There are three classes included in the fstream library, which are used to create, write or read files <br>
+        <table class="table1">
+            <tr>
+                <th>Class</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>ofstream</td>
+                <td>creates and writes to files</td>
+            </tr>
+            <tr>
+                <td>ifstream</td>
+                <td>reads from files</td>
+            </tr>
+            <tr>
+                <td>fstream</td>
+                <td>creates, writes and reads files</td>
+            </tr>
+        </table> <br>
+    </p>
+    <p>
+        Create and Write To a File <br><br>
+        To create a file, use either the ofstream or fstream class, and specify the name of the file. <br>
+        To write to the file, use the insertion operator (<<). <br><br>
+        <textarea name="ifc" id="ifc" cols="80" rows="15">
+            #include <iostream>
+                #include <fstream>
+                using namespace std;
+                
+                int main() {
+                  // Create and open a text file
+                  ofstream MyFile("filename.txt");
+                
+                  // Write to the file
+                  MyFile << "Files can be tricky, but it is fun enough!";
+                
+                  // Close the file
+                  MyFile.close();
+                }
+        </textarea> <br><br>
+        Why do we close the file?<br>
+        It is considered good practice, and it can clean up unnecessary memory space.<br><br>
+        Read from a File <br><br>
+        To read from a file, use either the ifstream or fstream class, and the name of the file. 
+        Note that we also use a while loop together with the getline() function 
+        (which belongs to the ifstream class) to read the file line by line, 
+        and to print the content of the file <br><br>
+        <textarea name="ifc" id="ifc" cols="100" rows="17">
+            // Create a text string, which is used to output the text file
+            string myText;
+            
+            // Read from the text file
+            ifstream MyReadFile("filename.txt");
+            
+            // Use a while loop together with the getline() function to read the file line by line
+            while (getline (MyReadFile, myText)) {
+              // Output the text from the file
+              cout << myText;
+            }
+            
+            // Close the file
+            MyReadFile.close();
+        </textarea> <br><br>
+
+        Exceptions:- <br><br>
+        When executing C++ code, different errors can occur: 
+        coding errors made by the programmer, errors due to wrong input, 
+        or other unforeseeable things. <br>
+        When an error occurs, C++ will normally stop and generate an error message. 
+        The technical term for this is: C++ will throw an exception (throw an error). <br> <br>
+        C++ try and catch <br><br>
+        Exception handling in C++ consist of three keywords: try, throw and catch: <br>
+        The try statement allows you to define a block of code to be tested for errors while it is being executed. <br>
+        The throw keyword throws an exception when a problem is detected, which lets us create a custom error. <br>
+        The catch statement allows you to define a block of code to be executed, if an error occurs in the try block. <br>
+        The try and catch keywords come in pairs <br><br>
+        <textarea name="ifc" id="ifc" cols="100" rows="13">
+            try {
+                int age = 15;
+                if (age >= 18) {
+                  cout << "Access granted - you are old enough.";
+                } else {
+                  throw (age);
+                }
+              }
+              catch (int myNum) {
+                cout << "Access denied - You must be at least 18 years old.\n";
+                cout << "Age is: " << myNum;
+              }
+        </textarea> <br><br>
+        We use the try block to test some code: <br>
+        If the age variable is less than 18, 
+        we will throw an exception, and handle it in our catch block. <br><br>
+        In the catch block, we catch the error and do something about it.  <br>
+        The catch statement takes a parameter: in our example we use an int variable (myNum)
+        (because we are throwing an exception of int type in the try block (age)), 
+        to output the value of age. <br><br>
+        If you do not know the throw type used in the try block, you can use the "three dots" syntax (...) inside the catch block, which will handle any type of exception <br><br>
+
+      </p>
+      <br><br>
+
+      <button class="nextbutton"><a href="#">Previous</a></button>
+      <div style="float:right;"> Hello</div>
+        <button class="nextbutton1"><a href="#">Next Topic</a></button>
+  </div>
+</div>
+    <!-- End Columns -->
+  <script src="../../Files/js.js"></script>
+</body>
+</html>
