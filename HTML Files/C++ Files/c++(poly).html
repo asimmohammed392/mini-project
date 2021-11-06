@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../CSS Files/C++/c++(poly).css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Header -->
+  <section id="header" style="background-color:black">
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="#hero">
+            <h1><span>KSA</span> Learning</h1>
+          </a>
+        </div>
+        <div class="nav-list">
+          <div class="hamburger">
+            <div class="bar"></div>
+          </div>
+          <ul>
+            <li><a href="#hero" data-after="Home">Home</a></li>
+            <li><a href="#services" data-after="Courses">Courses</a></li>
+            <li><a href="#projects" data-after="Projects">Quiz</a></li>
+            <li><a href="#contact" data-after="Contact">Contact</a></li>
+            <li><a href="#contact" data-after="Login">Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Header -->
+
+  <!-- Columns -->
+  <div class="column">
+    <div class="column left">
+      <h1 class="headings">All Topics</h1>
+      <ul> 
+        <li><a href="#" class="v2"><p>Syntax</p></a></li>
+        <li><a href="#" class="v2"><p>Data Types</p></a></li>
+        <li><a href="#" class="v2"><p>Operators</p></a></li>
+        <li><a href="#" class="v2"><p>Conditionals</p></a></li>
+        <li><a href="#" class="v2"><p>Looping</p></a></li>
+        <li><a href="#" class="v2"><p>Arrays</p></a></li>
+        <li><a href="#" class="v2"><p>Pointers</p></a></li>
+        <li><a href="#" class="v2"><p>Functions</p></a></li>
+        <li><a href="#" class="v2"><p>Classes & Objects</p></a></li>
+        <li><a href="#" class="v2"><p>Constructor</p></a></li>
+        <li><a href="#" class="v2"><p>Inheritance</p></a></li>
+        <li><a href="#" class="v2"><p>Polymorphism</p></a></li>
+        <li><a href="#" class="v2"><p>Encapsulation</p></a></li>
+        <li><a href="#" class="v2"><p>Files & Exceptions</p></a></li>
+      </ul>
+    </div>
+    <div class="column middle">
+      <div class="vl"></div>
+    </div>
+      <div class="column right">
+      <h1 class="heading">Polymorphism</h1>
+      <br><br>
+      <p>Polymorphism means "many forms", and it occurs
+         when we have many classes that are related to each other by inheritance. <br><br>
+         Like we specified in the previous chapter; <br>
+         Inheritance lets us inherit attributes and methods from another class. <br>
+         Polymorphism uses those methods to perform different tasks. <br>
+         This allows us to perform a single action in different ways. <br><br>
+         For example, think of a base class called Animal that has a method called animalSound().  <br>
+         Derived classes of Animals could be Pigs, Cats, Dogs, Birds - <br>
+         And they also have their own implementation of an animal sound <br>
+         (the pig oinks, and the cat meows, etc.) <br><br>
+        Example:- <br>
+        <textarea name="ifc" id="ifc" cols="70" rows="20">
+            // Base class
+            class Animal {
+              public:
+                void animalSound() {
+                cout << "The animal makes a sound \n" ;
+              }
+            };
+            
+            // Derived class
+            class Pig : public Animal {
+              public:
+                void animalSound() {
+                cout << "The pig says: wee wee \n" ;
+              }
+            };
+            
+            // Derived class
+            class Dog : public Animal {
+              public:
+                void animalSound() {
+                cout << "The dog says: bow wow \n" ;
+              }
+            };
+        </textarea> <br><br>
+        Now we can create Pig and Dog objects and override the animalSound() method <br><br>
+        <textarea name="ifc" id="ifc" cols="70" rows="30">
+            // Base class
+            class Animal {
+              public:
+                void animalSound() {
+                cout << "The animal makes a sound \n" ;
+              }
+            };
+            
+            // Derived class
+            class Pig : public Animal {
+              public:
+                void animalSound() {
+                cout << "The pig says: wee wee \n" ;
+               }
+            };
+            
+            // Derived class
+            class Dog : public Animal {
+              public:
+                void animalSound() {
+                cout << "The dog says: bow wow \n" ;
+              }
+            };
+            
+            int main() {
+              Animal myAnimal;
+              Pig myPig;
+              Dog myDog;
+            
+              myAnimal.animalSound();
+              myPig.animalSound();
+              myDog.animalSound();
+              return 0;
+            }
+        </textarea> <br><br>
+        Why And When To Use "Polymorphism? <br>
+        Same as Inheritance -
+        - It is useful for code reusability: reuse attributes and methods
+        of an existing class when you create a new class. <br><br>
+      </p>
+      <br><br>
+        <button class="nextbutton"><a href="#">Next Topic</a></button>
+  </div>
+</div>
+    <!-- End Columns -->
+  <script src="../../Files/js.js"></script>
+</body>
+</html>

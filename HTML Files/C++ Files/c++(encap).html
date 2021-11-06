@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../CSS Files/C++/c++(encapsulation).css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Header -->
+  <section id="header" style="background-color:black">
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="#hero">
+            <h1><span>KSA</span> Learning</h1>
+          </a>
+        </div>
+        <div class="nav-list">
+          <div class="hamburger">
+            <div class="bar"></div>
+          </div>
+          <ul>
+            <li><a href="#hero" data-after="Home">Home</a></li>
+            <li><a href="#services" data-after="Courses">Courses</a></li>
+            <li><a href="#projects" data-after="Projects">Quiz</a></li>
+            <li><a href="#contact" data-after="Contact">Contact</a></li>
+            <li><a href="#contact" data-after="Login">Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Header -->
+
+  <!-- Columns -->
+  <div class="column">
+    <div class="column left">
+      <h1 class="headings">All Topics</h1>
+      <ul> 
+        <li><a href="#" class="v2"><p>Syntax</p></a></li>
+        <li><a href="#" class="v2"><p>Data Types</p></a></li>
+        <li><a href="#" class="v2"><p>Operators</p></a></li>
+        <li><a href="#" class="v2"><p>Conditionals</p></a></li>
+        <li><a href="#" class="v2"><p>Looping</p></a></li>
+        <li><a href="#" class="v2"><p>Arrays</p></a></li>
+        <li><a href="#" class="v2"><p>Pointers</p></a></li>
+        <li><a href="#" class="v2"><p>Functions</p></a></li>
+        <li><a href="#" class="v2"><p>Classes & Objects</p></a></li>
+        <li><a href="#" class="v2"><p>Constructor</p></a></li>
+        <li><a href="#" class="v2"><p>Inheritance</p></a></li>
+        <li><a href="#" class="v2"><p>Polymorphism</p></a></li>
+        <li><a href="#" class="v2"><p>Encapsulation</p></a></li>
+        <li><a href="#" class="v2"><p>Files & Exceptions</p></a></li>
+      </ul>
+    </div>
+    <div class="column middle">
+      <div class="vl"></div>
+    </div>
+      <div class="column right">
+      <h1 class="heading">Encapsulation</h1>
+      <br><br>
+      <p>Encapsulation is one of the feature of OOP. <br><br>
+        The meaning of Encapsulation, is to make sure that "sensitive" data is hidden from users. <br>
+        To achieve this, you must declare class variables/attributes as 'private' <br> 
+        (cannot be accessed from outside the class). <br>
+        If you want others to read or modify the value of a private member, 
+        you can provide public 'get' and 'set' methods.<br> <br>
+        Example:- <br>
+        <textarea name="ifc" id="ifc" cols="70" rows="20">
+            #include <iostream>
+                using namespace std;
+                
+                class Employee {
+                  private:
+                    // Private attribute
+                    int salary;
+                
+                  public:
+                    // Setter
+                    void setSalary(int s) {
+                      salary = s;
+                    }
+                    // Getter
+                    int getSalary() {
+                      return salary;
+                    }
+                };
+                
+                int main() {
+                  Employee myObj;
+                  myObj.setSalary(50000);
+                  cout << myObj.getSalary();
+                  return 0;
+                }
+        </textarea> <br><br>
+        Example explained <br><br>
+        The salary attribute is private, which have restricted access. <br>
+        The public setSalary() method takes a parameter (s) and assigns it to the salary attribute (salary = s). <br>
+        The public getSalary() method returns the value of the private salary attribute. <br>
+        Inside main(), we create an object of the Employee class. <br>
+        Now we can use the setSalary() method to set the value of the private attribute to 50000. <br>
+        Then we call the getSalary() method on the object to return the value. <br> <br>
+        Why Encapsulation? <br><br>
+        It is considered good practice to declare your class attributes as private  <br>(as often as you can).
+        Encapsulation ensures better control of your data, <br> because you (or others)
+        can change one part of the code without affecting other parts <br><br>
+
+        Increased security of data <br><br>
+
+      </p>
+      <br><br>
+        <button class="nextbutton"><a href="#">Next Topic</a></button>
+  </div>
+</div>
+    <!-- End Columns -->
+  <script src="../../Files/js.js"></script>
+</body>
+</html>

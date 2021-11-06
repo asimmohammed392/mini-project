@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../CSS Files/C++/c++(inherit).css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Header -->
+  <section id="header" style="background-color:black">
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="#hero">
+            <h1><span>KSA</span> Learning</h1>
+          </a>
+        </div>
+        <div class="nav-list">
+          <div class="hamburger">
+            <div class="bar"></div>
+          </div>
+          <ul>
+            <li><a href="#hero" data-after="Home">Home</a></li>
+            <li><a href="#services" data-after="Courses">Courses</a></li>
+            <li><a href="#projects" data-after="Projects">Quiz</a></li>
+            <li><a href="#contact" data-after="Contact">Contact</a></li>
+            <li><a href="#contact" data-after="Login">Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Header -->
+
+  <!-- Columns -->
+  <div class="column">
+    <div class="column left">
+      <h1 class="headings">All Topics</h1>
+      <ul> 
+        <li><a href="#" class="v2"><p>Syntax</p></a></li>
+        <li><a href="#" class="v2"><p>Data Types</p></a></li>
+        <li><a href="#" class="v2"><p>Operators</p></a></li>
+        <li><a href="#" class="v2"><p>Conditionals</p></a></li>
+        <li><a href="#" class="v2"><p>Looping</p></a></li>
+        <li><a href="#" class="v2"><p>Arrays</p></a></li>
+        <li><a href="#" class="v2"><p>Pointers</p></a></li>
+        <li><a href="#" class="v2"><p>Functions</p></a></li>
+        <li><a href="#" class="v2"><p>Classes & Objects</p></a></li>
+        <li><a href="#" class="v2"><p>Constructor</p></a></li>
+        <li><a href="#" class="v2"><p>Inheritance</p></a></li>
+        <li><a href="#" class="v2"><p>Polymorphism</p></a></li>
+        <li><a href="#" class="v2"><p>Encapsulation</p></a></li>
+        <li><a href="#" class="v2"><p>Files & Exceptions</p></a></li>
+      </ul>
+    </div>
+    <div class="column middle">
+      <div class="vl"></div>
+    </div>
+      <div class="column right">
+      <h1 class="heading">Inheritance</h1>
+      <br><br>
+      <p>One of the important features of OOP. <br>
+        In C++, it is possible to inherit attributes and methods from one class to another. <br><br>
+        We group the "inheritance concept" into two categories: <br>
+        derived class (child) - the class that inherits from another class <br>
+        base class (parent) - the class being inherited from <br><br>
+        To inherit from a class, use the : symbol. <br>
+        In the example below, the Car class (child) inherits the attributes and methods from the Vehicle class (parent)<br> <br>
+        Example:- <br>
+        <textarea name="ifc" id="ifc" cols="70" rows="20">
+            // Base class
+            class Vehicle {
+              public:
+                string brand = "Ford";
+                void honk() {
+                  cout << "Tuut, tuut! \n" ;
+                }
+            };
+            
+            // Derived class
+            class Car: public Vehicle {
+              public:
+                string model = "Mustang";
+            };
+            
+            int main() {
+              Car myCar;
+              myCar.honk();
+              cout << myCar.brand + " " + myCar.model;
+              return 0;
+            }
+        </textarea> <br><br>
+        Why And When To Use "Inheritance"? <br>
+        - It is useful for code reusability: reuse attributes and methods
+        of an existing class when you create a new class. <br><br>
+        There are 3 types of Inheritances supported by C++ <br><br>
+        Single Level (above example) <br>
+        Multi Level <br>
+        <textarea name="ifc" id="ifc" cols="70" rows="20">
+            // Base class (parent)
+            class MyClass {
+              public:
+                void myFunction() {
+                  cout << "Some content in parent class." ;
+                }
+            };
+            
+            // Derived class (child)
+            class MyChild: public MyClass {
+            };
+            
+            // Derived class (grandchild)
+            class MyGrandChild: public MyChild {
+            };
+            
+            int main() {
+              MyGrandChild myObj;
+              myObj.myFunction();
+              return 0;
+            }
+        </textarea> <br><br>
+        Multiple <br>
+        <textarea name="ifc" id="ifc" cols="70" rows="20">
+            // Base class
+            class MyClass {
+              public:
+                void myFunction() {
+                  cout << "Some content in parent class." ;
+                }
+            };
+            
+            // Another base class
+            class MyOtherClass {
+              public:
+                void myOtherFunction() {
+                  cout << "Some content in another class." ;
+                }
+            };
+            
+            // Derived class
+            class MyChildClass: public MyClass, public MyOtherClass {
+            };
+            
+            int main() {
+              MyChildClass myObj;
+              myObj.myFunction();
+              myObj.myOtherFunction();
+              return 0;
+            }
+        </textarea> <br><br>
+
+      </p>
+      <br><br>
+        <button class="nextbutton"><a href="#">Next Topic</a></button>
+  </div>
+</div>
+    <!-- End Columns -->
+  <script src="../../Files/js.js"></script>
+</body>
+</html>
