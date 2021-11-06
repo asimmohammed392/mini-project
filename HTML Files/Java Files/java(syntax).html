@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../CSS Files/Java/java(syntax).css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Header -->
+  <section id="header" style="background-color:black">
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="#hero">
+            <h1><span>KSA</span> Learning</h1>
+          </a>
+        </div>
+        <div class="nav-list">
+          <div class="hamburger">
+            <div class="bar"></div>
+          </div>
+          <ul>
+            <li><a href="#hero" data-after="Home">Home</a></li>
+            <li><a href="#services" data-after="Courses">Courses</a></li>
+            <li><a href="#projects" data-after="Projects">Quiz</a></li>
+            <li><a href="#contact" data-after="Contact">Contact</a></li>
+            <li><a href="#contact" data-after="Login">Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Header -->
+
+  <!-- Columns -->
+  <div class="column">
+    <div class="column left">
+      <h1 class="headings">All Topics</h1>
+      <ul> 
+        <li><a href="#" class="v2"><p>Syntax</p></a></li>
+        <li><a href="#" class="v2"><p>Data Types</p></a></li>
+        <li><a href="#" class="v2"><p>Operators</p></a></li>
+        <li><a href="#" class="v2"><p>Conditionals</p></a></li>
+        <li><a href="#" class="v2"><p>Looping</p></a></li>
+        <li><a href="#" class="v2"><p>Arrays</p></a></li>
+        <li><a href="#" class="v2"><p>Methods</p></a></li>
+        <li><a href="#" class="v2"><p>Classes & Objects</p></a></li>
+        <li><a href="#" class="v2"><p>Constructor</p></a></li>
+        <li><a href="#" class="v2"><p>OOP's Concepts</p></a></li>
+        <li><a href="#" class="v2"><p>More from Java</p></a></li>
+        <li><a href="#" class="v2"><p>More from Java - 2</p></a></li>
+        <li><a href="#" class="v2"><p>More from Java - 3</p></a></li>
+      </ul>
+    </div>
+    <div class="column middle">
+      <div class="vl"></div>
+    </div>
+      <div class="column right">
+      <h1 class="heading">Syntax</h1>
+      <br><br>
+      <p>
+        Basic Java 'Hello World' Program:- <br>
+        <textarea name="" id="" cols="70" rows="6">
+            public class Main {
+                public static void main(String[] args) {
+                  System.out.println("Hello World");
+                }
+              }
+        </textarea> <br><br>
+        Every line of code that runs in Java must be inside a class. <br>
+        In our example, we named the class Main. <br>
+        Class name should always be same as filename. <br>
+        Reason for this is that, when Java is compiled it generates a class file (a byte code)
+        which has same name as of class. <br>
+        Now if filename and class name are different then it may lead to ambiguity.  <br><br>
+        The main() method is required and you will see it in every Java program <br>
+        Inside the main() method, we can use the println() method to print a line of text to the screen <br><br>
+        You don't have to understand the keywords before and after main. <br>
+        You will get to know them bit by bit while reading this tutorial. <br>
+        For now, just remember that every Java program has a class name which must match the filename,
+        and that every program must contain the main() method. <br><br>
+        The curly braces {} marks the beginning and the end of a block of code. <br>
+        Each code statement must end with a semicolon. <br> <br>
+        Java Comments <br><br>
+        Comments can be used to explain Java code, and to make it more readable. <br>
+        It can also be used to prevent execution when testing alternative code. <br>
+        Single-line comments start with two forward slashes (//). <br>
+        Multi-line comments start with /* and ends with */. <br>
+        Any text between // and the end of the line or /* and */ is ignored by Java (will not be executed). <br>
+
+      </p>
+      <br><br>
+      <button class="nextbutton"><a href="#">Previous</a></button>
+      <div style="float:right;"> Hello</div>
+      <button class="nextbutton1"><a href="#">Next Topic</a></button>
+  </div>
+</div>
+    <!-- End Columns -->
+  <script src="../../Files/js.js"></script>
+</body>
+</html>
