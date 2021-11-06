@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../CSS Files/C++/c++(const).css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Header -->
+  <section id="header" style="background-color:black">
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="#hero">
+            <h1><span>KSA</span> Learning</h1>
+          </a>
+        </div>
+        <div class="nav-list">
+          <div class="hamburger">
+            <div class="bar"></div>
+          </div>
+          <ul>
+            <li><a href="#hero" data-after="Home">Home</a></li>
+            <li><a href="#services" data-after="Courses">Courses</a></li>
+            <li><a href="#projects" data-after="Projects">Quiz</a></li>
+            <li><a href="#contact" data-after="Contact">Contact</a></li>
+            <li><a href="#contact" data-after="Login">Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Header -->
+
+  <!-- Columns -->
+  <div class="column">
+    <div class="column left">
+      <h1 class="headings">All Topics</h1>
+      <ul> 
+        <li><a href="#" class="v2"><p>Syntax</p></a></li>
+        <li><a href="#" class="v2"><p>Data Types</p></a></li>
+        <li><a href="#" class="v2"><p>Operators</p></a></li>
+        <li><a href="#" class="v2"><p>Conditionals</p></a></li>
+        <li><a href="#" class="v2"><p>Looping</p></a></li>
+        <li><a href="#" class="v2"><p>Arrays</p></a></li>
+        <li><a href="#" class="v2"><p>Pointers</p></a></li>
+        <li><a href="#" class="v2"><p>Functions</p></a></li>
+        <li><a href="#" class="v2"><p>Classes & Objects</p></a></li>
+        <li><a href="#" class="v2"><p>Constructor</p></a></li>
+        <li><a href="#" class="v2"><p>Inheritance</p></a></li>
+        <li><a href="#" class="v2"><p>Polymorphism</p></a></li>
+        <li><a href="#" class="v2"><p>Encapsulation</p></a></li>
+        <li><a href="#" class="v2"><p>Files & Exceptions</p></a></li>
+      </ul>
+    </div>
+    <div class="column middle">
+      <div class="vl"></div>
+    </div>
+      <div class="column right">
+      <h1 class="heading">Constructors</h1>
+      <br><br>
+      <p>A constructor in C++ is a special method
+        that is automatically called when an object of a class is created. <br>
+        The constructor has the same name as the class, it is always public, and it does not have any return value. <br>
+        To create a constructor, use the same name as the class, <br> followed by parentheses () <br>
+        <textarea name="ifc" id="ifc" cols="100" rows="10">
+            class MyClass {     // The class
+                public:           // Access specifier
+                  MyClass() {     // Constructor
+                    cout << "Hello World!";
+                  }
+              };
+              
+              int main() {
+                MyClass myObj; // Create an object of MyClass (this will call the constructor)
+                return 0;
+              }
+        </textarea> <br><br>
+        Parameters in Constructors:- <br>
+        Constructors can also take parameters (just like regular functions),
+        which can be useful for setting initial values for attributes. <br> <br>
+        The following class have brand, model and year attributes, and a constructor with different parameters. <br>
+        Inside the constructor we set the attributes equal to the constructor parameters (brand=x, etc). <br>
+        When we call the constructor (by creating an object of the class), we pass parameters to the constructor, <br>
+        which will set the value of the corresponding attributes to the same <br><br>
+        <textarea name="ifc" id="ifc" cols="100" rows="10">
+            class Car {        // The class
+                public:          // Access specifier
+                  string brand;  // Attribute
+                  string model;  // Attribute
+                  int year;      // Attribute
+                  Car(string x, string y, int z) { // Constructor with parameters
+                    brand = x;
+                    model = y;
+                    year = z;
+                  }
+              };
+              
+              int main() {
+                // Create Car objects and call the constructor with different values
+                Car carObj1("BMW", "X5", 1999);
+                Car carObj2("Ford", "Mustang", 1969);
+              
+                // Print values
+                cout << carObj1.brand << " " << carObj1.model << " " << carObj1.year << "\n";
+                cout << carObj2.brand << " " << carObj2.model << " " << carObj2.year << "\n";
+                return 0;
+              }
+        </textarea>
+        <br> <br>
+        Just like functions, constructors can also be defined outside the class. <br>
+        First, declare the constructor inside the class, <br>
+        and then define it outside of the class by specifying the name of the class, <br>
+        followed by the scope resolution :: operator, <br>
+        followed by the name of the constructor (which is the same as the class) <br> <br>
+        <textarea name="ifc" id="ifc" cols="100" rows="15">
+            class Car {        // The class
+                public:          // Access specifier
+                  string brand;  // Attribute
+                  string model;  // Attribute
+                  int year;      // Attribute
+                  Car(string x, string y, int z); // Constructor declaration
+              };
+              
+              // Constructor definition outside the class
+              Car::Car(string x, string y, int z) {
+                brand = x;
+                model = y;
+                year = z;
+              }
+              
+              int main() {
+                // Create Car objects and call the constructor with different values
+                Car carObj1("BMW", "X5", 1999);
+                Car carObj2("Ford", "Mustang", 1969);
+              
+                // Print values
+                cout << carObj1.brand << " " << carObj1.model << " " << carObj1.year << "\n";
+                cout << carObj2.brand << " " << carObj2.model << " " << carObj2.year << "\n";
+                return 0;
+              }
+              
+        </textarea> <br><br>
+        We are now familiar with the 'public' keyword <br>
+        The public keyword is an access specifier. Access specifiers define how the members <br>
+        (attributes and methods) of a class can be accessed. <br>
+        In the example above, the members are public - <br>
+        which means that they can be accessed and modified from outside the code. <br>
+        However, what if we want members to be private and hidden from the outside world? <br>
+        In C++, there are three access specifiers: <br>
+        public - members are accessible from outside the class <br>
+        private - members cannot be accessed (or viewed) from outside the class <br>
+        protected - members cannot be accessed from outside the class, however, <br>
+        they can be accessed in inherited classes. You will learn more about Inheritance later.<br> <br>
+        <textarea name="ifc" id="ifc" cols="100" rows="10">
+            class MyClass {
+                public:    // Public access specifier
+                  int x;   // Public attribute
+                private:   // Private access specifier
+                  int y;   // Private attribute
+              };
+              
+              int main() {
+                MyClass myObj;
+                myObj.x = 25;  // Allowed (public)
+                myObj.y = 50;  // Not allowed (private)
+                return 0;
+              }
+              //When we access y it shows :- error: y is private
+        </textarea> <br><br>
+        By default, all members of a class are private if you don't specify an access specifier<br><br>
+      </p>
+      <br><br>
+        <button class="nextbutton"><a href="#">Next Topic</a></button>
+  </div>
+</div>
+    <!-- End Columns -->
+  <script src="../../Files/js.js"></script>
+</body>
+</html>

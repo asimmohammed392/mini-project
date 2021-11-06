@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../CSS Files/C++/c++(class).css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Header -->
+  <section id="header" style="background-color:black">
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="#hero">
+            <h1><span>KSA</span> Learning</h1>
+          </a>
+        </div>
+        <div class="nav-list">
+          <div class="hamburger">
+            <div class="bar"></div>
+          </div>
+          <ul>
+            <li><a href="#hero" data-after="Home">Home</a></li>
+            <li><a href="#services" data-after="Courses">Courses</a></li>
+            <li><a href="#projects" data-after="Projects">Quiz</a></li>
+            <li><a href="#contact" data-after="Contact">Contact</a></li>
+            <li><a href="#contact" data-after="Login">Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Header -->
+
+  <!-- Columns -->
+  <div class="column">
+    <div class="column left">
+      <h1 class="headings">All Topics</h1>
+      <ul> 
+        <li><a href="#" class="v2"><p>Syntax</p></a></li>
+        <li><a href="#" class="v2"><p>Data Types</p></a></li>
+        <li><a href="#" class="v2"><p>Operators</p></a></li>
+        <li><a href="#" class="v2"><p>Conditionals</p></a></li>
+        <li><a href="#" class="v2"><p>Looping</p></a></li>
+        <li><a href="#" class="v2"><p>Arrays</p></a></li>
+        <li><a href="#" class="v2"><p>Pointers</p></a></li>
+        <li><a href="#" class="v2"><p>Functions</p></a></li>
+        <li><a href="#" class="v2"><p>Classes & Objects</p></a></li>
+        <li><a href="#" class="v2"><p>Constructor</p></a></li>
+        <li><a href="#" class="v2"><p>Inheritance</p></a></li>
+        <li><a href="#" class="v2"><p>Polymorphism</p></a></li>
+        <li><a href="#" class="v2"><p>Encapsulation</p></a></li>
+        <li><a href="#" class="v2"><p>Files & Exceptions</p></a></li>
+      </ul>
+    </div>
+    <div class="column middle">
+      <div class="vl"></div>
+    </div>
+      <div class="column right">
+      <h1 class="heading">Classes and Objects</h1>
+      <br><br>
+      <p>Lets first understand what is OOP <br>
+        OOP stands for Object-Oriented Programming. <br>
+        Procedural programming is about writing procedures or functions that perform operations on the data, 
+        while object-oriented programming is about creating objects that contain both data and functions. <br> <br>
+        Object-oriented programming has several advantages over procedural programming: <br>
+        OOP is faster and easier to execute <br>
+        OOP provides a clear structure for the programs <br>
+        OOP helps to keep the C++ code DRY "Don't Repeat Yourself",  <br>
+        and makes the code easier to maintain, modify and debug <br>
+        OOP makes it possible to create full reusable applications with less code and shorter development time <br>
+        <br>
+        What are Classes and Objects? <br>
+        Classes and objects are the two main aspects of object-oriented programming. <br>
+        Lets understand it with an example:- <br>
+        If 'fruits' or 'cars' is assumed to be a class then objects can be 'mango', 'banana', 'apple' etc. for fruits class and 'volvo', 'audi' etc. for cars class. 
+        <br> <br>
+        So, a class is a template for objects, and an object is an instance of a class. <br>
+        When the individual objects are created, they inherit all the variables and functions from the class. <br>
+        <br>
+        A class is a user-defined data type that we can use in our program, and it works as an object constructor, or a "blueprint" for creating objects. <br> <br>
+        Creating a class and an object to a class:- <br>
+        <textarea name="ifc" id="ifc" cols="100" rows="10">
+            class MyClass {       // The class
+                public:             // Access specifier
+                  int myNum;        // Attribute (int variable)
+                  string myString;  // Attribute (string variable)
+              };
+              
+              int main() {
+                MyClass myObj;  // Create an object of MyClass
+              
+                // Access attributes and set values
+                myObj.myNum = 15; 
+                myObj.myString = "Some text";
+              
+                // Print attribute values
+                cout << myObj.myNum << "\n";
+                cout << myObj.myString;
+                return 0;
+              }
+        </textarea>
+        <br> 
+        We can also create multiple objects for a single class. <br> <br>
+        Class Methods:- <br>
+        Methods are functions that belongs to the class. <br> <br>
+        There are two ways to define functions that belongs to a class: <br>
+        Inside class definition <br>
+        Outside class definition <br> <br>
+        In the following example, we define a function inside the class, and we name it "myMethod". <br>
+        Note: You access methods just like you access attributes; by creating an object of the class and using the dot syntax (.) <br>
+        <textarea name="ifc" id="ifc" cols="100" rows="10">
+            class MyClass {        // The class
+                public:              // Access specifier
+                  void myMethod() {  // Method/function defined inside the class
+                    cout << "Hello World!";
+                  }
+              };
+              
+              int main() {
+                MyClass myObj;     // Create an object of MyClass
+                myObj.myMethod();  // Call the method
+                return 0;
+              }
+        </textarea> <br><br>
+        To define a function outside the class definition, you have to declare it inside the class
+        and then define it outside of the class. This is done by specifiying the name of the class,
+        followed the scope resolution :: operator, followed by the name of the function: <br><br>
+        <textarea name="ifc" id="ifc" cols="100" rows="10">
+            class MyClass {        // The class
+                public:              // Access specifier
+                  void myMethod();   // Method/function declaration
+              };
+              
+              // Method/function definition outside the class
+              void MyClass::myMethod() {
+                cout << "Hello World!";
+              }
+              
+              int main() {
+                MyClass myObj;     // Create an object of MyClass
+                myObj.myMethod();  // Call the method
+                return 0;
+              }
+        </textarea> <br><br>
+        Similarly we can also pass parameters to these methods. <br><br>
+      </p>
+      <br><br>
+        <button class="nextbutton"><a href="#">Next Topic</a></button>
+  </div>
+</div>
+    <!-- End Columns -->
+  <script src="../../Files/js.js"></script>
+</body>
+</html>
