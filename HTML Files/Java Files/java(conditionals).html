@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../CSS Files/Java/java(conditionals).css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Header -->
+  <section id="header" style="background-color:black">
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="#hero">
+            <h1><span>KSA</span> Learning</h1>
+          </a>
+        </div>
+        <div class="nav-list">
+          <div class="hamburger">
+            <div class="bar"></div>
+          </div>
+          <ul>
+            <li><a href="#hero" data-after="Home">Home</a></li>
+            <li><a href="#services" data-after="Courses">Courses</a></li>
+            <li><a href="#projects" data-after="Projects">Quiz</a></li>
+            <li><a href="#contact" data-after="Contact">Contact</a></li>
+            <li><a href="#contact" data-after="Login">Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Header -->
+
+  <!-- Columns -->
+  <div class="column">
+    <div class="column left">
+      <h1 class="headings">All Topics</h1>
+      <ul> 
+        <li><a href="#" class="v2"><p>Syntax</p></a></li>
+        <li><a href="#" class="v2"><p>Data Types</p></a></li>
+        <li><a href="#" class="v2"><p>Operators</p></a></li>
+        <li><a href="#" class="v2"><p>Conditionals</p></a></li>
+        <li><a href="#" class="v2"><p>Looping</p></a></li>
+        <li><a href="#" class="v2"><p>Arrays</p></a></li>
+        <li><a href="#" class="v2"><p>Methods</p></a></li>
+        <li><a href="#" class="v2"><p>Classes & Objects</p></a></li>
+        <li><a href="#" class="v2"><p>Constructor</p></a></li>
+        <li><a href="#" class="v2"><p>OOP's Concepts</p></a></li>
+        <li><a href="#" class="v2"><p>More from Java</p></a></li>
+        <li><a href="#" class="v2"><p>More from Java - 2</p></a></li>
+        <li><a href="#" class="v2"><p>More from Java - 3</p></a></li>
+      </ul>
+    </div>
+    <div class="column middle">
+      <div class="vl"></div>
+    </div>
+      <div class="column right">
+      <h1 class="heading">Conditionals</h1>
+      <br><br>
+      <p>
+        All the conditional statements are same as of other languages. <br><br>
+        Java supports the usual logical conditions from mathematics: <br><br>
+        Less than: a < b <br>
+        Less than or equal to: a <= b <br>
+        Greater than: a > b <br>
+        Greater than or equal to: a >= b <br>
+        Equal to a == b <br>
+        Not Equal to: a != b <br><br>
+        You can use these conditions to perform different actions for different decisions. <br><br>
+        Java has the following conditional statements: <br><br>
+        Use if to specify a block of code to be executed, if a specified condition is true <br>
+        <textarea name="" id="" cols="60" rows="6">
+            int x = 20;
+            int y = 18;
+            if (x > y) {
+            System.out.println("x is greater than y");
+            }
+        </textarea> <br><br>
+
+        Use else to specify a block of code to be executed, if the same condition is false <br>
+        <textarea name="" id="" cols="60" rows="8">
+            int time = 20;
+            if (time < 18) {
+              System.out.println("Good day.");
+            } else {
+              System.out.println("Good evening.");
+            }
+            // Outputs "Good evening."
+        </textarea> <br><br>
+
+        Use else if to specify a new condition to test, if the first condition is false <br>
+        <textarea name="" id="" cols="60" rows="10">
+            int time = 22;
+            if (time < 10) {
+              System.out.println("Good morning.");
+            } else if (time < 20) {
+              System.out.println("Good day.");
+            } else {
+              System.out.println("Good evening.");
+            }
+            // Outputs "Good evening."
+        </textarea><br><br>
+        Use switch to specify many alternative blocks of code to be executed <br>
+        <textarea name="" id="" cols="50" rows="11">
+            switch(expression) {
+                case x:
+                  // code block
+                  break;
+                case y:
+                  // code block
+                  break;
+                default:
+                  // code block
+              }
+        </textarea><br><br>
+
+
+      </p>
+      <br><br>
+      <button class="nextbutton"><a href="#">Previous</a></button>
+      <div style="float:right;"> Hello</div>
+      <button class="nextbutton1"><a href="#">Next Topic</a></button>
+  </div>
+</div>
+    <!-- End Columns -->
+  <script src="../../Files/js.js"></script>
+</body>
+</html>
