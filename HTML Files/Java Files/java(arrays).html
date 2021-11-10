@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../CSS Files/Java/java(arrays).css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Header -->
+  <section id="header" style="background-color:black">
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="#hero">
+            <h1><span>KSA</span> Learning</h1>
+          </a>
+        </div>
+        <div class="nav-list">
+          <div class="hamburger">
+            <div class="bar"></div>
+          </div>
+          <ul>
+            <li><a href="#hero" data-after="Home">Home</a></li>
+            <li><a href="#services" data-after="Courses">Courses</a></li>
+            <li><a href="#projects" data-after="Projects">Quiz</a></li>
+            <li><a href="#contact" data-after="Contact">Contact</a></li>
+            <li><a href="#contact" data-after="Login">Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Header -->
+
+  <!-- Columns -->
+  <div class="column">
+    <div class="column left">
+      <h1 class="headings">All Topics</h1>
+      <ul> 
+        <li><a href="#" class="v2"><p>Syntax</p></a></li>
+        <li><a href="#" class="v2"><p>Data Types</p></a></li>
+        <li><a href="#" class="v2"><p>Operators</p></a></li>
+        <li><a href="#" class="v2"><p>Conditionals</p></a></li>
+        <li><a href="#" class="v2"><p>Looping</p></a></li>
+        <li><a href="#" class="v2"><p>Arrays</p></a></li>
+        <li><a href="#" class="v2"><p>Methods</p></a></li>
+        <li><a href="#" class="v2"><p>Classes & Objects</p></a></li>
+        <li><a href="#" class="v2"><p>Constructor</p></a></li>
+        <li><a href="#" class="v2"><p>OOP's Concepts</p></a></li>
+        <li><a href="#" class="v2"><p>More from Java</p></a></li>
+        <li><a href="#" class="v2"><p>More from Java - 2</p></a></li>
+        <li><a href="#" class="v2"><p>More from Java - 3</p></a></li>
+      </ul>
+    </div>
+    <div class="column middle">
+      <div class="vl"></div>
+    </div>
+      <div class="column right">
+      <h1 class="heading">Arrays</h1>
+      <br><br>
+      <p>
+        Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each value. <br>
+        To declare an array, define the variable type with square brackets <br><br>
+        String cars[];<br><br>
+        We have now declared a variable that holds an array of strings. <br> To insert values to it, 
+        we can use an array literal - place the values in a comma-separated list, inside curly braces <br><br>
+        String[] cars = {"Volvo", "BMW", "Ford", "Mazda"}; <br><br>
+        To create an array of integers, you could write <br><br>
+        int[] myNum = {10, 20, 30, 40}; <br><br>
+        Array indexes start with 0: [0] is the first element. [1] is the second element, etc. <br><br>
+        Accessing and Changing Elements of Array:- <br><br>
+        You access an array element by referring to the index number. <br>
+        To change the value of a specific element, refer to the index number <br><br>
+        cars[0] = "Opel"; <br><br>
+        Example:- <br>
+        <textarea name="" id="" cols="80" rows="6">
+            String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+            cars[0] = "Opel";
+            System.out.println(cars[0]);
+            // Now outputs Opel instead of Volvo
+        </textarea> <br><br>
+        
+        To find out how many elements an array has, use the length property as:<br><br>
+        Example:- <br>
+        <textarea name="" id="" cols="80" rows="4">
+            String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+            System.out.println(cars.length);
+            // Outputs 4
+        </textarea> <br><br>
+
+        Loop through an array:- <br><br>
+        You can loop through the array elements with the for loop, 
+        and use the length property to specify how many times the loop should run. <br>
+        The following example outputs all elements in the cars array <br><br>
+        Syntax:- <br><br>
+        <textarea name="" id="" cols="80" rows="5">
+            String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+            for (int i = 0; i < cars.length; i++) {
+              System.out.println(cars[i]);
+            }
+        </textarea><br><br>
+        There is also a "for-each" loop, which is used exclusively to loop through elements in an array <br><br>
+        Syntax:- <br>
+        <textarea name="" id="" cols="80" rows="4">
+            for (type variableName : arrayName) {
+                // code block to be executed
+              }
+        </textarea><br><br>
+        Example:- <br><br>
+        <textarea name="" id="" cols="80" rows="5">
+            String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+            for (String i : cars) {
+              System.out.println(i);
+            }
+        </textarea><br><br><br>
+        Multidimensional Arrays:- <br>
+        A multidimensional array is an array of arrays. <br><br>
+        int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} }; <br><br>
+        myNumbers is now an array with two arrays as its elements. <br>
+        To access the elements of the myNumbers array, specify two indexes: one for the array, and one for the element inside that array. <br> 
+        This example accesses the third element (2) in the second array (1) of myNumbers <br>
+        <textarea name="" id="" cols="80" rows="5">
+            int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };
+            int x = myNumbers[1][2];
+            System.out.println(x); // Outputs 7
+        </textarea><br><br>
+        We can also use a for loop inside another for loop to get the elements of a two-dimensional array (we still have to point to the two indexes) <br><br>
+        <textarea name="" id="" cols="80" rows="8">
+            public class Main {
+                public static void main(String[] args) {
+                  int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };
+                  for (int i = 0; i < myNumbers.length; ++i) {
+                    for(int j = 0; j < myNumbers[i].length; ++j) {
+                      System.out.println(myNumbers[i][j]);
+                    }
+                  }
+                }
+              }
+        </textarea><br><br>
+    </p>
+      <br><br>
+      <button class="nextbutton"><a href="#">Previous</a></button>
+      <div style="float:right;"> Hello</div>
+      <button class="nextbutton1"><a href="#">Next Topic</a></button>
+  </div>
+</div>
+    <!-- End Columns -->
+  <script src="../../Files/js.js"></script>
+</body>
+</html>
