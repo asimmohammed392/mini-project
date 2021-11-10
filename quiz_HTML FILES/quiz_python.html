@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS Files/quiz_style.css">
+    <title>Document</title>
+</head>
+<body>
+    <section id="header">
+        <div class="header container">
+          <div class="nav-bar">
+            <div class="brand">
+              <a href="#hero">
+                <h1><span>P</span>ort <span>F</span>olio</h1>
+              </a>
+            </div>
+            <div class="nav-list">
+              <div class="hamburger">
+                <div class="bar"></div>
+              </div>
+              <ul>
+                <li><a href="#hero" data-after="Home">Home</a></li>
+                <li><a href="#services" data-after="Services">Courses</a></li>
+                <li><a href="#projects" data-after="Projects">Quiz</a></li>
+                <li><a href="#contact" data-after="Contact">Contact</a></li>
+                <li><a href="#login" data-after="Login">Login</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    <div class="home-box custom-box">
+        <h3>Instruction:</h3>
+        <p>Total Number of questions: 10</p>
+        <button type="button" class="btn" onclick="startQuiz()">Start Quiz</button>
+    </div>
+    <div class="quiz-box custom-box hide">
+        <div class="question-number"></div>
+        <div class="question-text"> </div>
+        <div class="option-container">
+            
+        </div>
+        <div class="next-btn">
+            <button type="button" class="btn" onclick="next()">Next</button:button>
+        </div>
+        <div class="answers-indicator">
+            
+        </div>
+    </div>
+    <div class="result-box custom-box hide">
+        <h1>Quiz Result</h1>
+        <table>
+            <tr>
+                <td>Total Questions</td>
+                <td><span class="total-question"></span></td>
+            </tr>
+            <tr>
+                <td>Attempted</td>
+                <td><span class="total-attempt"></span></td>
+            </tr>
+            <tr>
+                <td>Correct</td>
+                <td><span class="total-correct"></span></td>
+            </tr>
+            <tr>
+                <td>Wrong</td>
+                <td><span class="total-wrong"></span></td>
+            </tr>
+            <tr>
+                <td>Percentage</td>
+                <td><span class="total-percent"></span></td>
+            </tr>
+            <tr>
+                <td>Total Score</td>
+                <td><span class="total-score"></span></td>
+            </tr>
+        </table>
+        <button type="button" class="btn" onclick="tryAgainQuiz()">Try Again</button>
+        <button type="button" class="btn" onclick="goToHome()">Go To Home</button>
+    </div>
+    <script src="../quiz_JS FILES/quiz_app_python.js"></script>
+    <script src="../quiz_JS FILES/quiz_python.js"></script>
+</body>
+</html>
