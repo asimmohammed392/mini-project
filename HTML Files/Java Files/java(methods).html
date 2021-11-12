@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../CSS Files/Java/java(methods).css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Header -->
+  <section id="header" style="background-color:black">
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="#hero">
+            <h1><span>KSA</span> Learning</h1>
+          </a>
+        </div>
+        <div class="nav-list">
+          <div class="hamburger">
+            <div class="bar"></div>
+          </div>
+          <ul>
+            <li><a href="#hero" data-after="Home">Home</a></li>
+            <li><a href="#services" data-after="Courses">Courses</a></li>
+            <li><a href="#projects" data-after="Projects">Quiz</a></li>
+            <li><a href="#contact" data-after="Contact">Contact</a></li>
+            <li><a href="#contact" data-after="Login">Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Header -->
+
+  <!-- Columns -->
+  <div class="column">
+    <div class="column left">
+      <h1 class="headings">All Topics</h1>
+      <ul> 
+        <li><a href="#" class="v2"><p>Syntax</p></a></li>
+        <li><a href="#" class="v2"><p>Data Types</p></a></li>
+        <li><a href="#" class="v2"><p>Operators</p></a></li>
+        <li><a href="#" class="v2"><p>Conditionals</p></a></li>
+        <li><a href="#" class="v2"><p>Looping</p></a></li>
+        <li><a href="#" class="v2"><p>Arrays</p></a></li>
+        <li><a href="#" class="v2"><p>Methods</p></a></li>
+        <li><a href="#" class="v2"><p>Classes & Objects</p></a></li>
+        <li><a href="#" class="v2"><p>Constructor</p></a></li>
+        <li><a href="#" class="v2"><p>OOP's Concepts</p></a></li>
+        <li><a href="#" class="v2"><p>More from Java</p></a></li>
+        <li><a href="#" class="v2"><p>More from Java - 2</p></a></li>
+        <li><a href="#" class="v2"><p>More from Java - 3</p></a></li>
+      </ul>
+    </div>
+    <div class="column middle">
+      <div class="vl"></div>
+    </div>
+      <div class="column right">
+      <h1 class="heading">Methods</h1>
+      <br><br>
+      <p>
+        A method is a block of code which only runs when it is called. <br>
+        You can pass data, known as parameters, into a method. <br>
+        Methods are used to perform certain actions, and they are also known as functions.  <br>
+        Why use methods? To reuse code: define the code once, and use it many times. <br><br>
+
+        Creating a method:- <br>
+        A method must be declared within a class. It is defined with the name of the method, followed by parentheses (). <br>
+        Java provides some pre-defined methods, such as System.out.println(), <br>
+        but you can also create your own methods to perform certain actions <br>
+        Calling a method:- <br>
+        To call a method in Java, write the method's name followed by two parentheses () and a semicolon; <br>
+        <textarea name="" id="" cols="80" rows="10">
+            public class Main {
+                static void myMethod() {
+                  System.out.println("I just got executed!");
+                }
+              
+                public static void main(String[] args) {
+                  myMethod();
+                }
+              }
+              
+              // Outputs "I just got executed!"
+        </textarea> <br><br>
+        Example Explained <br>
+        myMethod() is the name of the method <br>
+        static means that the method belongs to the Main class and not an object of the Main class. <br>
+        You will learn more about objects and how to access methods through objects later in this tutorial. <br>
+        void means that this method does not have a return value. <br><br>
+        A method can be called multiple times. <br> <br>
+
+        Parameters and Arguments:- <br><br>
+        Information can be passed to methods as parameter. Parameters act as variables inside the method. <br>
+        Parameters are specified after the method name, inside the parentheses.  <br>
+        You can add as many parameters as you want, just separate them with a comma. <br>
+        The following example has a method that takes a String called fname as parameter. <br>
+        When the method is called, we pass along a first name, which is used inside the method to print the full name <br>
+        <textarea name="" id="" cols="80" rows="15">
+            public class Main {
+                static void myMethod(String fname, int age) {
+                  System.out.println(fname + " is " + age);
+                }
+              
+                public static void main(String[] args) {
+                  myMethod("Liam", 5);
+                  myMethod("Jenny", 8);
+                  myMethod("Anja", 31);
+                }
+              }
+              
+              // Liam is 5
+              // Jenny is 8
+              // Anja is 31
+        </textarea> <br><br>
+        When a parameter is passed to the method, it is called an argument. <br>
+        So, from the example above: fname is a parameter, while Liam, Jenny and Anja are arguments. <br><br>
+        The void keyword, used in the examples above, indicates that the method should not return a value. <br>
+        If you want the method to return a value, you can use a primitive data type  <br>
+        (such as int, char, etc.) instead of void, and use the return keyword inside the method <br>
+        <textarea name="" id="" cols="80" rows="15">
+            public class Main {
+                static int myMethod(int x, int y) {
+                  return x + y;
+                }
+              
+                public static void main(String[] args) {
+                  int z = myMethod(5, 3);
+                  System.out.println(z);
+                }
+              }
+              // Outputs 8 (5 + 3)
+        </textarea> <br><br>
+      </p>
+      <br><br>
+      <button class="nextbutton"><a href="#">Previous</a></button>
+      <div style="float:right;"> Hello</div>
+      <button class="nextbutton1"><a href="#">Next Topic</a></button>
+  </div>
+</div>
+    <!-- End Columns -->
+  <script src="../../Files/js.js"></script>
+</body>
+</html>

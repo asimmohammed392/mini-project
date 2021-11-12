@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../CSS Files/Java/java(classes).css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Header -->
+  <section id="header" style="background-color:black">
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="#hero">
+            <h1><span>KSA</span> Learning</h1>
+          </a>
+        </div>
+        <div class="nav-list">
+          <div class="hamburger">
+            <div class="bar"></div>
+          </div>
+          <ul>
+            <li><a href="#hero" data-after="Home">Home</a></li>
+            <li><a href="#services" data-after="Courses">Courses</a></li>
+            <li><a href="#projects" data-after="Projects">Quiz</a></li>
+            <li><a href="#contact" data-after="Contact">Contact</a></li>
+            <li><a href="#contact" data-after="Login">Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Header -->
+
+  <!-- Columns -->
+  <div class="column">
+    <div class="column left">
+      <h1 class="headings">All Topics</h1>
+      <ul> 
+        <li><a href="#" class="v2"><p>Syntax</p></a></li>
+        <li><a href="#" class="v2"><p>Data Types</p></a></li>
+        <li><a href="#" class="v2"><p>Operators</p></a></li>
+        <li><a href="#" class="v2"><p>Conditionals</p></a></li>
+        <li><a href="#" class="v2"><p>Looping</p></a></li>
+        <li><a href="#" class="v2"><p>Arrays</p></a></li>
+        <li><a href="#" class="v2"><p>Methods</p></a></li>
+        <li><a href="#" class="v2"><p>Classes & Objects</p></a></li>
+        <li><a href="#" class="v2"><p>Constructor</p></a></li>
+        <li><a href="#" class="v2"><p>OOP's Concepts</p></a></li>
+        <li><a href="#" class="v2"><p>More from Java</p></a></li>
+        <li><a href="#" class="v2"><p>More from Java - 2</p></a></li>
+        <li><a href="#" class="v2"><p>More from Java - 3</p></a></li>
+      </ul>
+    </div>
+    <div class="column middle">
+      <div class="vl"></div>
+    </div>
+      <div class="column right">
+      <h1 class="heading">Classes and Objects</h1>
+      <br><br>
+      <p>
+        A class is a template for objects, and an object is an instance of a class. <br>
+        When the individual objects are created, they inherit all the variables and methods from the class.<br>
+        Classes and objects are the two main aspects of object-oriented programming. <br><br>
+
+        Create a Class <br>
+        To create a class, use the keyword class <br>
+
+       Create an Object <br>
+       In Java, an object is created from a class. <br>
+       We have already created the class named Main, so now we can use this to create objects. <br>
+       To create an object of Main, specify the class name, followed by the object name, and use the keyword new. <br>
+       <textarea name="" id="" cols="60" rows="10">
+        public class Main {
+            int x = 5;
+          
+            public static void main(String[] args) {
+              Main myObj = new Main();
+              System.out.println(myObj.x);
+            }
+          }
+        </textarea> <br><br>
+        We can create multiple objects for a single class <br>
+        We can also create objects in different class. <br>
+        Compile both of them and run the file in which object is created. <br><br>
+        Accessing Class Attributes:- <br>
+        
+        <textarea name="" id="" cols="80" rows="10">
+            public class Main {
+                int x = 10;
+              
+                public static void main(String[] args) {
+                  Main myObj = new Main();
+                  myObj.x = 25; // x is now 25
+                  System.out.println(myObj.x);
+                }
+              }
+        </textarea> <br><br>
+      </p>
+      <br><br>
+      <button class="nextbutton"><a href="#">Previous</a></button>
+      <div style="float:right;"> Hello</div>
+      <button class="nextbutton1"><a href="#">Next Topic</a></button>
+  </div>
+</div>
+    <!-- End Columns -->
+  <script src="../../Files/js.js"></script>
+</body>
+</html>
