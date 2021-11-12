@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../CSS Files/Java/java(constructor).css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Header -->
+  <section id="header" style="background-color:black">
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="#hero">
+            <h1><span>KSA</span> Learning</h1>
+          </a>
+        </div>
+        <div class="nav-list">
+          <div class="hamburger">
+            <div class="bar"></div>
+          </div>
+          <ul>
+            <li><a href="#hero" data-after="Home">Home</a></li>
+            <li><a href="#services" data-after="Courses">Courses</a></li>
+            <li><a href="#projects" data-after="Projects">Quiz</a></li>
+            <li><a href="#contact" data-after="Contact">Contact</a></li>
+            <li><a href="#contact" data-after="Login">Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Header -->
+
+  <!-- Columns -->
+  <div class="column">
+    <div class="column left">
+      <h1 class="headings">All Topics</h1>
+      <ul> 
+        <li><a href="#" class="v2"><p>Syntax</p></a></li>
+        <li><a href="#" class="v2"><p>Data Types</p></a></li>
+        <li><a href="#" class="v2"><p>Operators</p></a></li>
+        <li><a href="#" class="v2"><p>Conditionals</p></a></li>
+        <li><a href="#" class="v2"><p>Looping</p></a></li>
+        <li><a href="#" class="v2"><p>Arrays</p></a></li>
+        <li><a href="#" class="v2"><p>Methods</p></a></li>
+        <li><a href="#" class="v2"><p>Classes & Objects</p></a></li>
+        <li><a href="#" class="v2"><p>Constructor</p></a></li>
+        <li><a href="#" class="v2"><p>OOP's Concepts</p></a></li>
+        <li><a href="#" class="v2"><p>More from Java</p></a></li>
+        <li><a href="#" class="v2"><p>More from Java - 2</p></a></li>
+        <li><a href="#" class="v2"><p>More from Java - 3</p></a></li>
+      </ul>
+    </div>
+    <div class="column middle">
+      <div class="vl"></div>
+    </div>
+      <div class="column right">
+      <h1 class="heading">OOPS Concepts</h1>
+      <br><br>
+      <p>
+        Inheritance:- <br><br>
+        In Java, it is possible to inherit attributes and methods from one class to another. <br>
+        We group the "inheritance concept" into two categories: <br>
+        subclass (child) - the class that inherits from another class <br>
+        superclass (parent) - the class being inherited from <br>
+        To inherit from a class, use the extends keyword. <br>
+        In the example below, the Car class (subclass) inherits the attributes and methods from the Vehicle class (superclass) <br><br>
+        Example:- <br>
+        <textarea name="" id="" cols="80" rows="15">
+            class Vehicle {
+                protected String brand = "Ford";        // Vehicle attribute
+                public void honk() {                    // Vehicle method
+                  System.out.println("Tuut, tuut!");
+                }
+              }
+              
+              class Car extends Vehicle {
+                private String modelName = "Mustang";    // Car attribute
+                public static void main(String[] args) {
+              
+                  // Create a myCar object
+                  Car myCar = new Car();
+              
+                  // Call the honk() method (from the Vehicle class) on the myCar object
+                  myCar.honk();
+              
+                  // Display the value of the brand attribute (from the Vehicle class) and the value of the modelName from the Car class
+                  System.out.println(myCar.brand + " " + myCar.modelName);
+                }
+              }    
+        </textarea> <br><br>
+        Did you notice the protected modifier in Vehicle? <br>
+        We set the brand attribute in Vehicle to a protected access modifier.  <br>
+        If it was set to private, the Car class would not be able to access it. <br>
+        Why And When To Use "Inheritance"? <br>
+        - It is useful for code reusability: reuse attributes and methods of an existing class when you create a new class. <br>
+        If you don't want other classes to inherit from a class, use the final keyword <br><br>
+        <textarea name="" id="" cols="80" rows="15">
+            public class Main {
+                int x;
+                public Main(int y) {
+                  x = y;
+                }
+                public static void main(String[] args) {
+                  Main myObj = new Main(5);
+                  System.out.println(myObj.x);
+                }
+              }
+              // Outputs 5
+        </textarea> <br><br>
+        Encapsulation:- <br><br>
+        The meaning of Encapsulation, is to make sure that "sensitive" data is hidden from users.  <br>
+        To achieve this, you must: <br>
+        declare class variables/attributes as private <br>
+        provide public get and set methods to access and update the value of a private variable <br><br>
+        Get and Set <br>
+        You learned from the previous chapter that private variables can only be accessed within the same class (an outside class has no access to it). <br>
+        However, it is possible to access them if we provide public get and set methods. <br>
+        The get method returns the variable value, and the set method sets the value. <br>
+        <textarea name="" id="" cols="80" rows="15">
+            public class Person {
+                private String name; // private = restricted access
+                // Getter
+                public String getName() {
+                  return name;
+                }
+                // Setter
+                public void setName(String newName) {
+                  this.name = newName;
+                }
+              }
+        </textarea> <br><br>
+        Example explained <br>
+        The get method returns the value of the variable name. <br>
+        The set method takes a parameter (newName) and assigns it to the name variable. <br>
+        The this keyword is used to refer to the current object. <br><br>
+        Why Encapsulation? <br>
+        Better control of class attributes and methods <br>
+        Class attributes can be made read-only (if you only use the get method), or write-only (if you only use the set method) <br>
+        Flexible: the programmer can change one part of the code without affecting other parts <br>
+        Increased security of data <br><br>
+        Polymorphism:- <br><br>
+        Polymorphism means "many forms", and it occurs when we have many classes that are related to each other by inheritance. <br>
+        Like we specified in the previous chapter; Inheritance lets us inherit attributes and methods from another class. <br>
+        Polymorphism uses those methods to perform different tasks. <br>
+        This allows us to perform a single action in different ways. <br>
+        For example, think of a superclass called Animal that has a method called animalSound(). <br>
+        Subclasses of Animals could be Pigs, Cats, Dogs, Birds - And they also have their own implementation of an animal sound (the pig oinks, and the cat meows, etc.) <br><br>
+        <textarea name="" id="" cols="80" rows="20">
+            class Animal {
+                public void animalSound() {
+                  System.out.println("The animal makes a sound");
+                }
+              }
+              class Pig extends Animal {
+                public void animalSound() {
+                  System.out.println("The pig says: wee wee");
+                }
+              }
+              class Dog extends Animal {
+                public void animalSound() {
+                  System.out.println("The dog says: bow wow");
+                }
+              }
+              class Main {
+                public static void main(String[] args) {
+                  Animal myAnimal = new Animal();  // Create a Animal object
+                  Animal myPig = new Pig();  // Create a Pig object
+                  Animal myDog = new Dog();  // Create a Dog object
+                  myAnimal.animalSound();
+                  myPig.animalSound();
+                  myDog.animalSound();
+                }
+              }
+        </textarea><br><br>
+        Abstraction:- <br><br>
+        Data abstraction is the process of hiding certain details and showing only essential information to the user. <br>
+        Abstraction can be achieved with either abstract classes or interfaces (which you will learn more about in the next chapter). <br>
+        The abstract keyword is a non-access modifier, used for classes and methods: <br>
+        Abstract class: is a restricted class that cannot be used to create objects (to access it, it must be inherited from another class). <br>
+        Abstract method: can only be used in an abstract class, and it does not have a body. The body is provided by the subclass (inherited from). <br>
+        <textarea name="" id="" cols="80" rows="20">// Abstract class
+            abstract class Animal {
+              // Abstract method (does not have a body)
+              public abstract void animalSound();
+              // Regular method
+              public void sleep() {
+                System.out.println("Zzz");
+              }
+            }
+            
+            // Subclass (inherit from Animal)
+            class Pig extends Animal {
+              public void animalSound() {
+                // The body of animalSound() is provided here
+                System.out.println("The pig says: wee wee");
+              }
+            }
+            
+            class Main {
+              public static void main(String[] args) {
+                Pig myPig = new Pig(); // Create a Pig object
+                myPig.animalSound();
+                myPig.sleep();
+              }
+            }
+        </textarea>
+    </p>
+      <br><br>
+      <button class="nextbutton"><a href="#">Previous</a></button>
+      <div style="float:right;"> Hello</div>
+      <button class="nextbutton1"><a href="#">Next Topic</a></button>
+  </div>
+</div>
+    <!-- End Columns -->
+  <script src="../../Files/js.js"></script>
+</body>
+</html>
