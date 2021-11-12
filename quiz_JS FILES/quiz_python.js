@@ -116,64 +116,28 @@ const quiz=[
     answer:1
 },
 {
-    q:'What is the probability of getting a sum 5 from two throws of a dice?',
-    options:['1/9','1/8','1/7','1/6'],
-    answer:0
-},
-{
-    q:' A man draws two cards together from a pack of 52 cards. What is the probability of both the cards being kings?',
-    options:['1/111','1/121','1/221','1/321'],
-    answer:2
-},
-{
-    q:'What is the market price of a 9% share when a person gets 180 by investing Rs. 4000?',
-    options:['150','200','250','300'],
-    answer:1
-},
-{
-    q:'If 15 men can reap the crops of a field in 28 days, in how many days will 5 men reap it?',
-    options:['50 days','60 days','84 days','9.333 days'],
-    answer:2
-},
-{
-    q:'The true discount on a bill of Rs. 2700 is Rs. 200. What is the banker s discount?',
-    options:['Rs. 210','Rs. 212','Rs. 216','Rs. 218'],
-    answer:2
-},
-{
-    q:'If 30% of a certain number is 12.6, what is the number?',
-    options:['24','42','23','32'],
-    answer:1
-},
-{
-    q:'Complete the series 2, 5, 9, 19, 37.......',
-    options:['76','74','75','None of these'],
-    answer:2
-},
-{
-    q:'Find out the wrong number in the series: 125, 106, 88, 76, 65, 58, 53',
-    options:['125','106','88','76','65'],
-    answer:2
-},
-{
-    q:'What should come in place of the question mark (?) in the following number series:4, 5, 14, 51, ?',
-    options:['220','162','280','216'],
-    answer:0
-},
-{
-    q:'40 % of 280 =?',
-    options:['112','116','115','120'],
-    answer:0
-},
-{
-    q:' In what ways the letters of the word "RUMOUR" can be arranged?',
-    options:['180','150','200','230'],
+    q:'Which of the following statements is used to create an empty set in Python?',
+    options:['()','[]','{}','set()'],
     answer:3
 },
 {
-    q:'A box contains 2 red balls, 3 black balls, and 4 white balls. Find the number of ways by which 3 balls can be drawn from the box in which at least 1 black ball should be present.',
-    options:['64','48','32','96'],
-    answer:0
+    q:' What arithmetic operators cannot be used with strings in Python?',
+    options:['*','-','+','All of the mentioned'],
+    answer:1
 },
-
+{
+    q:'Which of the following statements is used to create an empty list in Python?',
+    options:['()','[]','{}','set()'],
+    answer:1
+},
+{
+    q:'What is the maximum possible length of an identifier in Python?',
+    options:['79 characters','31 characters','63 characters','none of the mentioned'],
+    answer:3
+},
+{
+    q:'The output of executing string.ascii_letters can also be achieved by:',
+    options:['string.ascii_lowercase_string.digits','string.ascii_lowercase+string.ascii_uppercase','string.letters','string.lowercase_string.uppercase'],
+    answer:1
+},
 ]
