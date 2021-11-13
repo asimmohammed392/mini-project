@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../CSS Files/Python/python(datatypes2).css">
-    <title>Introduction</title>
+    <title>More Datatypes</title>
 </head>
 <body>
     <!-- Header -->
@@ -57,43 +57,74 @@
       <div class="vl"></div>
     </div>
       <div class="column right">
-      <h1 class="heading">Introduction</h1>
+      <h1 class="heading">More Datatypes:-</h1>
       <br><br>
       <p>
-        Python is a popular programming language. <br>
-        Python can be used on a server to create web applications. <br><br>
-        It is used for: <br>
-        web development (server-side), <br>
-        software development, <br>
-        mathematics, <br>
-        system scripting.<br><br>
-        Why Use Python?<br>
-        Python works on different platforms (Windows, Mac, Linux, Raspberry Pi, etc). <br>
-        Python has a simple syntax similar to the English language. <br>
-        Python has syntax that allows developers to write programs with fewer lines than some other programming languages. <br>
-        Python runs on an interpreter system, meaning that code can be executed as soon as it is written. This means that prototyping can be very quick. <br>
-        Python can be treated in a procedural way, an object-oriented way or a functional way. <br><br>
+        Lists:- <br>
+        Lists are used to store multiple items in a single variable. <br>
+        Lists are created using square brackets <br>
+        List items are ordered, changeable, and allow duplicate values. <br>
+        List items are indexed, the first item has index [0], the second item has index [1] etc. <br>
+        Since lists are indexed, lists can have items with the same value <br>
+        The list is changeable, meaning that we can change, add, and remove items in a list after it has been created. <br><br>
+        List items are indexed and you can access them by referring to the index number <br>
+        Negative indexing means start from the end <br>
+        -1 refers to the last item, -2 refers to the second last item etc. <br>
+        You can specify a range of indexes by specifying where to start and where to end the range. <br>
+        When specifying a range, the return value will be a new list with the specified items. <br>
+        To change the value of a specific item, refer to the index number <br>
+        To insert a new list item, without replacing any of the existing values, we can use the insert() method. <br>
+        The insert() method inserts an item at the specified index<br><br>
 
-        Python Indentation <br>
-        Indentation refers to the spaces at the beginning of a code line. <br>
-        Where in other programming languages the indentation in code is for readability only, the indentation in Python is very important. <br>
-        Python uses indentation to indicate a block of code. <br>
-        Python will give you an error if you skip the indentation <br>
-        The number of spaces is up to you as a programmer, but it has to be at least one. <br>
-        You have to use the same number of spaces in the same block of code, otherwise Python will give you an error <br><br>
+        Looping through a list:- <br>
+        You can loop through the list items by using a for loop <br>
+        <textarea name="" id="" cols="80" rows="4">
+          thislist = ["apple", "banana", "cherry"]
+          for x in thislist:
+             print(x)
+        </textarea> <br><br>
+        You can also loop through the list items by referring to their index number. <br>
+        Use the range() and len() functions to create a suitable iterable. <br>
+        You can loop through the list items by using a while loop. <br> <br>
+        List Comprehensions:- <br>
+        List comprehension offers a shorter syntax when you want to create a new list based on the values of an existing list. <br>
+        <textarea name="" id="" cols="80" rows="4">
+          fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+          newlist = [x for x in fruits if "a" in x]
+          print(newlist)
+        </textarea><br><br>
+        Some list methods:- <br>
+        append(), insert(),pop(),index(),remove(),count(),reverese(),sort() <br><br><br>
+        Tuples:- <br>
+        Tuples are used to store multiple items in a single variable. <br>
+        A tuple is a collection which is ordered and unchangeable. <br>
+        Tuples are written with round brackets. <br>
+        Since they are unchangeable, there are not much operations that can be performed on tuples. <br><br>
+        The operations that are allowed are same as that of lists. <br>
+        Tuple Methods:- count(), index() <br><br>
 
-        Comments:- <br>
-        Comments can be used to explain Python code. <br>
-        Comments can be used to make the code more readable. <br>
-        Comments can be used to prevent execution when testing code.<br>
-        Comments starts with a #, and Python will ignore them <br>
-        Python does not really have a syntax for multi line comments. <br>
-        To add a multiline comment you could insert a # for each line  <br>
-        Or, not quite as intended, you can use a multiline string. <br>
-        Since Python will ignore string literals that are not assigned to a variable, you can add a multiline string (triple quotes) in your code, and place your comment inside it <br>
-        As long as the string is not assigned to a variable, Python will read the code, but then ignore it, and you have made a multiline comment. <br>
+        Sets:- <br>
+        Sets are used to store multiple items in a single variable. <br>
+        A set is a collection which is unordered, unchangeable*, and unindexed. <br>
+        Sets are written with curly brackets.
+        * set items are unchangeable, but you can remove items and add new items. <br>
+        Sets are unordered, so you cannot be sure in which order the items will appear. <br>
+        Set Methods:- <br>
+        Some mathematical operations that can be performed on sets(mathematics), can also be used on set datatype with proper name. <br><br> 
 
-    </p>
+        Dictionary:- <br>
+        Dictionaries are used to store data values in key:value pairs. <br>
+        A dictionary is a collection which is ordered*, changeable and does not allow duplicates. <br>
+        Dictionaries are written with curly brackets, and have keys and values <br>
+        Dictionary items are ordered, changeable, and does not allow duplicates. <br>
+        Dictionary items are presented in key:value pairs, and can be referred to by using the key name. <br>
+        Some default methods like, <br>
+        clear(), <br>
+        fromkeys(), <br>
+        items(), <br>
+        setdefault(), etc..<br> 
+        
+      </p>
       <br><br>
       <button class="nextbutton"><a href="../Python/python(datatypes).html">Previous</a></button>
       <div style="float:right;"> Hello</div>

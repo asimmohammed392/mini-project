@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../CSS Files/Python/python.css">
-    <title>Introduction</title>
+    <link rel="stylesheet" href="../../CSS Files/Python/python(datatypes).css">
+    <title>Datatypes - 1</title>
 </head>
 <body>
     <!-- Header -->
@@ -57,42 +57,86 @@
       <div class="vl"></div>
     </div>
       <div class="column right">
-      <h1 class="heading">Introduction</h1>
+      <h1 class="heading">Built-In Datatypes:-</h1>
       <br><br>
       <p>
-        Python is a popular programming language. <br>
-        Python can be used on a server to create web applications. <br><br>
-        It is used for: <br>
-        web development (server-side), <br>
-        software development, <br>
-        mathematics, <br>
-        system scripting.<br><br>
-        Why Use Python?<br>
-        Python works on different platforms (Windows, Mac, Linux, Raspberry Pi, etc). <br>
-        Python has a simple syntax similar to the English language. <br>
-        Python has syntax that allows developers to write programs with fewer lines than some other programming languages. <br>
-        Python runs on an interpreter system, meaning that code can be executed as soon as it is written. This means that prototyping can be very quick. <br>
-        Python can be treated in a procedural way, an object-oriented way or a functional way. <br><br>
+        In programming, data type is an important concept. <br>
+        Variables can store data of different types, and different types can do different things. <br> <br>
+        Python has the following data types built-in by default, in these categories: <br>
+        
+        Text Type:	str <br>
+        Numeric Types:	int, float, complex <br>
+        Sequence Types:	list, tuple, range <br>
+        Mapping Type:	dict <br>
+        Set Types:	set, frozenset <br>
+        Boolean Type:	bool <br>
+        Binary Types:	bytes, bytearray, memoryview <br><br>
+        In Python, the data type is set when you assign a value to a variable <br>
+        You can get the data type of any object by using the type() function <br>
+        If you want to specify the data type, you can use the following constructor functions <br><br>
 
-        Python Indentation <br>
-        Indentation refers to the spaces at the beginning of a code line. <br>
-        Where in other programming languages the indentation in code is for readability only, the indentation in Python is very important. <br>
-        Python uses indentation to indicate a block of code. <br>
-        Python will give you an error if you skip the indentation <br>
-        The number of spaces is up to you as a programmer, but it has to be at least one. <br>
-        You have to use the same number of spaces in the same block of code, otherwise Python will give you an error <br><br>
-
-        Comments:- <br>
-        Comments can be used to explain Python code. <br>
-        Comments can be used to make the code more readable. <br>
-        Comments can be used to prevent execution when testing code.<br>
-        Comments starts with a #, and Python will ignore them <br>
-        Python does not really have a syntax for multi line comments. <br>
-        To add a multiline comment you could insert a # for each line  <br>
-        Or, not quite as intended, you can use a multiline string. <br>
-        Since Python will ignore string literals that are not assigned to a variable, you can add a multiline string (triple quotes) in your code, and place your comment inside it <br>
-        As long as the string is not assigned to a variable, Python will read the code, but then ignore it, and you have made a multiline comment. <br>
-
+        There are three numeric types in Python: <br>
+        int - Int, or integer, is a whole number, positive or negative, without decimals, of unlimited length. <br>
+        float - Float, or "floating point number" is a number, positive or negative, containing one or more decimals. <br>
+        complex - Complex numbers are written with a "j" as the imaginary part <br>
+        Float can also be scientific numbers with an "e" to indicate the power of 10. <br><br>
+        You can convert from one type to another with the int(), float(), and complex() methods <br>
+        Python does not have a random() function to make a random number, 
+        but Python has a built-in module called random that can be used to make random numbers <br><br>
+        Python has a set of built-in methods that you can use on strings. <br>
+        <table class="table1">
+          <tr>
+            <th>Method</th>
+          </tr>
+          <tr>
+            <td>capitalise()</td>
+          </tr>
+          <tr>
+            <td>endswith()</td>
+          </tr>
+          <tr>
+            <td>count()</td>
+          </tr>
+          <tr>
+            <td>find()</td>
+          </tr>
+          <tr>
+            <td>index()</td>
+          </tr>
+          <tr>
+            <td>lstrip()</td>
+          </tr>
+          <tr>
+            <td>rstrip()</td>
+          </tr>
+          <tr>
+            <td>ljust()</td>
+          </tr>
+          <tr>
+            <td>rjust()</td>
+          </tr>
+          <tr>
+            <td>upper()</td>
+          </tr>
+          <tr>
+            <td>lower()</td>
+          </tr>
+          <tr>
+            <td>strip()</td>
+          </tr>
+          <tr>
+            <td>split()</td>
+          </tr>
+          <tr>
+            <td>strip()</td>
+          </tr>
+          <tr>
+            <td>join()</td>
+          </tr>
+          <tr>
+            <td>isalpha()</td>
+          </tr>
+        </table>
     </p>
       <br><br>
       <button class="nextbutton"><a href="../Python/python.html">Previous</a></button>
