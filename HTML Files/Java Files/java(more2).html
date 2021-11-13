@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../CSS Files/Java/java(more2).css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Header -->
+  <section id="header" style="background-color:black">
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="#hero">
+            <h1><span>KSA</span> Learning</h1>
+          </a>
+        </div>
+        <div class="nav-list">
+          <div class="hamburger">
+            <div class="bar"></div>
+          </div>
+          <ul>
+            <li><a href="#hero" data-after="Home">Home</a></li>
+            <li><a href="#services" data-after="Courses">Courses</a></li>
+            <li><a href="#projects" data-after="Projects">Quiz</a></li>
+            <li><a href="#contact" data-after="Contact">Contact</a></li>
+            <li><a href="#contact" data-after="Login">Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Header -->
+
+  <!-- Columns -->
+  <div class="column">
+    <div class="column left">
+      <h1 class="headings">All Topics</h1>
+      <ul> 
+        <li><a href="#" class="v2"><p>Syntax</p></a></li>
+        <li><a href="#" class="v2"><p>Data Types</p></a></li>
+        <li><a href="#" class="v2"><p>Operators</p></a></li>
+        <li><a href="#" class="v2"><p>Conditionals</p></a></li>
+        <li><a href="#" class="v2"><p>Looping</p></a></li>
+        <li><a href="#" class="v2"><p>Arrays</p></a></li>
+        <li><a href="#" class="v2"><p>Methods</p></a></li>
+        <li><a href="#" class="v2"><p>Classes & Objects</p></a></li>
+        <li><a href="#" class="v2"><p>Constructor</p></a></li>
+        <li><a href="#" class="v2"><p>OOP's Concepts</p></a></li>
+        <li><a href="#" class="v2"><p>More from Java</p></a></li>
+        <li><a href="#" class="v2"><p>More from Java - 2</p></a></li>
+        <li><a href="#" class="v2"><p>More from Java - 3</p></a></li>
+      </ul>
+    </div>
+    <div class="column middle">
+      <div class="vl"></div>
+    </div>
+      <div class="column right">
+      <h1 class="heading">More from Java - 2</h1>
+      <br><br>
+      <p>
+        Interface:- <br><br>
+        Another way to achieve abstraction in Java, is with interfaces. <br>
+        An interface is a completely "abstract class" that is used to group related methods with empty bodies <br>
+        To access the interface methods, the interface must be "implemented" (kinda like inherited) by another class with the implements keyword (instead of extends) <br>. 
+        The body of the interface method is provided by the "implement" class <br><br>
+        <textarea name="" id="" cols="80" rows="20">
+            // Interface
+            interface Animal {
+              public void animalSound(); // interface method (does not have a body)
+              public void sleep(); // interface method (does not have a body)
+            }
+            // Pig "implements" the Animal interface
+            class Pig implements Animal {
+              public void animalSound() {
+                // The body of animalSound() is provided here
+                System.out.println("The pig says: wee wee");
+              }
+              public void sleep() {
+                // The body of sleep() is provided here
+                System.out.println("Zzz");
+              }
+            }
+            class Main {
+              public static void main(String[] args) {
+                Pig myPig = new Pig();  // Create a Pig object
+                myPig.animalSound();
+                myPig.sleep();
+              }
+            }
+        </textarea> <br><br>
+        Like abstract classes, interfaces cannot be used to create objects (in the example above, it is not possible to create an "Animal" object in the MyMainClass) <br>
+        Interface methods do not have a body - the body is provided by the "implement" class <br>
+        On implementation of an interface, you must override all of its methods <br>
+        Interface methods are by default abstract and public <br>
+        Interface attributes are by default public, static and final <br>
+        An interface cannot contain a constructor (as it cannot be used to create objects) <br>
+        We can even implement multiple interfaces by separating them with comma. <br><br>
+
+        User Input:- <br><br>
+        The Scanner class is used to get user input, and it is found in the java.util package. <br>
+        To use the Scanner class, create an object of the class and use any of the available methods found in the Scanner class documentation. <br>
+        In our example, we will use the nextLine() method, which is used to read Strings <br><br>
+        <textarea name="" id="" cols="80" rows="10">
+            import java.util.Scanner;  // Import the Scanner class
+            class Main {
+              public static void main(String[] args) {
+                Scanner myObj = new Scanner(System.in);  // Create a Scanner object
+                System.out.println("Enter username");
+            
+                String userName = myObj.nextLine();  // Read user input
+                System.out.println("Username is: " + userName);  // Output user input
+              }
+            }
+        </textarea> <br><br>
+        In the example above, we used the nextLine() method, which is used to read Strings. <br>
+        To read other types, look at the table below <br>
+        <table class="table1">
+            <tr>
+                <th>Methods</th>
+                <th>Reads..</th>
+            </tr>
+            <tr>
+                <td>nextByte()</td>
+                <td>byte datatype</td>
+            </tr>
+            <tr>
+                <td>nextShort()</td>
+                <td>short datatype</td>
+            </tr>
+            <tr>
+                <td>nextLong()</td>
+                <td>long datatype</td>
+            </tr>
+            <tr>
+                <td>nextInt()</td>
+                <td>int datatype</td>
+            </tr>
+            <tr>
+                <td>nextFloat()</td>
+                <td>float datatype</td>
+            </tr>
+            <tr>
+                <td>nextDouble()</td>
+                <td>double datatype</td>
+            </tr>
+            <tr>
+                <td>nextBoolean()</td>
+                <td>boolean datatype</td>
+            </tr>
+            <tr>
+                <td>nextLine()</td>
+                <td>char(string) datatype</td>
+            </tr>
+        </table>
+      </p>
+      <br><br>
+      <button class="nextbutton"><a href="#">Previous</a></button>
+      <div style="float:right;"> Hello</div>
+      <button class="nextbutton1"><a href="#">Next Topic</a></button>
+  </div>
+</div>
+    <!-- End Columns -->
+  <script src="../../Files/js.js"></script>
+</body>
+</html>

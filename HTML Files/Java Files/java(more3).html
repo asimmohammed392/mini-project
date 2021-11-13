@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../CSS Files/Java/java(more3).css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Header -->
+  <section id="header" style="background-color:black">
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="#hero">
+            <h1><span>KSA</span> Learning</h1>
+          </a>
+        </div>
+        <div class="nav-list">
+          <div class="hamburger">
+            <div class="bar"></div>
+          </div>
+          <ul>
+            <li><a href="#hero" data-after="Home">Home</a></li>
+            <li><a href="#services" data-after="Courses">Courses</a></li>
+            <li><a href="#projects" data-after="Projects">Quiz</a></li>
+            <li><a href="#contact" data-after="Contact">Contact</a></li>
+            <li><a href="#contact" data-after="Login">Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Header -->
+
+  <!-- Columns -->
+  <div class="column">
+    <div class="column left">
+      <h1 class="headings">All Topics</h1>
+      <ul> 
+        <li><a href="#" class="v2"><p>Syntax</p></a></li>
+        <li><a href="#" class="v2"><p>Data Types</p></a></li>
+        <li><a href="#" class="v2"><p>Operators</p></a></li>
+        <li><a href="#" class="v2"><p>Conditionals</p></a></li>
+        <li><a href="#" class="v2"><p>Looping</p></a></li>
+        <li><a href="#" class="v2"><p>Arrays</p></a></li>
+        <li><a href="#" class="v2"><p>Methods</p></a></li>
+        <li><a href="#" class="v2"><p>Classes & Objects</p></a></li>
+        <li><a href="#" class="v2"><p>Constructor</p></a></li>
+        <li><a href="#" class="v2"><p>OOP's Concepts</p></a></li>
+        <li><a href="#" class="v2"><p>More from Java</p></a></li>
+        <li><a href="#" class="v2"><p>More from Java - 2</p></a></li>
+        <li><a href="#" class="v2"><p>More from Java - 3</p></a></li>
+      </ul>
+    </div>
+    <div class="column middle">
+      <div class="vl"></div>
+    </div>
+      <div class="column right">
+      <h1 class="heading">More from Java - 3</h1>
+      <br><br>
+      <p>
+        Array List:- <br><br>
+        The ArrayList class is a resizable array, which can be found in the java.util package. <br>
+        The difference between a built-in array and an ArrayList in Java, is that the size of an array cannot be modified (if you want to add or remove elements to/from an array, you have to create a new one). <br><br>
+        While elements can be added and removed from an ArrayList whenever you want. <br><br>
+        <textarea name="" id="" cols="80" rows="5">
+            import java.util.ArrayList; 
+            // import the ArrayList class
+            ArrayList<String> cars = new ArrayList<String>(); 
+                // Create an ArrayList object
+        </textarea> <br><br>
+        There are many methods to perform operations on ArrayList. Like <br><br> 
+        get() to access elements. <br>
+        add() to add elements. <br>
+        set() to change element. <br>
+        remove() to remove element. <br>
+        size() to get the length.
+        We can perform looping on arraylists same as other arrays. <br><br><br>
+
+       Enums:- <br><br>
+       An enum is a special "class" that represents a group of constants (unchangeable variables, like final variables). <br>
+       To create an enum, use the enum keyword (instead of class or interface), and separate the constants with a comma. <br>
+       Note that they should be in uppercase letters <br>
+        <textarea name="" id="" cols="50" rows="6">
+            enum Level {
+                LOW,
+                MEDIUM,
+                HIGH
+              }
+        </textarea> <br><br>
+        You can access enum constants with the dot syntax: <br>
+        Level myVar = Level.MEDIUM; <br><br>
+        We can add enums in classes, switch statements and can even loop through them. <br><br>
+        Difference between Enums and Classes <br>
+        An enum can, just like a class, have attributes and methods. The only difference is that enum constants are public, static and final (unchangeable - cannot be overridden). <br>
+        An enum cannot be used to create objects, and it cannot extend other classes (but it can implement interfaces). <br>
+        Why And When To Use Enums? <br>
+        Use enums when you have values that you know aren't going to change, like month days, days, colors, deck of cards, etc. <br>
+      </p>
+      <br><br>
+      <button class="nextbutton"><a href="#">Previous</a></button>
+      <div style="float:right;"> Hello</div>
+      <button class="nextbutton1"><a href="#">Next Topic</a></button>
+  </div>
+</div>
+    <!-- End Columns -->
+  <script src="../../Files/js.js"></script>
+</body>
+</html>
