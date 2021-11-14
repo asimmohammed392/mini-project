@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../CSS Files/DSA Files/dsa(link).css">
+    <title>Linked List</title>
+</head>
+<body>
+    <!-- Header -->
+  <section id="header" style="background-color:black">
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="#hero">
+            <h1><span>KSA</span> Learning</h1>
+          </a>
+        </div>
+        <div class="nav-list">
+          <div class="hamburger">
+            <div class="bar"></div>
+          </div>
+          <ul>
+            <li><a href="../../index.html" data-after="Home">Home</a></li>
+            <li><a href="../../index.html#services" data-after="Courses">Courses</a></li>
+            <li><a href="../../index.html#projects" data-after="Projects">Quiz</a></li>
+            <li><a href="../../index.html#contact" data-after="Contact">Contact</a></li>
+            <li><a href="#" data-after="Login">Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Header -->
+
+  <!-- Columns -->
+  <div class="column">
+    <div class="column left">
+      <h1 class="headings">All Topics</h1>
+      <ul>
+        <li><a href="../Python/python(datatypes).html" class="v2"><p>Introduction</p></a></li>
+        <li><a href="../Python/python(datatypes2).html" class="v2"><p>Linked List</p></a></li>
+        <li><a href="../Python/python(operators).html" class="v2"><p>Variants of LL</p></a></li>
+        <li><a href="../Python/python(conditionals).html" class="v2"><p>Stacks and Queues</p></a></li>
+        <li><a href="../Python/python(arrays).html" class="v2"><p>Trees</p></a></li>
+        <li><a href="../Python/python(functions).html" class="v2"><p>Graph</p></a></li>
+        <li><a href="../Python/python(module1).html" class="v2"><p>Other Data Structures</p></a></li>
+        <li><a href="../Python/python(module2).html" class="v2"><p>Algorithms</p></a></li>
+        <li><a href="../Python/python(class).html" class="v2"><p>Recursive - Divide and Conquer</p></a></li>
+        <li><a href="../Python/python(more).html" class="v2"><p>Greedy Algorithms</p></a></li>
+        <li><a href="../Python/python(matplot).html" class="v2"><p>Dynamic Programming</p></a></li>
+        <li><a href="../Python/python(matplot).html" class="v2"><p>Branch and Bound</p></a></li>
+        <li><a href="../Python/python(matplot).html" class="v2"><p>Backtracking</p></a></li>
+        <li><a href="../Python/python(matplot).html" class="v2"><p>Graph Algorithms</p></a></li>
+      </ul>
+    </div>
+    <div class="column middle">
+      <div class="vl"></div>
+    </div>
+      <div class="column right">
+      <h1 class="heading">Linked List</h1>
+      <br><br>
+      <p>
+        Before understanding the linked list concept, we first look at why there is a need for a linked list. <br><br>
+        There are two major drawbacks of using array: <br><br>
+        We cannot insert more than the specified number of elements because only that much spaces are allocated for the elements. <br><br>
+        In the case of an array, lots of wastage of memory can occur.  <br>
+        For example, if we declare an array of 50 size but we insert only 10 elements in an array. <br>
+        So, in this case, the memory space for other 40 elements will get wasted and cannot be used by another variable as this whole space is occupied by an array. <br><br><br>
+        In array, we are providing the fixed-size at the compile-time, due to which wastage of memory occurs. <br>
+        The solution to this problem is to use the linked list. <br><br><br>
+
+        Linked List:- <br><br>
+        A linked list can be defined as the collection of the nodes in which one node is connected to another node,
+        and node consists of two parts, i.e., one is the data part and the second one is the address part. <br><br>
+        <img src="../../Images/ll1.png" class="img1">
+        In the above figure, we can observe that each node contains the data and the address of the next node. <br>
+        The last node of the linked list contains the NULL value in the address part. <br><br>
+
+        How can we declare the Linked list?? <br><br>
+        the linked list contains two parts, which are of two different types, i.e., <br>
+         one is a simple variable, and the second one is a pointer variable. <br>
+        We can declare the linked list by using the user-defined data type known as structure. <br>
+        <textarea name="" id="" cols="50" rows="6">
+            struct node  
+            {  
+               int data;  
+               struct node *next;  
+            }  
+        </textarea><br><br>
+        Advantages of using a Linked list over Array <br><br>
+        Dynamic data structure: <br>
+        The size of the linked list is not fixed as it can vary according to our requirements. <br><br>
+        Insertion and Deletion: <br> 
+        Insertion and deletion in linked list are easier than array as the elements in an array are stored in a consecutive location. <br>
+        In contrast, in the case of a linked list, the elements are stored in a random location. <br>
+        The complexity for insertion and deletion of elements from the beginning is O(1) in the linked list, while in the case of an array, the complexity would be O(n). <br> 
+        If we want to insert or delete the element in an array, then we need to shift the elements for creating the space. <br>
+        On the other hand, in the linked list, we do not have to shift the elements. <br>
+        In the linked list, we just need to update the address of the pointer in the node. <br><br>
+        Memory efficient:- <br>
+        Its memory consumption is efficient as the size of the linked list can grow or shrink according to our requirements. <br><br>
+        Implementation:- <br>
+        Both the stacks and queues can be implemented using a linked list. <br><br><br>
+
+        Disadvantages of Linked list <br><br>
+        Memory usage:- <br>
+        The node in a linked list occupies more memory than array as each node occupies two types of variables, i.e.,
+        one is a simple variable, and another is a pointer variable that occupies 4 bytes in the memory. <br><br>
+        Traversal:- <br>
+        In a linked list, the traversal is not easy. If we want to access the element in a linked list, 
+        we cannot access the element randomly, but in the case of an array, 
+        we can randomly access the element by index. For example, if we want to access the 3rd node, 
+        then we need to traverse all the nodes before it. So, the time required to access a particular node is large. <br><br>
+        Reverse traversing <br>
+        In a linked list, backtracking or reverse traversing is difficult. 
+        In a doubly linked list, it is easier but requires more memory to store the back pointer.    <br><br><br> 
+        
+        Operations that can be performed on Linked List:- <br><br>
+        Traversing; <br>
+        Searching; <br>
+        Insertion - at the end, in the middle, at the front; <br>
+        Deletion - from the end, from the middle, from the front; <br>
+
+    </p>
+      <br><br>
+      <button class="nextbutton"><a href="../DSA Files/dsa(intro).htmls">Previous</a></button>
+      <div style="float:right;"> Hello</div>
+      <button class="nextbutton1"><a href="../Python/python(datatypes).html">Next Topic</a></button>
+  </div>
+</div>
+    <!-- End Columns -->
+    <section id="footer">
+      <div class="footer container">
+        <div class="brand">
+          <h1><span>KSA</span> Learning</h1>
+        </div>
+        <h2>One Solution for many Problems</h2>
+        <div class="social-icon">
+          <div class="social-item">
+            <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/facebook-new.png" /></a>
+          </div>
+          <div class="social-item">
+            <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/instagram-new.png" /></a>
+          </div>
+          <div class="social-item">
+            <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/twitter.png" /></a>
+          </div>
+          <div class="social-item">
+            <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/behance.png" /></a>
+          </div>
+        </div>
+        <p>Copyright © 2021 PortFolio. All rights reserved</p>
+      </div>
+    </section>
+  <script src="../../JS Files/js.js"></script>
+</body>
+</html>
