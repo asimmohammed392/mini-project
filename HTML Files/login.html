@@ -5,12 +5,12 @@
 			@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
 
 body {
-  background: black;
+  background-image: url(../Images/bg1.jpg);
   font-family: 'Open Sans', sans-serif;
 }
 
 .login {
-  width: 400px;
+  width: 600px;
   margin: 16px auto;
   font-size: 16px;
 }
@@ -28,11 +28,11 @@ body {
   margin-right: auto;
   margin-left: auto;
   border: 12px solid transparent;
-  border-bottom-color: #28d;
+  border-bottom-color:black;
 }
 
 .login-header {
-  background: #28d;
+  background :black;
   padding: 20px;
   font-size: 1.4em;
   font-weight: normal;
@@ -42,13 +42,13 @@ body {
 }
 
 .login-container {
-  background: #ebebeb;
+  background-color:dimgray;
   padding: 12px;
 }
 
 /* Every row inside .login-container is defined with p tags */
 .login p {
-  padding: 12px;
+  padding: 20px;
 }
 
 .login input {
@@ -90,6 +90,20 @@ body {
 /* Buttons' focus effect */
 .login input[type="submit"]:focus {
   border-color: #05a;
+}
+.cta {
+	display: inline-block;
+	padding: 10px 30px;
+	color: black;
+	background-color: transparent;
+	border: 2px solid crimson;
+	font-size: 1rem;
+	text-transform: uppercase;
+	letter-spacing: 0.1rem;
+	margin-top: 30px;
+	transition: 0.3s ease;
+  background-color: crimson;
+	transition-property: background-color, color;
 }
 		</style>
 	</head>
