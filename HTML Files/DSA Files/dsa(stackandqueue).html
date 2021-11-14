@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../CSS Files/DSA Files/dsa(stackandqueue).css">
+    <title>Stacks and Queues</title>
+</head>
+<body>
+    <!-- Header -->
+  <section id="header" style="background-color:black">
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="#hero">
+            <h1><span>KSA</span> Learning</h1>
+          </a>
+        </div>
+        <div class="nav-list">
+          <div class="hamburger">
+            <div class="bar"></div>
+          </div>
+          <ul>
+            <li><a href="../../index.html" data-after="Home">Home</a></li>
+            <li><a href="../../index.html#services" data-after="Courses">Courses</a></li>
+            <li><a href="../../index.html#projects" data-after="Projects">Quiz</a></li>
+            <li><a href="../../index.html#contact" data-after="Contact">Contact</a></li>
+            <li><a href="#" data-after="Login">Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Header -->
+
+  <!-- Columns -->
+  <div class="column">
+    <div class="column left">
+      <h1 class="headings">All Topics</h1>
+      <ul>
+        <li><a href="../Python/python(datatypes).html" class="v2"><p>Introduction</p></a></li>
+        <li><a href="../Python/python(datatypes2).html" class="v2"><p>Linked List</p></a></li>
+        <li><a href="../Python/python(operators).html" class="v2"><p>Variants of LL</p></a></li>
+        <li><a href="../Python/python(conditionals).html" class="v2"><p>Stacks and Queues</p></a></li>
+        <li><a href="../Python/python(arrays).html" class="v2"><p>Trees and Graph</p></a></li>
+        <li><a href="../Python/python(module1).html" class="v2"><p>Other Data Structures</p></a></li>
+        <li><a href="../Python/python(module2).html" class="v2"><p>Algorithms</p></a></li>
+        <li><a href="../Python/python(class).html" class="v2"><p>Recursive - Divide and Conquer</p></a></li>
+        <li><a href="../Python/python(more).html" class="v2"><p>Greedy Algorithms</p></a></li>
+        <li><a href="../Python/python(matplot).html" class="v2"><p>Dynamic Programming</p></a></li>
+        <li><a href="../Python/python(matplot).html" class="v2"><p>Branch and Bound</p></a></li>
+        <li><a href="../Python/python(matplot).html" class="v2"><p>Backtracking</p></a></li>
+        <li><a href="../Python/python(matplot).html" class="v2"><p>Graph Algorithms</p></a></li>
+      </ul>
+    </div>
+    <div class="column middle">
+      <div class="vl"></div>
+    </div>
+      <div class="column right">
+      <h1 class="heading">Stacks and Queues</h1>
+      <br><br>
+      <p>
+        Stack:- <br><br>
+        A Stack is a linear data structure that follows the LIFO (Last-In-First-Out) principle. <br> <br>
+        Stack has one end, it contains only one pointer top pointer pointing to the topmost element of the stack. <br><br>
+        Whenever an element is added in the stack, it is added on the top of the stack, 
+        and the element can be deleted only from the stack. <br><br>
+        In other words, a stack can be defined as a container in which insertion and deletion can be done from the one end known as the top of the stack. <br><br><br>
+    
+        Some key points related to stack <br><br>
+        It is called as stack because it behaves like a real-world stack, piles of books, etc. <br><br>
+        A Stack is an abstract data type with a pre-defined capacity, which means that it can store the elements of a limited size. <br><br>
+        It is a data structure that follows some order to insert and delete the elements, and that order can be LIFO or FILO. <br><br>
+    
+        Working of Stack <br><br>
+        Stack works on the LIFO pattern. <br>
+        <img src="../../Images/stack.png" class="img1"><br><br>
+        Standard Stack Operations <br><br>
+        push(): When we insert an element in a stack then the operation is known as a push. <br> If the stack is full then the overflow condition occurs. <br><br>
+        pop(): When we delete an element from the stack, the operation is known as a pop. <br> If the stack is empty means that no element exists in the stack, this state is known as an underflow state. <br><br>
+        isEmpty(): It determines whether the stack is empty or not. <br><br>
+        isFull(): It determines whether the stack is full or not.' <br><br>
+        peek(): It returns the element at the given position. <br><br>
+        count(): It returns the total number of elements available in a stack. <br><br>
+        change(): It changes the element at the given position. <br><br>
+        display(): It prints all the elements available in the stack. <br><br><br>
+
+        Applications of Stack <br><br>
+        Balancing of symbols: Stack is used for balancing a symbol. <br><br>
+        String reversal: Stack is also used for reversing a string. <br><br>
+        UNDO/REDO: It can also be used for performing UNDO/REDO operations. <br><br>
+        Recursion: The recursion means that the function is calling itself again. 
+        To maintain the previous states, 
+        the compiler creates a system stack in which all the previous records of the function are maintained. <br><br>
+        DFS(Depth First Search): This search is implemented on a Graph, and Graph uses the stack data structure. <br><br>
+        Backtracking: Suppose we have to create a path to solve a maze problem. <br>
+        If we are moving in a particular path, and we realize that we come on the wrong way. <br>
+        In order to come at the beginning of the path to create a new path, we have to use the stack data structure. <br><br>
+        Expression conversion: Stack can also be used for expression conversion. <br><br><br>
+
+        Implementing Stacks:- <br><br>
+        In array implementation, the stack is formed by using the array. <br>
+        All the operations regarding the stack are performed using arrays. <br><br>
+
+        Instead of using array, we can also use linked list to implement stack. <br>
+        Linked list allocates the memory dynamically. <br>
+        However, time complexity in both the scenario is same for all the operations i.e. push, pop and peek. <br><br>
+        In linked list implementation of stack, the nodes are maintained non-contiguously in the memory. <br>
+        Each node contains a pointer to its immediate successor node in the stack. <br>
+        Stack is said to be overflown if the space left in the memory heap is not enough to create a node. <br><br><br>
+
+        Queues:- <br><br>
+        A queue can be defined as an ordered list which enables insert operations to be performed at one end called REAR and delete operations to be performed at another end called FRONT. <br><br>
+        Queue is referred to be as First In First Out list. <br>
+        For example, people waiting in line for a rail ticket form a queue. <br><br>
+        <img src="../../Images/Queue.jpg" class="img1"><br><br>
+
+        Applications of Queues:- <br><br>
+        Queues are widely used as waiting lists for a single shared resource like printer, disk, CPU. <br><br>
+        Queues are used in asynchronous transfer of data (where data is not being transferred at the same rate between two processes) for eg. pipes, file IO, sockets. <br><br>
+        Queues are used as buffers in most of the applications like MP3 media player, CD player, etc. <br><br>
+        Queue are used to maintain the play list in media players in order to add and remove the songs from the play-list. <br><br>
+        Queues are used in operating systems for handling interrupts.   <br><br><br>
+
+        Operations on Queue <br><br>
+        Enqueue: The enqueue operation is used to insert the element at the rear end of the queue. It returns void. <br><br>
+        Dequeue: The dequeue operation performs the deletion from the front-end of the queue. It also returns the element which has been removed from the front-end. It returns an integer value. The dequeue operation can also be designed to void. <br><br>
+        Peek: This is the third operation that returns the element, which is pointed by the front pointer in the queue but does not delete it. <br><br>
+        Queue overflow (isfull): When the Queue is completely full, then it shows the overflow condition. <br><br>
+        Queue underflow (isempty): When the Queue is empty, i.e., no elements are in the Queue then it throws the underflow condition.        <br><br>
+
+        Types of Queue <br>
+        There are four types of Queues <br><br>
+        Linear Queue:- <br><br>
+        In Linear Queue, an insertion takes place from one end while the deletion occurs from another end. <br>
+        The end at which the insertion takes place is known as the rear end, and the end at which the deletion takes place is known as front end.  <br>
+        It strictly follows the FIFO rule. <br><br>
+
+        Circular Queue:- <br><br>
+        In Circular Queue, all the nodes are represented as circular. <br>
+        It is similar to the linear Queue except that the last element of the queue is connected to the first element. <br>
+        It is also known as Ring Buffer as all the ends are connected to another end. <br><br>
+
+        Priority Queue:- <br><br>
+        A priority queue is another special type of Queue data structure in which each element has some priority associated with it. <br>
+        Based on the priority of the element, the elements are arranged in a priority queue. <br>
+        If the elements occur with the same priority, then they are served according to the FIFO principle. <br><br>
+
+        Deque:- <br><br>
+        Both the Linear Queue and Deque are different as the linear queue follows the FIFO principle whereas, 
+        deque does not follow the FIFO principle. <br>
+        In Deque, the insertion and deletion can occur from both ends. <br><br>
+
+        Implementing Queue:- <br><br>
+        Array Representation:- <br><br>
+        We can easily represent queue by using linear arrays. <br>
+        There are two variables i.e. front and rear, that are implemented in the case of every queue. <br>
+        Front and rear variables point to the position from where insertions and deletions are performed in a queue. <br><br>
+        Linked List Representation:- <br><br>
+        The storage requirement of linked representation of a queue with n elements is o(n) while the time requirement for operations is o(1). <br>
+        In a linked queue, each node of the queue consists of two parts i.e. data part and the link part.  <br>
+        Each element of the queue points to its immediate next element in the memory. <br>
+        In the linked queue, there are two pointers maintained in the memory i.e. front pointer and rear pointer. <br>
+        The front pointer contains the address of the starting element of the queue while the rear pointer contains the address of the last element of the queue. <br><br>
+    </p>
+      <br><br>
+      <button class="nextbutton"><a href="../DSA Files/dsa(variant).html">Previous</a></button>
+      <div style="float:right;"> Hello</div>
+      <button class="nextbutton1"><a href="../DSA Files/dsa(treeandgraph).html">Next Topic</a></button>
+  </div>
+</div>
+    <!-- End Columns -->
+    <section id="footer">
+      <div class="footer container">
+        <div class="brand">
+          <h1><span>KSA</span> Learning</h1>
+        </div>
+        <h2>One Solution for many Problems</h2>
+        <div class="social-icon">
+          <div class="social-item">
+            <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/facebook-new.png" /></a>
+          </div>
+          <div class="social-item">
+            <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/instagram-new.png" /></a>
+          </div>
+          <div class="social-item">
+            <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/twitter.png" /></a>
+          </div>
+          <div class="social-item">
+            <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/behance.png" /></a>
+          </div>
+        </div>
+        <p>Copyright © 2021 PortFolio. All rights reserved</p>
+      </div>
+    </section>
+  <script src="../../JS Files/js.js"></script>
+</body>
+</html>

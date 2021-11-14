@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../CSS Files/DSA Files/dsa(treeandgraph).css">
+    <title>Trees and Graphs</title>
+</head>
+<body>
+    <!-- Header -->
+  <section id="header" style="background-color:black">
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="#hero">
+            <h1><span>KSA</span> Learning</h1>
+          </a>
+        </div>
+        <div class="nav-list">
+          <div class="hamburger">
+            <div class="bar"></div>
+          </div>
+          <ul>
+            <li><a href="../../index.html" data-after="Home">Home</a></li>
+            <li><a href="../../index.html#services" data-after="Courses">Courses</a></li>
+            <li><a href="../../index.html#projects" data-after="Projects">Quiz</a></li>
+            <li><a href="../../index.html#contact" data-after="Contact">Contact</a></li>
+            <li><a href="#" data-after="Login">Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Header -->
+
+  <!-- Columns -->
+  <div class="column">
+    <div class="column left">
+      <h1 class="headings">All Topics</h1>
+      <ul>
+        <li><a href="../Python/python(datatypes).html" class="v2"><p>Introduction</p></a></li>
+        <li><a href="../Python/python(datatypes2).html" class="v2"><p>Linked List</p></a></li>
+        <li><a href="../Python/python(operators).html" class="v2"><p>Variants of LL</p></a></li>
+        <li><a href="../Python/python(conditionals).html" class="v2"><p>Stacks and Queues</p></a></li>
+        <li><a href="../Python/python(arrays).html" class="v2"><p>Trees and Graph</p></a></li>
+        <li><a href="../Python/python(module1).html" class="v2"><p>Other Data Structures</p></a></li>
+        <li><a href="../Python/python(module2).html" class="v2"><p>Algorithms</p></a></li>
+        <li><a href="../Python/python(class).html" class="v2"><p>Recursive - Divide and Conquer</p></a></li>
+        <li><a href="../Python/python(more).html" class="v2"><p>Greedy Algorithms</p></a></li>
+        <li><a href="../Python/python(matplot).html" class="v2"><p>Dynamic Programming</p></a></li>
+        <li><a href="../Python/python(matplot).html" class="v2"><p>Branch and Bound</p></a></li>
+        <li><a href="../Python/python(matplot).html" class="v2"><p>Backtracking</p></a></li>
+        <li><a href="../Python/python(matplot).html" class="v2"><p>Graph Algorithms</p></a></li>
+      </ul>
+    </div>
+    <div class="column middle">
+      <div class="vl"></div>
+    </div>
+      <div class="column right">
+      <h1 class="heading">Trees and Graphs</h1>
+      <br><br>
+      <p>
+        Trees:- <br><br>
+        We read the linear data structures like an array, linked list, stack and queue in which all the elements are arranged in a sequential manner. <br>
+        The different data structures are used for different kinds of data. <br><br>
+        A tree is also one of the data structures that represent hierarchical data. <br>
+        Suppose we want to show the employees and their positions in the hierarchical form <br><br>
+        <img src="../../Images/tree.png" class="img1"><br><br>
+        Its structure is similar to the real tree, so it is named a Tree. <br>
+        In this structure, the root is at the top, and its branches are moving in a downward direction. <br>
+        Therefore, we can say that the Tree data structure is an efficient way of storing the data in a hierarchical way. <br><br>
+        Let's understand some key points of the Tree data structure. <br><br>
+        A tree data structure is defined as a collection of objects or entities known as nodes that are linked together to represent or simulate hierarchy. <br><br>
+        A tree data structure is a non-linear data structure because it does not store in a sequential manner. It is a hierarchical structure as elements in a Tree are arranged in multiple levels. <br><br>
+        In the Tree data structure, the topmost node is known as a root node. Each node contains some data, and data can be of any type. In the above tree structure, the node contains the name of the employee, so the type of data would be a string. <br><br>
+        Each node contains some data and the link or reference of other nodes that can be called children. <br><br><br>
+        
+        Some basic terms used in Tree data structure. <br><br>
+        Root: The root node is the topmost node in the tree hierarchy. In other words, the root node is the one that doesn't have any parent. In the above structure, node numbered 1 is the root node of the tree. If a node is directly linked to some other node, it would be called a parent-child relationship.  <br><br>
+        Child node: If the node is a descendant of any node, then the node is known as a child node. <br><br>
+        Parent: If the node contains any sub-node, then that node is said to be the parent of that sub-node. <br><br>
+        Sibling: The nodes that have the same parent are known as siblings. <br><br>
+        Leaf Node:- The node of the tree, which doesn't have any child node, is called a leaf node. A leaf node is the bottom-most node of the tree. There can be any number of leaf nodes present in a general tree. Leaf nodes can also be called external nodes. <br><br>
+        Internal nodes: A node has atleast one child node known as an internal <br><br>
+        Ancestor node:- An ancestor of a node is any predecessor node on a path from the root to that node. The root node doesn't have any ancestors. In the tree shown in the above image, nodes 1, 2, and 5 are the ancestors of node 10. <br><br>
+        Descendant: The immediate successor of the given node is known as a descendant of a node. In the above figure, 10 is the descendant of node 5. <br><br>
+
+        Implementation:- <br><br>
+        The tree data structure can be created by creating the nodes dynamically with the help of the pointers. <br><br>
+        <textarea name="" id="" cols="60" rows="7">
+            struct node  
+            {  
+              int data;  
+            struct node *left;  
+            struct node *right;   
+            }  
+        </textarea><br><br>
+        There are many types of trees:- <br><br>
+        General Trees <br>
+        Binary Trees <br>
+        Binary Search Trees <br>
+        AVL Tree <br>
+        Red Black Tree <br> <br><br>
+
+
+        Graphs:- <br><br>
+        A graph can be defined as group of vertices and edges that are used to connect these vertices. <br><br>
+        A graph can be seen as a cyclic tree, where the vertices (Nodes) maintain any complex relationship among them instead of having parent child relationship. <br><br>
+        
+        A graph can be directed or undirected. <br>
+        However, in an undirected graph, edges are not associated with the directions with them. <br><br>
+        An undirected graph is shown in the above figure since its edges are not attached with any of the directions. <br><br>
+        If an edge exists between vertex A and B then the vertices can be traversed from B to A as well as A to B. <br><br>
+
+        In a directed graph, edges form an ordered pair. <br>
+        Edges represent a specific path from some vertex A to another vertex B. <br>
+        Node A is called initial node while node B is called terminal node. <br><br>
+        <img src="../../Images/graph.jpeg" class="img1"><br><br>
+        Graph Terminology <br><br>
+        Path <br>
+        A path can be defined as the sequence of nodes that are followed in order to reach some terminal node V from the initial node U. <br><br>
+        Closed Path <br>
+        A path will be called as closed path if the initial node is same as terminal node. A path will be closed path if V0=VN. <br><br>      
+        Simple Path <br>
+        If all the nodes of the graph are distinct with an exception V0=VN, then such path P is called as closed simple path <br><br>
+        Cycle <br>
+        A cycle can be defined as the path which has no repeated edges or vertices except the first and last vertices. <br><br>
+        Connected Graph <br>
+        A connected graph is the one in which some path exists between every two vertices (u, v) in V. There are no isolated nodes in connected graph. <br><br>
+        Complete Graph <br>
+        A complete graph is the one in which every node is connected with all other nodes. A complete graph contain n(n-1)/2 edges where n is the number of nodes in the graph. <br><br>
+        Weighted Graph <br>
+        In a weighted graph, each edge is assigned with some data such as length or weight. The weight of an edge e can be given as w(e) which must be a positive (+) value indicating the cost of traversing the edge. <br><br>
+        Digraph <br>
+        A digraph is a directed graph in which each edge of the graph is associated with some direction and the traversing can be done only in the specified direction.   <br><br>
+        Loop <br>
+        An edge that is associated with the similar end points can be called as Loop. <br><br>
+        Adjacent Nodes <br>
+        If two nodes u and v are connected via an edge e, then the nodes u and v are called as neighbours or adjacent nodes. <br><br>
+        Degree of the Node <br>
+        A degree of a node is the number of edges that are connected with that node. A node with degree 0 is called as isolated node.    <br><br>     
+        
+        In sequential representation, we use adjacency matrix to store the mapping represented by vertices and edges. <br>
+        In adjacency matrix, the rows and columns are represented by the graph vertices. <br>
+        A graph having n vertices, will have a dimension n x n. <br><br>
+        An entry Mij in the adjacency matrix representation of an undirected graph G will be 1 if there exists an edge between Vi and Vj. <br><br>
+
+        Representation of weighted directed graph is different. <br>
+        Instead of filling the entry by 1, the Non- zero entries of the adjacency matrix are represented by the weight of respective edges. <br><br>
+
+        In the linked representation, an adjacency list is used to store the Graph into the computer's memory. <br><br>
+        An adjacency list is maintained for each node present in the graph which stores the node value and a pointer to the next adjacent node to the respective node. <br>
+        If all the adjacent nodes are traversed then store the NULL in the pointer field of last node of the list. <br>
+        The sum of the lengths of adjacency lists is equal to the twice of the number of edges present in an undirected graph. <br><br>
+
+        In a directed graph, the sum of lengths of all the adjacency lists is equal to the number of edges present in the graph. <br><br>
+        In the case of weighted directed graph, each node contains an extra field that is called the weight of the node. <br><br>
+    </p>
+      <br><br>
+      <button class="nextbutton"><a href="../DSA Files/dsa(stackandqueue).html">Previous</a></button>
+      <div style="float:right;"> Hello</div>
+      <button class="nextbutton1"><a href="../Python/python(datatypes).html">Next Topic</a></button>
+  </div>
+</div>
+    <!-- End Columns -->
+    <section id="footer">
+      <div class="footer container">
+        <div class="brand">
+          <h1><span>KSA</span> Learning</h1>
+        </div>
+        <h2>One Solution for many Problems</h2>
+        <div class="social-icon">
+          <div class="social-item">
+            <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/facebook-new.png" /></a>
+          </div>
+          <div class="social-item">
+            <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/instagram-new.png" /></a>
+          </div>
+          <div class="social-item">
+            <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/twitter.png" /></a>
+          </div>
+          <div class="social-item">
+            <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/behance.png" /></a>
+          </div>
+        </div>
+        <p>Copyright © 2021 PortFolio. All rights reserved</p>
+      </div>
+    </section>
+  <script src="../../JS Files/js.js"></script>
+</body>
+</html>
