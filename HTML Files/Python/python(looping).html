@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../CSS Files/Python/python(looping).css">
-    <title>Introduction</title>
+    <title>Looping</title>
 </head>
 <body>
     <!-- Header -->
@@ -35,7 +35,7 @@
   <!-- End Header -->
 
   <!-- Columns -->
-  <div class="column">
+  <div class="column"> 
     <div class="column left">
       <h1 class="headings">All Topics</h1>
       <ul>
@@ -57,42 +57,76 @@
       <div class="vl"></div>
     </div>
       <div class="column right">
-      <h1 class="heading">Introduction</h1>
+      <h1 class="heading">Looping</h1>
       <br><br>
       <p>
-        Python is a popular programming language. <br>
-        Python can be used on a server to create web applications. <br><br>
-        It is used for: <br>
-        web development (server-side), <br>
-        software development, <br>
-        mathematics, <br>
-        system scripting.<br><br>
-        Why Use Python?<br>
-        Python works on different platforms (Windows, Mac, Linux, Raspberry Pi, etc). <br>
-        Python has a simple syntax similar to the English language. <br>
-        Python has syntax that allows developers to write programs with fewer lines than some other programming languages. <br>
-        Python runs on an interpreter system, meaning that code can be executed as soon as it is written. This means that prototyping can be very quick. <br>
-        Python can be treated in a procedural way, an object-oriented way or a functional way. <br><br>
+        Looping is done in the same way as in other languages. <br><br>
+        Loops can execute a block of code as long as a specified condition is reached. <br>
+        Loops are handy because they save time, reduce errors, and they make code more readable. <br>
+        <br><br>
+        While Loop:- <br><br>
+        The while loop loops through a block of code as long as a specified condition is true <br>
+        Example:- <br>
+        <textarea name="" id="" cols="60" rows="6">
+          i = 1
+          while i < 6:
+            print(i)
+            i += 1
+        </textarea> <br><br>
+       Break Statement:- <br>
+       <textarea name="" id="" cols="50" rows="7">
+        i = 1
+        while i < 6:
+          print(i)
+          if i == 3:
+            break
+          i += 1
+       </textarea><br><br>
+       Break statement makes the control to exit the loop at i=3. <br><br>
+       There is no do-while supported by python. <br><br>
+       Continue Statement:- <br>
+       <textarea name="" id="" cols="60" rows="8">
+        i = 0
+        while i < 6:
+          i += 1
+          if i == 3:
+            continue
+          print(i)
+       </textarea><br><br>
+       Continues the next iteration when i=3; <br><br>
+       With the else statement we can run a block of code once when the condition no longer is true <br>
+       <textarea name="" id="" cols="60" rows="8">
+        i = 1
+        while i < 6:
+          print(i)
+          i += 1
+        else:
+          print("i is no longer less than 6")
+       </textarea><br><br>
 
-        Python Indentation <br>
-        Indentation refers to the spaces at the beginning of a code line. <br>
-        Where in other programming languages the indentation in code is for readability only, the indentation in Python is very important. <br>
-        Python uses indentation to indicate a block of code. <br>
-        Python will give you an error if you skip the indentation <br>
-        The number of spaces is up to you as a programmer, but it has to be at least one. <br>
-        You have to use the same number of spaces in the same block of code, otherwise Python will give you an error <br><br>
+        For Loop:- <br><br>
+        A for loop is used for iterating over a sequence 
+        (that is either a list, a tuple, a dictionary, a set, or a string). <br>
+        This is less like the for keyword in other programming languages, and works more like an iterator method as found in other object-orientated programming languages. <br><br>
 
-        Comments:- <br>
-        Comments can be used to explain Python code. <br>
-        Comments can be used to make the code more readable. <br>
-        Comments can be used to prevent execution when testing code.<br>
-        Comments starts with a #, and Python will ignore them <br>
-        Python does not really have a syntax for multi line comments. <br>
-        To add a multiline comment you could insert a # for each line  <br>
-        Or, not quite as intended, you can use a multiline string. <br>
-        Since Python will ignore string literals that are not assigned to a variable, you can add a multiline string (triple quotes) in your code, and place your comment inside it <br>
-        As long as the string is not assigned to a variable, Python will read the code, but then ignore it, and you have made a multiline comment. <br>
+        <textarea name="" id="" cols="80" rows="5">
+          fruits = ["apple", "banana", "cherry"]
+          for x in fruits:
+            print(x)
+        </textarea><br><br>
+        Similarly we can loop through a string or any other iterable. <br>
+        The for loop does not require an indexing variable to set beforehand. <br><br>
+        The range() Function <br>
+        To loop through a set of code a specified number of times, we can use the range() function. <br>
+        The range() function returns a sequence of numbers, starting from 0 by default, 
+        and increments by 1 (by default), and ends at a specified number. <br>
 
+        <textarea name="" id="" cols="50" rows="4">
+          for x in range(2, 30, 3):
+          print(x)
+        </textarea><br><br>
+        In the above example, it is equivalent to 'for(i=2;i&lt;30;i+=3)' in other languages.<br><br>
+       Rest all things like break, continue, pass, else in looping, nested loops are similar to while loops <br><br>
     </p>
       <br><br>
       <button class="nextbutton"><a href="../Python/python(conditionals).html">Previous</a></button>

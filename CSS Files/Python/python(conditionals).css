@@ -257,7 +257,7 @@ p {
 }
 .vl {
     border-left: 3px solid crimson;
-    height: 200vh;
+    height: 290vh;
   
 }
 .v2{
@@ -294,6 +294,9 @@ p {
 }
 .nextbutton1{
     float:right;
+}
+.nextbutton{
+	float:left;
 }
 .nextbutton a, .nextbutton1 a{
     color:white;

@@ -57,43 +57,195 @@
       <div class="vl"></div>
     </div>
       <div class="column right">
-      <h1 class="heading">Introduction</h1>
+      <h1 class="heading">Conditionals</h1>
       <br><br>
       <p>
-        Python is a popular programming language. <br>
-        Python can be used on a server to create web applications. <br><br>
-        It is used for: <br>
-        web development (server-side), <br>
-        software development, <br>
-        mathematics, <br>
-        system scripting.<br><br>
-        Why Use Python?<br>
-        Python works on different platforms (Windows, Mac, Linux, Raspberry Pi, etc). <br>
-        Python has a simple syntax similar to the English language. <br>
-        Python has syntax that allows developers to write programs with fewer lines than some other programming languages. <br>
-        Python runs on an interpreter system, meaning that code can be executed as soon as it is written. This means that prototyping can be very quick. <br>
-        Python can be treated in a procedural way, an object-oriented way or a functional way. <br><br>
+        Operators are used to perform operations on variables and values. <br><br>
 
-        Python Indentation <br>
-        Indentation refers to the spaces at the beginning of a code line. <br>
-        Where in other programming languages the indentation in code is for readability only, the indentation in Python is very important. <br>
-        Python uses indentation to indicate a block of code. <br>
-        Python will give you an error if you skip the indentation <br>
-        The number of spaces is up to you as a programmer, but it has to be at least one. <br>
-        You have to use the same number of spaces in the same block of code, otherwise Python will give you an error <br><br>
-
-        Comments:- <br>
-        Comments can be used to explain Python code. <br>
-        Comments can be used to make the code more readable. <br>
-        Comments can be used to prevent execution when testing code.<br>
-        Comments starts with a #, and Python will ignore them <br>
-        Python does not really have a syntax for multi line comments. <br>
-        To add a multiline comment you could insert a # for each line  <br>
-        Or, not quite as intended, you can use a multiline string. <br>
-        Since Python will ignore string literals that are not assigned to a variable, you can add a multiline string (triple quotes) in your code, and place your comment inside it <br>
-        As long as the string is not assigned to a variable, Python will read the code, but then ignore it, and you have made a multiline comment. <br>
-
+        Python divides the operators into the following groups:<br>
+        1. Arithmatic Operators<br>
+        2. Relational Operators<br>       
+        3. Logical Operators <br>
+        4. Assignment Operators<br>
+        5. Bitwise Operators<br><br>
+        Arithmatic Operators:- <br>
+        Arithmetic operators are used to perform common mathematical operations.
+        <table class="table1">
+            <tr class="row1">
+                <th>Operator</th>
+                <th>Name</th>
+                <th>Example</th>
+            </tr>
+            <tr class="row1">
+                <td>+</td>
+                <td>Addition</td>
+                <td>x+y</td>
+            </tr>
+            <tr class="row1">
+                <td>-</td>
+                <td>Subtraction</td>
+                <td>x-y</td>
+            </tr>
+            <tr class="row1">
+                <td>*</td>
+                <td>Multiplication</td>
+                <td>x*y</td>
+            </tr>
+            <tr class="row1">
+                <td>/</td>
+                <td>Division</td>
+                <td>x/y</td>
+            </tr>
+            <tr class="row1">
+                <td>%</td>
+                <td>Modulus</td>
+                <td>x%y</td>
+            </tr>
+            <tr class="row1">
+                <td>++</td>
+                <td>Increment</td>
+                <td>++x</td>
+            </tr>
+            <tr class="row1">
+                <td>--</td>
+                <td>Decrement</td>
+                <td>--x</td>
+            </tr>
+        </table>
     </p>
+    <br>
+        <p>Relational Operators:- <br>
+            Comparison operators are used to compare two values. <br> Output is either true(1) or false(0) <br>
+            <table class="table1">
+                <tr class="row1">
+                    <th>Operator</th>
+                    <th>Name</th>
+                    <th>Example</th>
+                </tr>
+                <tr class="row1">
+                    <td>==</td>
+                    <td>Equal to</td>
+                    <td>x==y</td>
+                </tr>
+                <tr class="row1">
+                    <td>!=</td>
+                    <td>Not Equal to</td>
+                    <td>x!=y</td>
+                </tr>
+                <tr class="row1">
+                    <td>></td>
+                    <td>Greater than</td>
+                    <td>x>y</td>
+                </tr>
+                <tr class="row1">
+                    <td> &lt;</td>
+                    <td>Lesser than</td>
+                    <td> x&lt;y </td>
+                </tr> 
+                <tr class="row1">
+                    <td>>=</td>
+                    <td>Greater than or Equal to</td>
+                    <td>x>=y</td>
+                </tr>
+                <tr class="row1">
+                    <td>&lt;=</td>
+                    <td>Less than or Equal to</td>
+                    <td>x&lt;=y</td>
+                </tr>
+            </table>
+        </p>
+        <br>
+        <p>Logical Operators:- <br>
+            Logical operators are used to determine the logic between variables or values: <br>
+            <table class="table1">
+                <tr class="row1">
+                    <th>Operator</th>
+                    <th>Name</th>
+                    <th>Example</th>
+                </tr>
+                <tr class="row1">
+                    <td>and</td>
+                    <td>Logical and</td>
+                    <td>x>y and x>10</td>
+                </tr>
+                <tr class="row1">
+                    <td>or</td>
+                    <td>Logical or</td>
+                    <td>x!=y or y&lt;=6</td>
+                </tr>
+                <tr class="row1">
+                    <td>not</td>
+                    <td>Logical not</td>
+                    <td>not(y>x)</td>
+                </tr>
+            </table>
+        </p>
+        <br>
+        <p>Assignment Operators:- <br>
+            Assignment operators are used to assign values to variables. <br>
+            <table class="table1">
+                <tr class="row1">
+                    <th>Operator</th>
+                    <th>Example</th>
+                    <th>Same as</th>
+                </tr>
+                <tr class="row1">
+                    <td>=</td>
+                    <td>x=5</td>
+                    <td>x=5</td>
+                </tr>
+                <tr class="row1">
+                    <td>+=</td>
+                    <td>x+=5</td>
+                    <td>x=x+5</td>
+                </tr>
+                <tr class="row1">
+                    <td>-=</td>
+                    <td>x-=3</td>
+                    <td>x=x-3</td>
+                </tr>
+                <tr class="row1">
+                    <td>*=</td>
+                    <td>x*=4</td>
+                    <td>x=x*4</td>
+                </tr>
+                <tr class="row1">
+                    <td>/=</td>
+                    <td>x/=y</td>
+                    <td>x=x/y</td>
+                </tr>
+                <tr class="row1">
+                    <td>%=</td>
+                    <td>x%=9</td>
+                    <td>x=x%9</td>
+                </tr>
+                <tr class="row1">
+                    <td>&=</td>
+                    <td>x&=1</td>
+                    <td>x=x&1</td>
+                </tr>
+                <tr class="row1">
+                    <td>|=</td>
+                    <td>x|=3</td>
+                    <td>x=x|3</td>
+                </tr>
+                <tr class="row1">
+                    <td>^=</td>
+                    <td>x^=4</td>
+                    <td>x=x^4</td>
+                </tr>
+                <tr class="row1">
+                    <td>>>=</td>
+                    <td>x>>=3</td>
+                    <td>x=x>>3</td>
+                </tr>
+                <tr class="row1">
+                    <td>&lt;&lt;=</td>
+                    <td>x&lt;&lt;=3</td>
+                    <td>x=x&lt;&lt;3</td>
+                </tr>
+            </table>
+        </p>
       <br><br>
       <button class="nextbutton"><a href="../Python/python(datatypes2).html">Previous</a></button>
       <div style="float:right;"> Hello</div>

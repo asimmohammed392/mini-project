@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../CSS Files/Python/python(datatypes2).css">
-    <title>Introduction</title>
+    <link rel="stylesheet" href="../../CSS Files/Python/python(functions).css">
+    <title>Functions</title>
 </head>
 <body>
     <!-- Header -->
@@ -57,41 +57,80 @@
       <div class="vl"></div>
     </div>
       <div class="column right">
-      <h1 class="heading">Introduction</h1>
+      <h1 class="heading">Functions</h1>
       <br><br>
       <p>
-        Python is a popular programming language. <br>
-        Python can be used on a server to create web applications. <br><br>
-        It is used for: <br>
-        web development (server-side), <br>
-        software development, <br>
-        mathematics, <br>
-        system scripting.<br><br>
-        Why Use Python?<br>
-        Python works on different platforms (Windows, Mac, Linux, Raspberry Pi, etc). <br>
-        Python has a simple syntax similar to the English language. <br>
-        Python has syntax that allows developers to write programs with fewer lines than some other programming languages. <br>
-        Python runs on an interpreter system, meaning that code can be executed as soon as it is written. This means that prototyping can be very quick. <br>
-        Python can be treated in a procedural way, an object-oriented way or a functional way. <br><br>
+        A function is a block of code which only runs when it is called. <br>
+        You can pass data, known as parameters, into a function. <br>
+        A function can return data as a result. <br>
+        Creating a Function <br>
+        In Python a function is defined using the def keyword: <br>
+        def my_function(): <br>
+          print("Hello from a function") <br>
 
-        Python Indentation <br>
-        Indentation refers to the spaces at the beginning of a code line. <br>
-        Where in other programming languages the indentation in code is for readability only, the indentation in Python is very important. <br>
-        Python uses indentation to indicate a block of code. <br>
-        Python will give you an error if you skip the indentation <br>
-        The number of spaces is up to you as a programmer, but it has to be at least one. <br>
-        You have to use the same number of spaces in the same block of code, otherwise Python will give you an error <br><br>
+        Calling a function:- <br>
+        To call a function in Python, write the function's name followed by two parentheses () <br>
+        <textarea name="" id="" cols="60" rows="5">
+          def my_function():
+           print("Hello from a function")
+          my_function()
+        </textarea> <br><br>
 
-        Comments:- <br>
-        Comments can be used to explain Python code. <br>
-        Comments can be used to make the code more readable. <br>
-        Comments can be used to prevent execution when testing code.<br>
-        Comments starts with a #, and Python will ignore them <br>
-        Python does not really have a syntax for multi line comments. <br>
-        To add a multiline comment you could insert a # for each line  <br>
-        Or, not quite as intended, you can use a multiline string. <br>
-        Since Python will ignore string literals that are not assigned to a variable, you can add a multiline string (triple quotes) in your code, and place your comment inside it <br>
-        As long as the string is not assigned to a variable, Python will read the code, but then ignore it, and you have made a multiline comment. <br>
+        Parameters and Arguments:- <br><br>
+        The terms parameter and argument can be used for the same thing: information that are passed into a function. <br>
+        From a function's perspective: <br> 
+        A parameter is the variable listed inside the parentheses in the function definition. <br>
+        An argument is the value that is sent to the function when it is called. <br>
+       <textarea name="" id="" cols="60" rows="10">
+        def my_function(fname):
+        print(fname + " Refsnes")
+      
+        my_function("Emil")
+        my_function("Tobias")
+        my_function("Linus")
+        </textarea> <br><br>
+        By default, a function must be called with the correct number of arguments. <br>
+        Meaning that if your function expects 2 arguments, 
+        you have to call the function with 2 arguments, not more, and not less. <br><br>
+        <textarea name="" id="" cols="80" rows="5">
+          def my_function(fname, lname):
+            print(fname + " " + lname)
+
+          my_function("Emil", "Refsnes")
+        </textarea> <br><br>
+        If you do not know how many arguments that will be passed into your function, 
+        add a * before the parameter name in the function definition. <br>
+        This way the function will receive a tuple of arguments, and can access the items accordingly <br>
+        We can also pass some default values. <br>
+        Apart from these there are also keyword arguments and arbitrary keyword arguments. <br><br>
+        We can pass lists through the functions as arguments. <br>
+        Recursion is supported by python with proper syntax and indentation. <br>
+        We can return values from a function. <br>
+        We can use pass statement also. <br><br>
+        
+        Lambda Function:- <br>
+        A lambda function is a small anonymous function. <br>
+        A lambda function can take any number of arguments, but can only have one expression. <br>
+        Syntax:- <br>
+        lambda arguments : expression <br>
+        It can take any number of arguments. <br>
+        <textarea name="" id="" cols="50" rows="3">
+          x = lambda a, b : a * b
+          print(x(5, 6))
+        </textarea><br><br>
+        Why Use Lambda Functions?
+        The power of lambda is better shown when you use them as an anonymous function inside another function. <br>
+        Say you have a function definition that takes one argument, 
+        and that argument will be multiplied with an unknown number. <br>
+        Use that function definition to make a function that always doubles or triples the number you send in <br>
+        <textarea name="" id="" cols="50" rows="9">
+          def myfunc(n):
+            return lambda a : a * n
+          mydoubler = myfunc(2)
+          mytripler = myfunc(3)
+          print(mydoubler(11))
+          print(mytripler(11))
+        </textarea><br><br>
 
     </p>
       <br><br>
