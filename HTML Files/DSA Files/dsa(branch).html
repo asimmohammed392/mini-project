@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../CSS Files/DSA Files/dsa(branch).css">
+    <title>Branch and Bound</title>
+</head>
+<body>
+    <!-- Header -->
+  <section id="header" style="background-color:black">
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="#hero">
+            <h1><span>KSA</span> Learning</h1>
+          </a>
+        </div>
+        <div class="nav-list">
+          <div class="hamburger">
+            <div class="bar"></div>
+          </div>
+          <ul>
+            <li><a href="../../index.html" data-after="Home">Home</a></li>
+            <li><a href="../../index.html#services" data-after="Courses">Courses</a></li>
+            <li><a href="../../index.html#projects" data-after="Projects">Quiz</a></li>
+            <li><a href="../../index.html#contact" data-after="Contact">Contact</a></li>
+            <li><a href="#" data-after="Login">Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Header -->
+
+  <!-- Columns -->
+  <div class="column">
+    <div class="column left">
+      <h1 class="headings">All Topics</h1>
+      <ul>
+        <li><a href="../Python/python(datatypes).html" class="v2"><p>Introduction</p></a></li>
+        <li><a href="../Python/python(datatypes2).html" class="v2"><p>Linked List</p></a></li>
+        <li><a href="../Python/python(operators).html" class="v2"><p>Variants of LL</p></a></li>
+        <li><a href="../Python/python(conditionals).html" class="v2"><p>Stacks and Queues</p></a></li>
+        <li><a href="../Python/python(arrays).html" class="v2"><p>Trees and Graph</p></a></li>
+        <li><a href="../Python/python(module2).html" class="v2"><p>Algorithms</p></a></li>
+        <li><a href="../Python/python(class).html" class="v2"><p>Recursive - Divide and Conquer</p></a></li>
+        <li><a href="../Python/python(more).html" class="v2"><p>Greedy Algorithms</p></a></li>
+        <li><a href="../Python/python(matplot).html" class="v2"><p>Dynamic Programming</p></a></li>
+        <li><a href="../Python/python(matplot).html" class="v2"><p>Branch and Bound</p></a></li>
+        <li><a href="../Python/python(matplot).html" class="v2"><p>Backtracking</p></a></li>
+        <li><a href="../Python/python(matplot).html" class="v2"><p>Graph Algorithms</p></a></li>
+      </ul>
+    </div>
+    <div class="column middle">
+      <div class="vl"></div>
+    </div>
+      <div class="column right">
+      <h1 class="heading">Branch and Bound</h1>
+      <br><br>
+      <p>
+        Branch and bound is an algorithm design paradigm which is generally used for solving combinatorial optimization problems. These problems typically exponential in terms of time complexity and may require exploring all possible permutations in worst case. Branch and Bound solve these problems relatively quickly. <br><br>
+        The backtracking based solution works better than brute force by ignoring infeasible solutions. We can do better (than backtracking) if we know a bound on best possible solution subtree rooted with every node. If the best in subtree is worse than current best, we can simply ignore this node and its subtrees. So we compute bound (best solution) for every node and compare the bound with current best solution before exploring the node. <br><br>
+        Branch and bound is very useful technique for searching a solution but in worst case, we need to fully calculate the entire tree. At best, we only need to fully calculate one path through the tree and prune the rest of it. <br>
+        Given a 3×3 board with 8 tiles (every tile has one number from 1 to 8) and one empty space. The objective is to place the numbers on tiles to match the final configuration using the empty space. We can slide four adjacent (left, right, above, and below) tiles into the empty space.  <br><br>
+        The search for an answer node can often be speeded by using an “intelligent” ranking function, also called an approximate cost function to avoid searching in sub-trees that do not contain an answer node. It is similar to the backtracking technique but uses a BFS-like search. <br><br>
+
+        There are basically three types of nodes involved in Branch and Bound <br>
+        1. Live node is a node that has been generated but whose children have not yet been generated. <br><br>
+        2. E-node is a live node whose children are currently being explored. In other words, an E-node is a node currently being expanded. <br><br>
+        3. Dead node is a generated node that is not to be expanded or explored any further. All children of a dead node have already been expanded. <br><br>
+        Cost function: <br>
+        Each node X in the search tree is associated with a cost. The cost function is useful for determining the next E-node. The next E-node is the one with the least cost. The cost function is defined as <br><br>
+        C(X) = g(X) + h(X) where <br>
+        g(X) = cost of reaching the current node from the root <br>
+        h(X) = cost of reaching an answer node from X. <br>
+        The ideal Cost function for an 8-puzzle Algorithm : <br>
+        We assume that moving one tile in any direction will have a 1 unit cost. Keeping that in mind, we define a cost function for the 8-puzzle algorithm as below: <br><br>
+        c(x) = f(x) + h(x) where <br>
+        f(x) is the length of the path from root to x (the number of moves so far) and <br>
+        h(x) is the number of non-blank tiles not in 
+             their goal position (the number of mis-
+             -placed tiles). There are at least h(x) 
+             moves to transform state x to a goal state <br><br>
+        An algorithm is available for getting an approximation of h(x) which is an unknown value. <br><br>
+
+        N-Queens:- <br>
+        In backtracking solution we backtrack when we hit a dead end. In Branch and Bound solution, after building a partial solution, we figure out that there is no point going any deeper as we are going to hit a dead end. <br><br>
+
+        Travelling Salesman Problem:-  <br>
+        In Branch and Bound method, for current node in tree, we compute a bound on best possible solution that we can get if we down this node. If the bound on best possible solution itself is worse than current best (best computed so far), then we ignore the subtree rooted with the node. <br><br>
+        Note that the cost through a node includes two costs. <br>
+        1) Cost of reaching the node from the root (When we reach a node, we have this cost computed) <br><br>
+        2) Cost of reaching an answer from current node to a leaf (We compute a bound on this cost to decide whether to ignore subtree with this node or not).    <br>    <br>
+        In branch and bound, the challenging part is figuring out a way to compute a bound on best possible solution. Below is an idea used to compute bounds for Traveling salesman problem. <br><br>
+        Cost of any tour can be written as below. <br>
+        <textarea name="" id="" cols="80" rows="10">
+            Cost of a tour T = (1/2) * ∑ (Sum of cost of two edges
+                                      adjacent to u and in the
+                                      tour T) 
+                           where u ∈ V
+        For every vertex u, if we consider two edges through it in T,
+        and sum their costs.  The overall sum for all vertices would
+        be twice of cost of tour T (We have considered every edge 
+        twice.)
+        
+        (Sum of two tour edges adjacent to u) >= (sum of minimum weight
+                                                  two edges adjacent to
+                                                  u)
+        
+        Cost of any tour >=  1/2) * ∑ (Sum of cost of two minimum
+                                      weight edges adjacent to u) 
+                           where u ∈ V        
+        </textarea>
+        
+    </p>
+      <br><br>
+      <button class="nextbutton"><a href="../DSA Files/dsa(link).html">Previous</a></button>
+      <div style="float:right;"> Hello</div>
+      <button class="nextbutton1"><a href="../DSA Files/dsa(link).html">Next Topic</a></button>
+  </div>
+</div>
+    <!-- End Columns -->
+    <section id="footer">
+      <div class="footer container">
+        <div class="brand">
+          <h1><span>KSA</span> Learning</h1>
+        </div>
+        <h2>One Solution for many Problems</h2>
+        <div class="social-icon">
+          <div class="social-item">
+            <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/facebook-new.png" /></a>
+          </div>
+          <div class="social-item">
+            <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/instagram-new.png" /></a>
+          </div>
+          <div class="social-item">
+            <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/twitter.png" /></a>
+          </div>
+          <div class="social-item">
+            <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/behance.png" /></a>
+          </div>
+        </div>
+        <p>Copyright © 2021 PortFolio. All rights reserved</p>
+      </div>
+    </section>
+  <script src="../../JS Files/js.js"></script>
+</body>
+</html>

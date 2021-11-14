@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../CSS Files/DSA Files/dsa(recursive).css">
+    <title>Divide and Conquer</title>
+</head>
+<body>
+    <!-- Header -->
+  <section id="header" style="background-color:black">
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="#hero">
+            <h1><span>KSA</span> Learning</h1>
+          </a>
+        </div>
+        <div class="nav-list">
+          <div class="hamburger">
+            <div class="bar"></div>
+          </div>
+          <ul>
+            <li><a href="../../index.html" data-after="Home">Home</a></li>
+            <li><a href="../../index.html#services" data-after="Courses">Courses</a></li>
+            <li><a href="../../index.html#projects" data-after="Projects">Quiz</a></li>
+            <li><a href="../../index.html#contact" data-after="Contact">Contact</a></li>
+            <li><a href="#" data-after="Login">Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Header -->
+
+  <!-- Columns -->
+  <div class="column">
+    <div class="column left">
+      <h1 class="headings">All Topics</h1>
+      <ul>
+        <li><a href="../Python/python(datatypes).html" class="v2"><p>Introduction</p></a></li>
+        <li><a href="../Python/python(datatypes2).html" class="v2"><p>Linked List</p></a></li>
+        <li><a href="../Python/python(operators).html" class="v2"><p>Variants of LL</p></a></li>
+        <li><a href="../Python/python(conditionals).html" class="v2"><p>Stacks and Queues</p></a></li>
+        <li><a href="../Python/python(arrays).html" class="v2"><p>Trees and Graph</p></a></li>
+        <li><a href="../Python/python(module2).html" class="v2"><p>Algorithms</p></a></li>
+        <li><a href="../Python/python(class).html" class="v2"><p>Recursive - Divide and Conquer</p></a></li>
+        <li><a href="../Python/python(more).html" class="v2"><p>Greedy Algorithms</p></a></li>
+        <li><a href="../Python/python(matplot).html" class="v2"><p>Dynamic Programming</p></a></li>
+        <li><a href="../Python/python(matplot).html" class="v2"><p>Branch and Bound</p></a></li>
+        <li><a href="../Python/python(matplot).html" class="v2"><p>Backtracking</p></a></li>
+        <li><a href="../Python/python(matplot).html" class="v2"><p>Graph Algorithms</p></a></li>
+      </ul>
+    </div>
+    <div class="column middle">
+      <div class="vl"></div>
+    </div>
+      <div class="column right">
+      <h1 class="heading">Divide and Conquer</h1>
+      <br><br>
+      <p>
+        This technique can be divided into the following three parts: <br><br>
+        Divide: This involves dividing the problem into smaller sub-problems. <br>
+        Conquer: Solve sub-problems by calling recursively until solved. <br>
+        Combine: Combine the sub-problems to get the final solution of the whole problem. <br><br>
+
+        The following are some standard algorithms that follow Divide and Conquer algorithm.  <br><br>
+        Quicksort is a sorting algorithm. The algorithm picks a pivot element and rearranges the array elements so that all elements smaller than the picked pivot element move to the left side of the pivot, and all greater elements move to the right side. Finally, the algorithm recursively sorts the subarrays on the left and right of the pivot element. <br><br>
+        Merge Sort is also a sorting algorithm. The algorithm divides the array into two halves, recursively sorts them, and finally merges the two sorted halves. <br><br>
+        Closest Pair of Points The problem is to find the closest pair of points in a set of points in the x-y plane. The problem can be solved in O(n^2) time by calculating the distances of every pair of points and comparing the distances to find the minimum. The Divide and Conquer algorithm solves the problem in O(N log N) time. <br><br>
+        Strassen’s Algorithm is an efficient algorithm to multiply two matrices. A simple method to multiply two matrices needs 3 nested loops and is O(n^3). Strassen’s algorithm multiplies two matrices in O(n^2.8974) time. <br><br>
+        Cooley–Tukey Fast Fourier Transform (FFT) algorithm is the most common algorithm for FFT. It is a divide and conquer algorithm which works in O(N log N) time.        <br><br>
+
+        What does not qualifies as Divide and Conquer: <br><br>
+        Binary Search is a searching algorithm. In each step, the algorithm compares the input element x with the value of the middle element in the array. If the values match, return the index of the middle. Otherwise, if x is less than the middle element, then the algorithm recurs for the left side of the middle element, else recurs for the right side of the middle element. Contrary to popular belief, this is not an example of Divide and Conquer because there is only one sub-problem in each step (Divide and conquer requires that there must be two or more sub-problems) and hence this is a case of Decrease and Conquer. <br><br>
+
+        Algorithm:- <br><br>
+        <textarea name="" id="" cols="60" rows="12">
+            DAC(a, i, j)
+            {
+                if(small(a, i, j))
+                  return(Solution(a, i, j))
+                else 
+                  m = divide(a, i, j)               // f1(n)
+                  b = DAC(a, i, mid)                 // T(n/2)
+                  c = DAC(a, mid+1, j)            // T(n/2)
+                  d = combine(b, c)                 // f2(n)
+               return(d)
+            }
+        </textarea><br><br>
+        Recurrence Relation:- <br><br>
+        <textarea name="" id="" cols="80" rows="3">
+            O(1) if n is small
+            T(n) =     f1(n) + 2T(n/2) + f2(n)
+        </textarea>
+    </p>
+      <br><br>
+      <button class="nextbutton"><a href="../DSA Files/dsa(link).html">Previous</a></button>
+      <div style="float:right;"> Hello</div>
+      <button class="nextbutton1"><a href="../DSA Files/dsa(link).html">Next Topic</a></button>
+  </div>
+</div>
+    <!-- End Columns -->
+    <section id="footer">
+      <div class="footer container">
+        <div class="brand">
+          <h1><span>KSA</span> Learning</h1>
+        </div>
+        <h2>One Solution for many Problems</h2>
+        <div class="social-icon">
+          <div class="social-item">
+            <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/facebook-new.png" /></a>
+          </div>
+          <div class="social-item">
+            <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/instagram-new.png" /></a>
+          </div>
+          <div class="social-item">
+            <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/twitter.png" /></a>
+          </div>
+          <div class="social-item">
+            <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/behance.png" /></a>
+          </div>
+        </div>
+        <p>Copyright © 2021 PortFolio. All rights reserved</p>
+      </div>
+    </section>
+  <script src="../../JS Files/js.js"></script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../CSS Files/DSA Files/dsa(back).css">
+    <title>Backtracking</title>
+</head>
+<body>
+    <!-- Header -->
+  <section id="header" style="background-color:black">
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="#hero">
+            <h1><span>KSA</span> Learning</h1>
+          </a>
+        </div>
+        <div class="nav-list">
+          <div class="hamburger">
+            <div class="bar"></div>
+          </div>
+          <ul>
+            <li><a href="../../index.html" data-after="Home">Home</a></li>
+            <li><a href="../../index.html#services" data-after="Courses">Courses</a></li>
+            <li><a href="../../index.html#projects" data-after="Projects">Quiz</a></li>
+            <li><a href="../../index.html#contact" data-after="Contact">Contact</a></li>
+            <li><a href="#" data-after="Login">Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Header -->
+
+  <!-- Columns -->
+  <div class="column">
+    <div class="column left">
+      <h1 class="headings">All Topics</h1>
+      <ul>
+        <li><a href="../Python/python(datatypes).html" class="v2"><p>Introduction</p></a></li>
+        <li><a href="../Python/python(datatypes2).html" class="v2"><p>Linked List</p></a></li>
+        <li><a href="../Python/python(operators).html" class="v2"><p>Variants of LL</p></a></li>
+        <li><a href="../Python/python(conditionals).html" class="v2"><p>Stacks and Queues</p></a></li>
+        <li><a href="../Python/python(arrays).html" class="v2"><p>Trees and Graph</p></a></li>
+        <li><a href="../Python/python(module2).html" class="v2"><p>Algorithms</p></a></li>
+        <li><a href="../Python/python(class).html" class="v2"><p>Recursive - Divide and Conquer</p></a></li>
+        <li><a href="../Python/python(more).html" class="v2"><p>Greedy Algorithms</p></a></li>
+        <li><a href="../Python/python(matplot).html" class="v2"><p>Dynamic Programming</p></a></li>
+        <li><a href="../Python/python(matplot).html" class="v2"><p>Branch and Bound</p></a></li>
+        <li><a href="../Python/python(matplot).html" class="v2"><p>Backtracking</p></a></li>
+        <li><a href="../Python/python(matplot).html" class="v2"><p>Graph Algorithms</p></a></li>
+      </ul>
+    </div>
+    <div class="column middle">
+      <div class="vl"></div>
+    </div>
+      <div class="column right">
+      <h1 class="heading">Backtracking</h1>
+      <br><br>
+      <p>
+        Backtracking is an algorithmic paradigm that tries different solutions until finds a solution that “works”. Problems that are typically solved using the backtracking technique have the following property in common. These problems can only be solved by trying every possible configuration and each configuration is tried only once. A Naive solution for these problems is to try all configurations and output a configuration that follows given problem constraints. Backtracking works incrementally and is an optimization over the Naive solution where all possible configurations are generated and tried. <br><br>
+        Backtracking works in an incremental way to attack problems. Typically, we start from an empty solution vector and one by one add items (Meaning of item varies from problem to problem. In the context of Knight’s tour problem, an item is a Knight’s move). When we add an item, we check if adding the current item violates the problem constraint, if it does then we remove the item and try other alternatives. If none of the alternatives works out then we go to the previous stage and remove the item added in the previous stage. If we reach the initial stage back then we say that no solution exists. If adding an item doesn’t violate constraints then we recursively add items one by one. If the solution vector becomes complete then we print the solution. <br><br>
+        <br>
+        Some problems that can be solved by Bactracking:- <br><br>
+        N-queens:- <br>
+        The N Queen is the problem of placing N chess queens on an N×N chessboard so that no two queens attack each other. <br>
+        The idea is to place queens one by one in different columns, starting from the leftmost column. When we place a queen in a column, we check for clashes with already placed queens. In the current column, if we find a row for which there is no clash, we mark this row and column as part of the solution. If we do not find such a row due to clashes then we backtrack and return false. <br><br>
+
+        Knight’s Tour:- <br>
+        Given a N*N board with the Knight placed on the first block of an empty board. Moving according to the rules of chess knight must visit each square exactly once. Print the order of each cell in which they are visited. <br>
+        Backtracking works in an incremental way to attack problems. Typically, we start from an empty solution vector and one by one add items (Meaning of item varies from problem to problem. In the context of Knight’s tour problem, an item is a Knight’s move). When we add an item, we check if adding the current item violates the problem constraint, if it does then we remove the item and try other alternatives. If none of the alternatives works out then we go to the previous stage and remove the item added in the previous stage. If we reach the initial stage back then we say that no solution exists. If adding an item doesn’t violate constraints then we recursively add items one by one. If the solution vector becomes complete then we print the solution. <br><br>
+
+        Rat in a Maze:- <br>
+        A Maze is given as N*N binary matrix of blocks where source block is the upper left most block i.e., maze[0][0] and destination block is lower rightmost block i.e., maze[N-1][N-1]. A rat starts from source and has to reach the destination. The rat can move only in two directions: forward and down.  <br>
+        Backtracking Algorithm: Backtracking is an algorithmic-technique for solving problems recursively by trying to build a solution incrementally. Solving one piece at a time, and removing those solutions that fail to satisfy the constraints of the problem at any point of time (by time, here, is referred to the time elapsed till reaching any level of the search tree) is the process of backtracking. <br><br>
+
+        Sudoku:- <br>
+        Given a partially filled 9×9 2D array ‘grid[9][9]’, the goal is to assign digits (from 1 to 9) to the empty cells so that every row, column, and subgrid of size 3×3 contains exactly one instance of the digits from 1 to 9. <br><br>
+        Like all other Backtracking problems, Sudoku can be solved by one by one assigning numbers to empty cells. Before assigning a number, check whether it is safe to assign. Check that the same number is not present in the current row, current column and current 3X3 subgrid. After checking for safety, assign the number, and recursively check whether this assignment leads to a solution or not. If the assignment doesn’t lead to a solution, then try the next number for the current empty cell. And if none of the number (1 to 9) leads to a solution, return false and print no solution exists. <br><br>
+
+        m-Colouring:- <br>
+        Given an undirected graph and a number m, determine if the graph can be coloured with at most m colours such that no two adjacent vertices of the graph are colored with the same color. Here coloring of a graph means the assignment of colors to all vertices.  <br><br>
+        The idea is to assign colors one by one to different vertices, starting from the vertex 0. Before assigning a color, check for safety by considering already assigned colors to the adjacent vertices i.e check if the adjacent vertices have the same color or not. If there is any color assignment that does not violate the conditions, mark the color assignment as part of the solution. If no assignment of color is possible then backtrack and return false. <br><br>
+    </p>
+      <br><br>
+      <button class="nextbutton"><a href="../DSA Files/dsa(link).html">Previous</a></button>
+      <div style="float:right;"> Hello</div>
+      <button class="nextbutton1"><a href="../DSA Files/dsa(link).html">Next Topic</a></button>
+  </div>
+</div>
+    <!-- End Columns -->
+    <section id="footer">
+      <div class="footer container">
+        <div class="brand">
+          <h1><span>KSA</span> Learning</h1>
+        </div>
+        <h2>One Solution for many Problems</h2>
+        <div class="social-icon">
+          <div class="social-item">
+            <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/facebook-new.png" /></a>
+          </div>
+          <div class="social-item">
+            <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/instagram-new.png" /></a>
+          </div>
+          <div class="social-item">
+            <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/twitter.png" /></a>
+          </div>
+          <div class="social-item">
+            <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/behance.png" /></a>
+          </div>
+        </div>
+        <p>Copyright © 2021 PortFolio. All rights reserved</p>
+      </div>
+    </section>
+  <script src="../../JS Files/js.js"></script>
+</body>
+</html>

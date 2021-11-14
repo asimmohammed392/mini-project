@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../CSS Files/DSA Files/dsa(graph).css">
+    <title>Graph Algorithms</title>
+</head>
+<body>
+    <!-- Header -->
+  <section id="header" style="background-color:black">
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="#hero">
+            <h1><span>KSA</span> Learning</h1>
+          </a>
+        </div>
+        <div class="nav-list">
+          <div class="hamburger">
+            <div class="bar"></div>
+          </div>
+          <ul>
+            <li><a href="../../index.html" data-after="Home">Home</a></li>
+            <li><a href="../../index.html#services" data-after="Courses">Courses</a></li>
+            <li><a href="../../index.html#projects" data-after="Projects">Quiz</a></li>
+            <li><a href="../../index.html#contact" data-after="Contact">Contact</a></li>
+            <li><a href="#" data-after="Login">Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Header -->
+
+  <!-- Columns -->
+  <div class="column">
+    <div class="column left">
+      <h1 class="headings">All Topics</h1>
+      <ul>
+        <li><a href="../Python/python(datatypes).html" class="v2"><p>Introduction</p></a></li>
+        <li><a href="../Python/python(datatypes2).html" class="v2"><p>Linked List</p></a></li>
+        <li><a href="../Python/python(operators).html" class="v2"><p>Variants of LL</p></a></li>
+        <li><a href="../Python/python(conditionals).html" class="v2"><p>Stacks and Queues</p></a></li>
+        <li><a href="../Python/python(arrays).html" class="v2"><p>Trees and Graph</p></a></li>
+        <li><a href="../Python/python(module2).html" class="v2"><p>Algorithms</p></a></li>
+        <li><a href="../Python/python(class).html" class="v2"><p>Recursive - Divide and Conquer</p></a></li>
+        <li><a href="../Python/python(more).html" class="v2"><p>Greedy Algorithms</p></a></li>
+        <li><a href="../Python/python(matplot).html" class="v2"><p>Dynamic Programming</p></a></li>
+        <li><a href="../Python/python(matplot).html" class="v2"><p>Branch and Bound</p></a></li>
+        <li><a href="../Python/python(matplot).html" class="v2"><p>Backtracking</p></a></li>
+        <li><a href="../Python/python(matplot).html" class="v2"><p>Graph Algorithms</p></a></li>
+      </ul>
+    </div>
+    <div class="column middle">
+      <div class="vl"></div>
+    </div>
+      <div class="column right">
+      <h1 class="heading">Graph Algorithms</h1>
+      <br><br>
+      <p>
+        Prim's Algorithm:- <br><br>
+        How does Prim’s Algorithm Work? The idea behind Prim’s algorithm is simple, a spanning tree means all vertices must be connected. So the two disjoint subsets (discussed above) of vertices must be connected to make a Spanning Tree. And they must be connected with the minimum weight edge to make it a Minimum Spanning Tree. <br><br>
+        Algorithm <br>
+        1) Create a set mstSet that keeps track of vertices already included in MST. <br>
+        2) Assign a key value to all vertices in the input graph. Initialize all key values as INFINITE. Assign key value as 0 for the first vertex so that it is picked first. <br><br>
+        3) While mstSet doesn’t include all vertices <br>
+        ….a) Pick a vertex u which is not there in mstSet and has minimum key value. <br>
+        ….b) Include u to mstSet. <br>
+        ….c) Update key value of all adjacent vertices of u. To update the key values, iterate through all adjacent vertices. For every adjacent vertex v, if weight of edge u-v is less than the previous key value of v, update the key value as weight of u-v <br><br>
+        The idea of using key values is to pick the minimum weight edge from cut. The key values are used only for vertices which are not yet included in MST, the key value for these vertices indicate the minimum weight edges connecting them to the set of vertices included in MST.  <br><br>
+        
+        How to implement the above algorithm? <br><br>
+        We use a boolean array mstSet[] to represent the set of vertices included in MST. If a value mstSet[v] is true, then vertex v is included in MST, otherwise not. Array key[] is used to store key values of all vertices. Another array parent[] to store indexes of parent nodes in MST. The parent array is the output array which is used to show the constructed MST.  <br><br>
+
+        Kruskal's Algorithm:- <br>
+        1. Sort all the edges in non-decreasing order of their weight. <br>
+        2. Pick the smallest edge. Check if it forms a cycle with the spanning tree formed so far. If cycle is not formed, include this edge. Else, discard it. <br><br>
+        3. Repeat step#2 until there are (V-1) edges in the spanning tree.    <br>    <br>
+
+        The algorithm is a Greedy Algorithm. The Greedy Choice is to pick the smallest weight edge that does not cause a cycle in the MST constructed so far. <br><br>
+
+        Dijkstra’s Algorithm:- <br><br>
+        Given a graph and a source vertex in the graph, find the shortest paths from the source to all vertices in the given graph. <br>
+        Dijkstra’s algorithm is very similar to Prim’s algorithm for minimum spanning tree. Like Prim’s MST, we generate a SPT (shortest path tree) with a given source as a root. We maintain two sets, one set contains vertices included in the shortest-path tree, other set includes vertices not yet included in the shortest-path tree. At every step of the algorithm, we find a vertex that is in the other set (set of not yet included) and has a minimum distance from the source. <br><br>
+        Below are the detailed steps used in Dijkstra’s algorithm to find the shortest path from a single source vertex to all other vertices in the given graph. <br><br>
+        
+        Algorithm <br>
+        1) Create a set sptSet (shortest path tree set) that keeps track of vertices included in the shortest-path tree, i.e., whose minimum distance from the source is calculated and finalized. Initially, this set is empty. <br>
+        2) Assign a distance value to all vertices in the input graph. Initialize all distance values as INFINITE. Assign distance value as 0 for the source vertex so that it is picked first. <br>
+        3) While sptSet doesn’t include all vertices <br>
+        ….a) Pick a vertex u which is not there in sptSet and has a minimum distance value. <br>
+        ….b) Include u to sptSet. <br>
+        ….c) Update distance value of all adjacent vertices of u. To update the distance values, iterate through all adjacent vertices. For every adjacent vertex v, if the sum of distance value of u (from source) and weight of edge u-v, is less than the distance value of v, then update the distance value of v.         <br><br>
+
+        Bellman-Ford Algorithm:- <br><br>
+        Dijkstra doesn’t work for Graphs with negative weight cycle, Bellman-Ford works for such graphs. Bellman-Ford is also simpler than Dijkstra and suites well for distributed systems. But time complexity of Bellman-Ford is O(VE), which is more than Dijkstra. <br><br>
+        Algorithm <br>
+        Following are the detailed steps. <br>
+        Input: Graph and a source vertex src <br><br>
+        Output: Shortest distance to all vertices from src. If there is a negative weight cycle, then shortest distances are not calculated, negative weight cycle is reported. <br><br>
+        1) This step initializes distances from the source to all vertices as infinite and distance to the source itself as 0. Create an array dist[] of size |V| with all values as infinite except dist[src] where src is source vertex. <br><br>
+        2) This step calculates shortest distances. Do following |V|-1 times where |V| is the number of vertices in given graph. <br><br>
+        …..a) Do following for each edge u-v <br>
+        ………………If dist[v] > dist[u] + weight of edge uv, then update dist[v] <br><br>
+        ………………….dist[v] = dist[u] + weight of edge uv <br>
+        3) This step reports if there is a negative weight cycle in graph. Do following for each edge u-v <br><br> 
+        ……If dist[v] > dist[u] + weight of edge uv, then “Graph contains negative weight cycle” <br><br>
+        The idea of step 3 is, step 2 guarantees the shortest distances if the graph doesn’t contain a negative weight cycle. If we iterate through all edges one more time and get a shorter path for any vertex, then there is a negative weight cycle <br><br>
+        How does this work? Like other Dynamic Programming Problems, the algorithm calculates shortest paths in a bottom-up manner. It first calculates the shortest distances which have at-most one edge in the path. Then, it calculates the shortest paths with at-most 2 edges, and so on. After the i-th iteration of the outer loop, the shortest paths with at most i edges are calculated. There can be maximum |V| – 1 edges in any simple path, that is why the outer loop runs |v| – 1 times. The idea is, assuming that there is no negative weight cycle, if we have calculated shortest paths with at most i edges, then an iteration over all edges guarantees to give shortest path with at-most (i+1) edges <br><br>    
+        
+        Floyd-Warshall Algorithm:- <br><br>
+        The Floyd Warshall Algorithm is for solving the All Pairs Shortest Path problem. The problem is to find shortest distances between every pair of vertices in a given edge weighted directed Graph. <br><br>
+        Floyd Warshall Algorithm <br><br>
+        We initialize the solution matrix same as the input graph matrix as a first step. Then we update the solution matrix by considering all vertices as an intermediate vertex. The idea is to one by one pick all vertices and updates all shortest paths which include the picked vertex as an intermediate vertex in the shortest path. When we pick vertex number k as an intermediate vertex, we already have considered vertices {0, 1, 2, .. k-1} as intermediate vertices. For every pair (i, j) of the source and destination vertices respectively, there are two possible cases. <br><br>
+        1) k is not an intermediate vertex in shortest path from i to j. We keep the value of dist[i][j] as it is. <br><br>
+        2) k is an intermediate vertex in shortest path from i to j. We update the value of dist[i][j] as dist[i][k] + dist[k][j] if dist[i][j] > dist[i][k] + dist[k][j] <br><br>
+        The following figure shows the above optimal substructure property in the all-pairs shortest path problem.  <br><br>      
+    </p>
+      <br><br>
+      <button class="nextbutton"><a href="../DSA Files/dsa(link).html">Previous</a></button>
+      <div style="float:right;"> Hello</div>
+      <button class="nextbutton1"><a href="../DSA Files/dsa(link).html">Next Topic</a></button>
+  </div>
+</div>
+    <!-- End Columns -->
+    <section id="footer">
+      <div class="footer container">
+        <div class="brand">
+          <h1><span>KSA</span> Learning</h1>
+        </div>
+        <h2>One Solution for many Problems</h2>
+        <div class="social-icon">
+          <div class="social-item">
+            <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/facebook-new.png" /></a>
+          </div>
+          <div class="social-item">
+            <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/instagram-new.png" /></a>
+          </div>
+          <div class="social-item">
+            <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/twitter.png" /></a>
+          </div>
+          <div class="social-item">
+            <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/behance.png" /></a>
+          </div>
+        </div>
+        <p>Copyright © 2021 PortFolio. All rights reserved</p>
+      </div>
+    </section>
+  <script src="../../JS Files/js.js"></script>
+</body>
+</html>
