@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../CSS Files/Python/python(more).css">
-    <title>Introduction</title>
+    <title>More from Python</title>
 </head>
 <body>
     <!-- Header -->
@@ -57,42 +57,45 @@
       <div class="vl"></div>
     </div>
       <div class="column right">
-      <h1 class="heading">Introduction</h1>
+      <h1 class="heading">More from Python:-</h1>
       <br><br>
       <p>
-        Python is a popular programming language. <br>
-        Python can be used on a server to create web applications. <br><br>
-        It is used for: <br>
-        web development (server-side), <br>
-        software development, <br>
-        mathematics, <br>
-        system scripting.<br><br>
-        Why Use Python?<br>
-        Python works on different platforms (Windows, Mac, Linux, Raspberry Pi, etc). <br>
-        Python has a simple syntax similar to the English language. <br>
-        Python has syntax that allows developers to write programs with fewer lines than some other programming languages. <br>
-        Python runs on an interpreter system, meaning that code can be executed as soon as it is written. This means that prototyping can be very quick. <br>
-        Python can be treated in a procedural way, an object-oriented way or a functional way. <br><br>
+        Exception Handling:- <br>
+        The try.. except.. finally block <br>
+        The try block lets you test a block of code for errors. <br>
+        The except block lets you handle the error. <br>
+        The finally block lets you execute code, regardless of the result of the try- and except blocks.  <br>       
+        <textarea name="" id="" cols="60" rows="7">
+          try:
+            print(x)
+          except NameError:
+            print("Variable x is not defined")
+          except:
+            print("Something else went wrong")
+        </textarea><br><br>
+        You can use the else keyword to define a block of code to be executed if no errors were raised <br>
+        <textarea name="" id="" cols="60" rows="7">
+          try:
+          print(x)
+        except:
+          print("Something went wrong")
+        finally:
+          print("The 'try except' is finished")
+        </textarea><br><br>
+        As a Python developer you can choose to throw an exception if a condition occurs. <br>
+        To throw (or raise) an exception, use the raise keyword. <br>
+        The raise keyword is used to raise an exception. <br>
+        You can define what kind of error to raise, and the text to print to the user. <br>
 
-        Python Indentation <br>
-        Indentation refers to the spaces at the beginning of a code line. <br>
-        Where in other programming languages the indentation in code is for readability only, the indentation in Python is very important. <br>
-        Python uses indentation to indicate a block of code. <br>
-        Python will give you an error if you skip the indentation <br>
-        The number of spaces is up to you as a programmer, but it has to be at least one. <br>
-        You have to use the same number of spaces in the same block of code, otherwise Python will give you an error <br><br>
-
-        Comments:- <br>
-        Comments can be used to explain Python code. <br>
-        Comments can be used to make the code more readable. <br>
-        Comments can be used to prevent execution when testing code.<br>
-        Comments starts with a #, and Python will ignore them <br>
-        Python does not really have a syntax for multi line comments. <br>
-        To add a multiline comment you could insert a # for each line  <br>
-        Or, not quite as intended, you can use a multiline string. <br>
-        Since Python will ignore string literals that are not assigned to a variable, you can add a multiline string (triple quotes) in your code, and place your comment inside it <br>
-        As long as the string is not assigned to a variable, Python will read the code, but then ignore it, and you have made a multiline comment. <br>
-
+       Built-In Math Functions:- <br>
+       Python has some built-in math functions like, <br>
+       min(), max(), pow(), sqrt(), pi(), abs() etc.. <br>
+       Syntax is:- math.min(n1,n2...), math.sqrt(no.) etc.. accordingly <br><br>
+       
+      User Input:- <br>
+      Python allows for user input. <br>
+      That means we are able to ask the user for input.   <br>
+      Python 3.6 uses the input() method. <br>   
     </p>
       <br><br>
       <button class="nextbutton"><a href="../Python/python(class).html">Previous</a></button>

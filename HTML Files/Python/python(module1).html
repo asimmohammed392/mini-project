@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../CSS Files/Python/python(datatypes2).css">
-    <title>Introduction</title>
+    <link rel="stylesheet" href="../../CSS Files/Python/python(modules).css">
+    <title>Modules</title>
 </head>
 <body>
     <!-- Header -->
@@ -57,41 +57,68 @@
       <div class="vl"></div>
     </div>
       <div class="column right">
-      <h1 class="heading">Introduction</h1>
+      <h1 class="heading">Modules</h1>
       <br><br>
       <p>
-        Python is a popular programming language. <br>
-        Python can be used on a server to create web applications. <br><br>
-        It is used for: <br>
-        web development (server-side), <br>
-        software development, <br>
-        mathematics, <br>
-        system scripting.<br><br>
-        Why Use Python?<br>
-        Python works on different platforms (Windows, Mac, Linux, Raspberry Pi, etc). <br>
-        Python has a simple syntax similar to the English language. <br>
-        Python has syntax that allows developers to write programs with fewer lines than some other programming languages. <br>
-        Python runs on an interpreter system, meaning that code can be executed as soon as it is written. This means that prototyping can be very quick. <br>
-        Python can be treated in a procedural way, an object-oriented way or a functional way. <br><br>
+        What is a Module? <br>
+        Consider a module to be the same as a code library. <br>
+        A file containing a set of functions you want to include in your application. <br><br>
 
-        Python Indentation <br>
-        Indentation refers to the spaces at the beginning of a code line. <br>
-        Where in other programming languages the indentation in code is for readability only, the indentation in Python is very important. <br>
-        Python uses indentation to indicate a block of code. <br>
-        Python will give you an error if you skip the indentation <br>
-        The number of spaces is up to you as a programmer, but it has to be at least one. <br>
-        You have to use the same number of spaces in the same block of code, otherwise Python will give you an error <br><br>
+        Create a Module <br>
+        To create a module just save the code you want in a file with the file extension .py <br><br>
+        def greeting(name): <br>
+          print("Hello, " + name)   <br>   <br>
+        Save this code in a file named mymodule.py <br>   <br>
 
-        Comments:- <br>
-        Comments can be used to explain Python code. <br>
-        Comments can be used to make the code more readable. <br>
-        Comments can be used to prevent execution when testing code.<br>
-        Comments starts with a #, and Python will ignore them <br>
-        Python does not really have a syntax for multi line comments. <br>
-        To add a multiline comment you could insert a # for each line  <br>
-        Or, not quite as intended, you can use a multiline string. <br>
-        Since Python will ignore string literals that are not assigned to a variable, you can add a multiline string (triple quotes) in your code, and place your comment inside it <br>
-        As long as the string is not assigned to a variable, Python will read the code, but then ignore it, and you have made a multiline comment. <br>
+        Use a Module <br>
+        Now we can use the module we just created, by using the import statement <br><br>
+        import mymodule <br>
+        mymodule.greeting("Jonathan")  <br> 
+        When using a function from a module, use the syntax: module_name.function_name. <br><br>
+        Save this file as mymodule.py <br>
+        <textarea name="" id="" cols="50" rows="6">
+          person1 = {
+            "name": "John",
+            "age": 36,
+            "country": "Norway"
+          }
+        </textarea><br>
+        <textarea name="" id="" cols="50" rows="6">
+          import mymodule
+
+          a = mymodule.person1["age"]
+          print(a)
+        </textarea><br><br>
+
+        Renaming a Module:- <br>
+        Create an alias for mymodule called mx using 'as' keyword. <br>
+        <textarea name="" id="" cols="50" rows="6">
+          import mymodule as mx
+
+          a = mx.person1["age"]
+          print(a)
+        </textarea><br><br>
+
+        Import from module:- <br>
+        mymodule.py:- <br>
+        <textarea name="" id="" cols="60" rows="10">
+          def greeting(name):
+          print("Hello, " + name)
+        
+        person1 = {
+          "name": "John",
+          "age": 36,
+          "country": "Norway"
+        }          
+        </textarea><br><br>
+        Driver code:- <br>
+        <textarea name="" id="" cols="60" rows="3">
+          from mymodule import person1
+          print (person1["age"])
+        </textarea><br><br>
+        When importing using the from keyword, do not use the module name when referring to elements in the module. <br>
+        Example: person1["age"], not mymodule.person1["age"] <br><br>
+
 
     </p>
       <br><br>

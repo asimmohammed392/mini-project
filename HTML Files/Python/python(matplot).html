@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../CSS Files/Python/python(matplot).css">
-    <title>Introduction</title>
+    <title>MatPlotLib</title>
 </head>
 <body>
     <!-- Header -->
@@ -57,41 +57,46 @@
       <div class="vl"></div>
     </div>
       <div class="column right">
-      <h1 class="heading">Introduction</h1>
+      <h1 class="heading">MatPlotLib</h1>
       <br><br>
       <p>
-        Python is a popular programming language. <br>
-        Python can be used on a server to create web applications. <br><br>
-        It is used for: <br>
-        web development (server-side), <br>
-        software development, <br>
-        mathematics, <br>
-        system scripting.<br><br>
-        Why Use Python?<br>
-        Python works on different platforms (Windows, Mac, Linux, Raspberry Pi, etc). <br>
-        Python has a simple syntax similar to the English language. <br>
-        Python has syntax that allows developers to write programs with fewer lines than some other programming languages. <br>
-        Python runs on an interpreter system, meaning that code can be executed as soon as it is written. This means that prototyping can be very quick. <br>
-        Python can be treated in a procedural way, an object-oriented way or a functional way. <br><br>
+        Matplotlib is a low level graph plotting library in python that serves as a visualization utility. <br>
+        Most of the Matplotlib utilities lies under the pyplot submodule, and are usually imported under the plt alias <br>
+        Now the Pyplot package can be referred to as plt <br><br>
+        The plot() function is used to draw points (markers) in a diagram. <br>
+        By default, the plot() function draws a line from point to point. <br>
+        The function takes parameters for specifying points in the diagram. <br>
+        Parameter 1 is an array containing the points on the x-axis. <br>
+        Parameter 2 is an array containing the points on the y-axis. <br><br>
+        Draw a line in a diagram from position (1, 3) to (2, 8) then to (6, 1) and finally to position (8, 10) <br><br>
+        <textarea name="" id="" cols="60" rows="10">
+          import matplotlib.pyplot as plt
+          import numpy as np
+          
+          xpoints = np.array([1, 2, 6, 8])
+          ypoints = np.array([3, 8, 1, 10])
+          
+          plt.plot(xpoints, ypoints)
+          plt.show()
+        </textarea><br><br>
+        We can use any markers to mark at the points. <br>
+        plt.plot(ypoints, marker = '*') <br><br>
 
-        Python Indentation <br>
-        Indentation refers to the spaces at the beginning of a code line. <br>
-        Where in other programming languages the indentation in code is for readability only, the indentation in Python is very important. <br>
-        Python uses indentation to indicate a block of code. <br>
-        Python will give you an error if you skip the indentation <br>
-        The number of spaces is up to you as a programmer, but it has to be at least one. <br>
-        You have to use the same number of spaces in the same block of code, otherwise Python will give you an error <br><br>
+        Labels:- <br>
+        <textarea name="" id="" cols="60" rows="11">
+          import numpy as np
+          import matplotlib.pyplot as plt
+          x = np.array([80, 85, 90, 95, 100, 105, 110, 115, 120, 125])
+          y = np.array([240, 250, 260, 270, 280, 290, 300, 310, 320, 330])
+          plt.plot(x, y)
+          plt.title("Sports Watch Data")
+          plt.xlabel("Average Pulse")
+          plt.ylabel("Calorie Burnage")
+          plt.show()
+        </textarea><br><br>
 
-        Comments:- <br>
-        Comments can be used to explain Python code. <br>
-        Comments can be used to make the code more readable. <br>
-        Comments can be used to prevent execution when testing code.<br>
-        Comments starts with a #, and Python will ignore them <br>
-        Python does not really have a syntax for multi line comments. <br>
-        To add a multiline comment you could insert a # for each line  <br>
-        Or, not quite as intended, you can use a multiline string. <br>
-        Since Python will ignore string literals that are not assigned to a variable, you can add a multiline string (triple quotes) in your code, and place your comment inside it <br>
-        As long as the string is not assigned to a variable, Python will read the code, but then ignore it, and you have made a multiline comment. <br>
+        Not just drawing these lines through some points. <br>
+        We can draw various graphs like bar graphs, pie charts, histograms, Subplots, scatter plots etc.. <br><br>
 
     </p>
       <br><br>
