@@ -215,6 +215,10 @@ body{
 	content: fit-content;
     padding:30px;
 }
+.custom-box li{
+	padding:10px 0;
+	font-size: medium;
+}
 .custom-box.hide{
     display:none;
 }
@@ -233,7 +237,7 @@ body{
 .home-box p{
     font-size:18px;
     color:white;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     line-height: 20px
 }
 .btn{
