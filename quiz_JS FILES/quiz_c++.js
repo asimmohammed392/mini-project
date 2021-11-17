@@ -337,7 +337,7 @@ const quiz=[
 },
 {
     q:'Which of the header file is used for array type manipulation?',
-    options:['<array>','<type_traits>','<iostream>','std namespace'],
+    options:['array','type_traits','iostream','std namespace'],
     answer:3
 },
 {
