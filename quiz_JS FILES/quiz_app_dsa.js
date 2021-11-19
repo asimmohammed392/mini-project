@@ -34,6 +34,7 @@ function getNewQuestion(){
     for (let i=0;i<optionLen;i++){
         availableOptions.push(i);
     }
+    let animationDelay=0.2;
     optionContainer.innerHTML='';
     for(let i=0;i<optionLen;i++){
         const optionIndex=availableOptions[Math.floor(Math.random()*availableOptions.length)];
@@ -42,6 +43,8 @@ function getNewQuestion(){
         const option= document.createElement("div");
         option.innerHTML=currentQuestions.options[optionIndex];
         option.id=optionIndex;
+        option.style.animationDelay=animationDelay+'s';
+        animationDelay=animationDelay+0.2;
         option.className="option";
         optionContainer.appendChild(option);
         option.setAttribute("onclick","getResult(this)");
@@ -59,6 +62,12 @@ function getResult(element){
 
     }else{
         element.classList.add("wrong");
+        const optionLen=optionContainer.children.length;
+        for(let i=0;i<optionLen;i++){
+            if(parseInt(optionContainer.children[i].id)===currentQuestions.answer){
+                optionContainer.children[i].classList.add("correct");
+            }
+        }
         updateAnswerIndicator("wrong");
     }
     attempts++;
