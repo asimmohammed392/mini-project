@@ -106,11 +106,6 @@ const quiz=[
     answer:2
 },
 {
-    q:' What will be the output of the following Python statement?',
-    options:['bc','abc','a','bca'],
-    answer:1
-},
-{
     q:'Which function is called when the following Python program is executed?  f = foo() format(f)',
     options:['str()',' format()','__str__()',' __format__()'],
     answer:1
