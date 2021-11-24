@@ -168,7 +168,7 @@ const quiz=[
 {
     q:' In what ways the letters of the word "RUMOUR" can be arranged?',
     options:['180','150','200','230'],
-    answer:3
+    answer:0
 },
 {
     q:'A box contains 2 red balls, 3 black balls, and 4 white balls. Find the number of ways by which 3 balls can be drawn from the box in which at least 1 black ball should be present.',
